@@ -1,5 +1,7 @@
-game/saves/*
 .vscode/settings.json
 .DS_Store
 game/*.rpyc
 game/cache/*
+log.txt
+game/saves/navigation.json
+game/saves/persistent
