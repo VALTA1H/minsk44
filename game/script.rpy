@@ -12,7 +12,9 @@ define distant_celebration = "audio/distant_celebration.mp3"
 define incoming_shell_rising = "audio/incoming_shell_rising.mp3"
 define explosion_loud = "audio/explosion_loud.mp3"
 define theme_tense = "audio/theme_tense.mp3"
+define wind_low = "audio/wind_low.mp3"
 
+# === ПЕРСОНАЖИ ===
 # === ПЕРСОНАЖИ ===
 define n_narr = Character("Безымянный", color="#91d46a", kind=nvl)
 define narr = Character("Безымянный", color="#91d46a")
@@ -24,6 +26,23 @@ define kolya = Character("Коля", color="#add8e6")
 define politruk = Character("Политрук", color="#ff7f7f")
 define masha = Character("Маша", color="#98fb98")
 define soldier = Character("Рядовой", color="#ffffff")
+
+# === ДОПОЛНИТЕЛЬНЫЕ ПЕРСОНАЖИ (жители, внук и др.) ===
+define old_man = Character("Старик", color="#d3d3d3")
+define old_woman = Character("Старуха", color="#f5deb3")
+define grandson = Character("Внук", color="#90ee90")
+define old_narr = Character("Дед", color="#91d46a")  # пожилой ГГ в эпилоге A
+define old_kolya = Character("Коля (в 2025)", color="#add8e6")  # если Коля дожил
+
+# === ГЛОБАЛЬНЫЕ ФЛАГИ (добавьте ЭТО в начало script.rpy) ===
+default avoided_ambush = False
+default protected_masha = False
+default saved_wounded = False
+default saved_soldier = False
+default spared_civilians = False
+default kolya_saved = False
+default chose_duty = False
+default chose_comrades = False
 
 # === ДИСКЛЕЙМЕР ===
 label disclaimer:
@@ -43,7 +62,7 @@ label disclaimer:
         "Я не хочу продолжать (Выход из игры)":
             nvl hide
             nvl clear
-            $ renpy.full_quit()
+            $ renpy.quit()
 
     return
 
