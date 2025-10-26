@@ -24,7 +24,6 @@ label day2_start:
     ivan "Внимание! Враг отступил, но оставил «крыс» — снайперов и миномётчиков. Двигаемся осторожно, по укрытиям!"
     politruk "Помните, товарищи! Этот город — наша земля. Каждый дом, каждая улица — свидетель зверств оккупантов. Освободим его от захватчиков до конца!"
 
-    scene city_street_morning with dissolve
     #ДОБАВЬ МУЗЫКУ ТИПО ВОЕННЫЕ ПРЕСТУПЛЕНИЯ
     n_narr "Мы продвигаемся вглубь. Стены домов изрешечены пулями. На асфальте — следы крови и обломки техники."
     n_narr "Проходим мимо разрушенного здания. На обгоревшей стене виднеется надпись мелом: «Мама, я дома». Сердце сжимается."
@@ -32,7 +31,6 @@ label day2_start:
     nvl hide
     nvl clear
 
-    # === ВСТРЕЧА С МИРНЫМ ЖИТЕЛЕМ ===
     scene city_courtyard with dissolve
     soldier "Кто-нибудь, помогите!"
 
@@ -69,10 +67,9 @@ label day2_start:
     nvl hide
     nvl clear
 
-    # === ПУЛЕМЁТ В ПОЧТАМТЕ ===
-    scene bg city_street_ruins with dissolve
+    scene city_street_ruins with dissolve
     play sound machine_gun
-    scene bg city_street_ruins with hpunch
+    scene city_street_ruins with hpunch
 
     n_narr "Продолжаем движение. Внезапно — короткая очередь. Пули свистят над головами."
 
@@ -95,7 +92,7 @@ label day2_start:
             play sound grenade_throw
             n_narr "Я вырываю гранату из подсумка и метаю её в разбитое окно второго этажа."
             play sound explosion_loud
-            scene bg city_street_ruins with vpunch
+            scene city_street_ruins with vpunch
             n_narr "Взрыв. Облако пыли и дыма. Огонь прекратился."
             n_narr "Мы врываемся внутрь… В подвале, под завалами, слышен детский плач."
 
@@ -111,7 +108,7 @@ label day2_start:
             jump day2_basement
 
 label day2_basement:
-    scene bg city_basement with fade
+    scene city_basement with fade
     stop sound
     play sound child_crying loop
 
@@ -121,7 +118,6 @@ label day2_basement:
     nvl hide
     nvl clear
 
-    # === МОРАЛЬНЫЙ ВЫБОР: МЕДИКАМЕНТЫ ===
     menu choice_medicine:
         "Забрать всё содержимое ящика":
             narr "Война не щадит никого. Наши раненые — в первую очередь."
@@ -139,8 +135,7 @@ label day2_basement:
     nvl hide
     nvl clear
 
-    # === ИССЛЕДОВАНИЕ РАЗРУШЕННОГО ДОМА ===
-    scene bg destroyed_house with dissolve
+    scene destroyed_house with dissolve
     n_narr "Пока отряд отдыхает, я замечаю полуразрушенный дом с выгоревшим фасадом. На обугленной двери — шестиконечная звезда, вырезанная топором."
     n_narr "Маша, увидев это, замирает. Её лицо становится каменным."
 
@@ -158,8 +153,7 @@ label day2_basement:
     nvl hide
     nvl clear
 
-    # === ИТОГ ДНЯ ===
-    scene bg city_square_evening with fade
+    scene city_square_evening with fade
     stop music fadeout 2.0
     stop sound fadeout 2.0
     play music theme_calm fadein 2.0
@@ -181,5 +175,4 @@ label day2_basement:
     scene black with fade
     n_narr "День второй позади. Впереди — леса, болота и погоня за отступающим врагом."
 
-    # Переход к следующему дню
     jump day34_start
