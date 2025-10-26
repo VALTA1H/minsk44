@@ -87,7 +87,7 @@ label pre_history:
     nvl clear
 
     scene black with dissolve
-    play sound incoming_shell_rising fadein 2.0 loop
+    play sound incoming_shell_rising fadein 2.0 loop    
 
     n_narr "Гул."
     n_narr "Я слышу его сквозь сон. Оглушающий, низкий, нарастающий. Он приближается."
