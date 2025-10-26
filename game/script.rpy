@@ -72,7 +72,7 @@ label disclaimer:
 label pre_history:
     scene black with fade
     play music theme_calm fadein 2.0
-    scene bedroom_morning with fade
+        scene bedroom_morning with fade
 
     n_narr "Утренний свет. Я помню только этот свет. И запах свежего хлеба, которого не чувствовал уже давно."
     n_narr "Я помню обещание, данное ей: вернуться. Несмотря ни на что."
