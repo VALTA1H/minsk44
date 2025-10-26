@@ -48,8 +48,10 @@ default chose_comrades = False
 label disclaimer:
     scene black with fade
 
-    d_text "Этот проект представляет собой художественную визуальную новеллу, вдохновлённую историческими событиями операции «Багратион» в 1944 году."
-    d_text "Он не преследует пропагандистских целей и стремится к честному, уважительному отображению трагических реалий войны и моральных дилемм, с которыми сталкивались люди."
+    d_text "Этот проект представляет собой художественную визуальную новеллу,"
+    d_text "Вдохновлённую историческими событиями операции «Багратион» в 1944 году."
+    d_text "Он не преследует пропагандистских целей и стремится к честному,"
+    d_text "уважительному отображению трагических реалий войны и моральных дилемм, с которыми сталкивались люди."
     d_text "Все персонажи и события вымышлены. Игра содержит сцены насилия, травматичные эпизоды и описание военных действий."
     d_text "Рекомендуется проявлять осторожность при знакомстве с содержанием."
 
@@ -70,7 +72,7 @@ label disclaimer:
 label pre_history:
     scene black with fade
     play music theme_calm fadein 2.0
-    scene bg bedroom_morning with fade
+    scene bedroom_morning with fade
 
     n_narr "Утренний свет. Я помню только этот свет. И запах свежего хлеба, которого не чувствовал уже давно."
     n_narr "Я помню обещание, данное ей: вернуться. Несмотря ни на что."
@@ -99,7 +101,7 @@ label pre_history:
     play sound explosion_loud
     scene black with hpunch
 
-    scene bg trench_night with fade
+    scene trench_night with fade
 
     play music theme_tense fadein 1.0
     play sound rain loop
@@ -118,7 +120,7 @@ label start:
     call disclaimer
     call pre_history
 
-    scene bg trench_night with fade
+    scene trench_night with fade
 
     narr "Ночь на 28 июня. Восточный берег реки Березина. Если переживу — запомню это."
 
