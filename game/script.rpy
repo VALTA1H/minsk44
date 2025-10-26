@@ -72,7 +72,7 @@ label disclaimer:
 label pre_history:
     scene black with fade
     play music theme_calm fadein 2.0
-    scene bedroom_morning with fade
+    scene village_morning with fade
 
     n_narr "Утренний свет. Я помню только этот свет. И запах свежего хлеба, которого не чувствовал уже давно."
     n_narr "Я помню обещание, данное ей: вернуться. Несмотря ни на что."
@@ -154,7 +154,7 @@ label start:
     n_narr "Земля дрожит под ногами. Воздух наполняется грохотом и свистом разрывов."
 
     play sound artillery loop
-    scene bg trench_night with vpunch
+    scene river_crossing with vpunch
 
     n_narr "Первые лодки уже спускают на воду. Холодные брызги бьют в лицо."
 
@@ -165,7 +165,6 @@ label start:
 
     n_narr "Подаётся сигнал. Начинается хаос. Мы бросаемся к лодкам."
 
-    scene bg river_crossing with fade
     play sound machine_gun
     stop sound
 
@@ -193,7 +192,7 @@ label start:
     stop music fadeout 2.0
     stop sound fadeout 2.0
 
-    scene bg western_bank with fade
+    scene western_bank with fade
     play music theme_tense
 
     n_narr "Спустя часы, казавшиеся вечностью, мы захватываем плацдарм. Мокрые, измученные… но живые."
@@ -204,7 +203,7 @@ label start:
 
     # === УТРО: МАРШ ВГЛУБЬ ===
     scene black with dissolve
-    scene bg dusty_road_day with fade
+    scene dusty_road_day with fade
 
     n_narr "Утро сменяет ночь. Мы совершаем стремительный марш в поддержке техники. Жара и пыль поднимаются столбом. Слышно лишь рев моторов."
 
@@ -214,7 +213,7 @@ label start:
     politruk "Держать темп, товарищи! Каждая минута — это километры, отделяющие нас от фашистского зверя!"
     politruk "Именно наша скорость — ключ к успеху операции «Багратион»! Нельзя дать врагу подготовить оборону!"
 
-    scene bg spearhead_view with dissolve
+    scene spearhead_view with dissolve
 
     n_narr "По главной дороге грохочут танки, мчатся конные части."
 
@@ -225,7 +224,7 @@ label start:
     politruk "Их задача — рвать оборону. Наша — не отставать и зачищать фланги."
 
     # === ВСТРЕЧА С ПАРТИЗАНАМИ ===
-    scene bg forest_ambush with dissolve
+    scene forest_ambush with dissolve
 
     masha "Тихо! Сюда!"
 
@@ -282,7 +281,7 @@ label convoy_report:
 
 # === ВЕЧЕР ПЕРВОГО ДНЯ ===
 label end_of_day1:
-    scene bg forest_camp_dusk with fade
+    scene forest_camp with fade
     stop music
     play music theme_calm fadein 2.0
     play sound crickets_sound fadein 2.0 loop
