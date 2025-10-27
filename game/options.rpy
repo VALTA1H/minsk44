@@ -23,7 +23,7 @@ define gui.show_name = True
 
 ## Версия игры.
 
-define config.version = "1.0"
+define config.version = "0.8"
 
 
 ## Текст, помещённый в экран "Об игре". Поместите текст между тройными
@@ -195,6 +195,12 @@ init python:
     build.classify('**/.**', None)
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
+    build.classify('**.rpyc', None)
+    build.classify('**.rpymc', None)
+    build.classify('**.txt', None)
+    build.classify('**.rpyb', None)
+    build.classify('**.json', None)
+    build.classify('**.md', None)
 
     ## Чтобы архивировать файлы, классифицируйте их, например, как 'archive'.
 
