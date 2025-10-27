@@ -135,7 +135,7 @@ label minsk_liberated:
     politruk "Сегодня — великий день!    Беларусь свободна!"
     n_narr "Но в этом празднике — горечь. Слишком много имён, что не вернутся домой."
 
-    scene minsk_victory_night with fade
+    scene black with fade
 
     n_narr "Ночью город не спит. Люди обнимаются, плачут, поют."
     n_narr "Я стою у разрушенного фонтана. В кармане — кукла, иконка и обещание."
@@ -198,9 +198,7 @@ label epilogue_a:
     grandson "И я обещаю — мы сохраним эту память и сделаем нашу Беларусь сильной."
 
     n_narr "Внук кладёт цветы к мемориалу. На граните — тысячи имён. Среди них — Иван, Маша, Коля…"
-
-    scene bg minsk_modern_memorial_wide with fade
-    n_narr "Камера отъезжает. Современный Минск — живой, чистый, благоустроенный."
+    n_narr "Современный Минск — живой, чистый, благоустроенный."
     n_narr "Аллея Победы. Дети играют. Студенты читают. Жизнь продолжается."
 
     scene black with fade
@@ -212,7 +210,7 @@ label epilogue_a:
 
 # === ЭПИЛОГ B: «ПОСЛЕДНИЙ ШАГ» ===
 label epilogue_b:
-    scene minsk_freedom_square_1944_night with fade
+    scene black with fade
     play music theme_tense fadeout 2.0
     play sound wind_low
 
@@ -228,7 +226,7 @@ label epilogue_b:
     scene black with dissolve
     n_narr "80 лет спустя…"
 
-    scene minsk_hero_city_memorial_2025 with fade
+    scene minsk_memorial_2025_day with fade
     play sound birds_morning
 
     grandson "Ты когда-нибудь его видел?"
@@ -241,7 +239,6 @@ label epilogue_b:
 
     n_narr "Рядом — ухоженная аллея с фонарями и скамейками. На табличке: «Героям, чьи имена неизвестны, но подвиг — вечен»."
 
-    scene bg minsk_memorial_sunset with fade
     n_narr "Солнце садится. Ветер шелестит листвой. Где-то играет гармонь."
 
     scene black with fade
