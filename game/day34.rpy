@@ -153,7 +153,7 @@ label bridge_artillery:
 
 # === ФИНАЛ ДНЯ ===
 label bridge_victory:
-    scene fforest_bridge_dawn with fade
+    scene forest_bridge_dawn with fade
     stop music fadeout 2.0
     stop sound fadeout 2.0
     play music theme_calm loop

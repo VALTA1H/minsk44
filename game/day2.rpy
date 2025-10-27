@@ -133,6 +133,7 @@ label day2_basement:
             n_narr "Маша кладёт руку мне на плечо. «Спасибо», — шепчет она."
             $ medicine_taken = "some"
 
+    stop sound
     nvl hide
     nvl clear
 
