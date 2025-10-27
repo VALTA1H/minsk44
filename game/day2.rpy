@@ -111,7 +111,7 @@ label day2_start:
 label day2_basement:
     scene city_basement with fade
     stop sound
-    play sound child_crying loop
+    play sound child_crying
 
     n_narr "Подвал наполнен сыростью и страхом. Старуха, чудом оставшаяся в живых, дрожит, прикрывая ребёнка своим телом."
     n_narr "Ящик с медикаментами стоит в углу. На нём — следы немецких сапог. Видимо, его готовили к эвакуации."
@@ -159,7 +159,7 @@ label day2_basement:
     stop music fadeout 2.0
     stop sound fadeout 2.0
     play music theme_calm fadein 2.0
-    play sound distant_celebration loop
+    play sound distant_celebration
 
     n_narr "К вечеру город полностью в наших руках. Остатки немецкого гарнизона уничтожены или взяты в плен."
     n_narr "Жители, прятавшиеся в подвалах, выходят на улицы. Их лица — смесь радости, боли и неверия."
@@ -174,6 +174,7 @@ label day2_basement:
     n_narr "Обещание всё ещё со мной. Но теперь я знаю: чтобы вернуться, нужно сначала дойти до конца."
     n_narr "А ещё нужно помнить. Помнить о Бобруйске. Помнить о всех городах и деревнях Беларуси. Об их мёртвых улицах и живой боли его жителей."
 
+    stop sound
     scene black with fade
     n_narr "День второй позади. Впереди — леса, болота и погоня за отступающим врагом."
 
