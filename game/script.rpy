@@ -15,7 +15,6 @@ define theme_tense = "audio/theme_tense.mp3"
 define wind_low = "audio/wind_low.mp3"
 
 # === ПЕРСОНАЖИ ===
-# === ПЕРСОНАЖИ ===
 define n_narr = Character("Безымянный", color="#91d46a", kind=nvl)
 define narr = Character("Безымянный", color="#91d46a")
 define d_text = Character("Автор", color="#ffffff", kind=nvl)
@@ -28,16 +27,15 @@ define masha = Character("Маша", color="#98fb98")
 define soldier = Character("Рядовой", color="#ffffff")
 
 # === ДОПОЛНИТЕЛЬНЫЕ ПЕРСОНАЖИ (жители, внук и др.) ===
+define civil = Character("Неизвестный", color="#9dff00ff")
 define old_man = Character("Старик", color="#d3d3d3")
 define old_woman = Character("Старуха", color="#f5deb3")
 define grandson = Character("Внук", color="#90ee90")
-define civil = Character("Неизвестный", color="#9dff00ff")
 define old_narr = Character("Дед", color="#91d46a")  # пожилой ГГ в эпилоге A
 define old_kolya = Character("Коля (в 2025)", color="#add8e6")  # если Коля дожил
 
 # === ГЛОБАЛЬНЫЕ ФЛАГИ (добавьте ЭТО в начало script.rpy) ===
 default avoided_ambush = False
-default protected_masha = False
 default saved_wounded = False
 default saved_soldier = False
 default spared_civilians = False
@@ -49,10 +47,8 @@ default chose_comrades = False
 label disclaimer:
     scene black with fade
 
-    d_text "Этот проект представляет собой художественную визуальную новеллу,"
-    d_text "Вдохновлённую историческими событиями операции «Багратион» в 1944 году."
-    d_text "Он стремится к честному,"
-    d_text "уважительному отображению трагических реалий войны и моральных дилемм, с которыми сталкивались люди."
+    d_text "Этот проект представляет собой художественную визуальную новеллу,Вдохновлённую историческими событиями операции «Багратион» в 1944 году."
+    d_text "Он стремится к честному,уважительному отображению трагических реалий войны и моральных дилемм, с которыми сталкивались люди."
     d_text "Все персонажи и события вымышлены. Игра содержит сцены насилия, травматичные эпизоды и описание военных действий."
     d_text "Рекомендуется проявлять осторожность при знакомстве с содержанием."
 
@@ -90,7 +86,7 @@ label pre_history:
     nvl clear
 
     scene black with dissolve
-    play sound incoming_shell_rising fadein 2.0 loop    
+    play sound incoming_shell_rising fadein 2.0 loop
 
     n_narr "Гул."
     n_narr "Я слышу его сквозь сон. Оглушающий, низкий, нарастающий. Он приближается."
@@ -170,7 +166,7 @@ label start:
 
     n_narr "Вода, на удивление, кристально чистая. Дыхание перехватывает. Вокруг — крики, свист пуль, взрывы мин, брызги."
     n_narr "Всё, что я могу сделать, — прижаться к борту лодки и надеяться, что мы доберёмся до западного берега."
-    
+
     nvl hide
     nvl clear
 
@@ -225,7 +221,6 @@ label start:
 
     # === ВСТРЕЧА С ПАРТИЗАНАМИ ===
     scene forest_ambush with dissolve
-
     masha "Тихо! Сюда!"
 
     n_narr "Нас останавливает партизанка Маша. Её форма изорвана, но взгляд — твёрд."
