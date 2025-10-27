@@ -116,7 +116,7 @@ label minsk_liberated:
     scene minsk_freedom_square_evening with fade
     stop music fadeout 3.0
     play sound distant_celebration
-    play sound child_crying
+    play music theme_calm
 
     if chose_duty:
         n_narr "К вечеру площадь зачищена. Минск — свободен."
@@ -156,6 +156,7 @@ label minsk_liberated:
     scene black with dissolve
     n_narr "Через 80 лет… кто вспомнит нас? Кто сохранит память?"
 
+    stop music
     jump epilogue_setup
 
     # === ПОДГОТОВКА К ЭПИЛОГУ ===
