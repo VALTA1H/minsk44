@@ -138,6 +138,7 @@ label bridge_assault:
         "Подавить огонь":
             play sound grenade_throw
             n_narr "Граната в амбразуру. Коля остаётся стоять, дрожа."
+            play sound explosion_loud
             $ kolya_saved = False
 
     jump bridge_victory

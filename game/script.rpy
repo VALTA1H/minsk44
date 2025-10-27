@@ -15,7 +15,6 @@ define theme_tense = "audio/theme_tense.mp3"
 define wind_low = "audio/wind_low.mp3"
 
 # === ПЕРСОНАЖИ ===
-# === ПЕРСОНАЖИ ===
 define n_narr = Character("Безымянный", color="#91d46a", kind=nvl)
 define narr = Character("Безымянный", color="#91d46a")
 define d_text = Character("Автор", color="#ffffff", kind=nvl)

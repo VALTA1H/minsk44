@@ -11,8 +11,8 @@ label day5_start:
     nvl clear
 
     scene bg minsk_outskirts_morning with fade
-    play sound distant_celebration
-    play sound birds_morning
+    play sound distant_celebration loop
+    play sound birds_morning loop
 
     n_narr "Первые жители бегут к нам — с плачем, с хлебом, с иконами."
     old_man "Спасибо… спасибо, сыны! Мы молились… молились каждый день!"
@@ -36,7 +36,7 @@ label day5_start:
 label pows_camp_ruins:
     scene bg minsk_pows_camp_ruins with fade
     stop sound
-    play sound wind_low
+    play sound wind_low loop
     #МУЗЫКУ ТРАГИЧНУЮ
     n_narr "Забор из колючей проволоки. Обгоревшие бараки. И… детская игрушка — обугленная кукла у ворот."
 
