@@ -46,7 +46,7 @@ label trail_pursuit:
     n_narr "В портфеле — карты Минска. И список партизан. Имя Маши — подчёркнуто красным."
 
     if not avoided_ambush:
-        play sound machine_gun
+        play sound machine_gun loop
         scene swamp_clearing with hpunch
         n_narr "Из кустов — очередь! Засада!"
         ivan "В укрытие!"
@@ -61,6 +61,7 @@ label trail_pursuit:
                 n_narr "Час под снайперским огнём… но всех вывезли."
                 $ saved_wounded = True
 
+    stop sound
     jump night_camp
 
 # === МАРШ ПО ДОРОГЕ ===
@@ -122,7 +123,7 @@ label night_camp:
 
 # === АТАКА НА МОСТ ===
 label bridge_assault:
-    play sound machine_gun
+    play sound machine_gun loop
     scene forest_bridge_dawn with vpunch
 
     n_narr "Пулемёт открывает огонь! Земля рвётся под ногами."
@@ -141,6 +142,7 @@ label bridge_assault:
             play sound explosion_loud
             $ kolya_saved = False
 
+    stop sound
     jump bridge_victory
 
 label bridge_artillery:
@@ -151,9 +153,10 @@ label bridge_artillery:
 
 # === ФИНАЛ ДНЯ ===
 label bridge_victory:
-    scene forest_bridge_smoke with fade
+    scene fforest_bridge_dawn with fade
     stop music fadeout 2.0
     stop sound fadeout 2.0
+    play music theme_calm loop
 
     n_narr "Мост захвачен. 'Котёл' под Бобруйском — закрыт. Десятки тысяч врагов — в ловушке."
     politruk "Теперь — на Минск! На столицу!"
@@ -169,4 +172,5 @@ label bridge_victory:
     n_narr "К вечеру 2 июля мы выходим к шоссе на Минск. Впереди — огни столицы."
     n_narr "Пятый день начнётся с атаки. Но сегодня… сегодня мы выжили."
 
+    stop music
     jump day5_start
