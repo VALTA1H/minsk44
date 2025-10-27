@@ -123,7 +123,7 @@ label night_camp:
 # === АТАКА НА МОСТ ===
 label bridge_assault:
     play sound machine_gun
-    scene bg forest_bridge_dawn with vpunch
+    scene forest_bridge_dawn with vpunch
 
     n_narr "Пулемёт открывает огонь! Земля рвётся под ногами."
     kolya "А-а-а!" with hpunch
@@ -151,7 +151,7 @@ label bridge_artillery:
 
 # === ФИНАЛ ДНЯ ===
 label bridge_victory:
-    scene bg forest_bridge_smoke with fade
+    scene forest_bridge_smoke with fade
     stop music fadeout 2.0
     stop sound fadeout 2.0
 

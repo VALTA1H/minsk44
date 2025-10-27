@@ -10,7 +10,7 @@ label day5_start:
     nvl hide
     nvl clear
 
-    scene bg minsk_outskirts_morning with fade
+    scene minsk_outskirts_morning with fade
     play sound distant_celebration loop
     play sound birds_morning loop
 
@@ -34,7 +34,7 @@ label day5_start:
 
 # === РУИНЫ ЛАГЕРЯ ВОЕННОПЛЕННЫХ ===
 label pows_camp_ruins:
-    scene bg minsk_pows_camp_ruins with fade
+    scene minsk_pows_camp_ruins with fade
     stop sound
     play sound wind_low loop
     #МУЗЫКУ ТРАГИЧНУЮ
@@ -58,7 +58,7 @@ label pows_camp_ruins:
 
 # === ПОДХОД К ПЛОЩАДИ СВОБОДЫ ===
 label freedom_square_approach:
-    scene bg minsk_freedom_square_ruins with fade
+    scene minsk_freedom_square_ruins with fade
     play music theme_tense fadein 2.0
     play sound distant_gunfire
 
@@ -76,7 +76,7 @@ label freedom_square_approach:
 
     # === АТАКА НАЧИНАЕТСЯ ===
     play sound machine_gun
-    scene bg minsk_freedom_square_ruins with vpunch
+    scene minsk_freedom_square_ruins with vpunch
 
     n_narr "Пулемёт открывает огонь! Кирпичи летят в щепки!"
     ivan "Вперёд! Не дать им перезарядиться!"
@@ -113,7 +113,7 @@ label freedom_square_approach:
 
 # === ОСВОБОЖДЕНИЕ МИНСКА ===
 label minsk_liberated:
-    scene bg minsk_freedom_square_evening with fade
+    scene minsk_freedom_square_evening with fade
     stop music fadeout 3.0
     play sound distant_celebration
     play sound child_crying
@@ -135,7 +135,7 @@ label minsk_liberated:
     politruk "Сегодня — великий день!    Беларусь свободна!"
     n_narr "Но в этом празднике — горечь. Слишком много имён, что не вернутся домой."
 
-    scene bg minsk_victory_night with fade
+    scene minsk_victory_night with fade
 
     n_narr "Ночью город не спит. Люди обнимаются, плачут, поют."
     n_narr "Я стою у разрушенного фонтана. В кармане — кукла, иконка и обещание."
@@ -171,7 +171,7 @@ label epilogue_setup:
 
 # === ЭПИЛОГ A: «РАССКАЗ ВЕТЕРАНА» ===
 label epilogue_a:
-    scene bg minsk_memorial_1944 with fade
+    scene minsk_memorial_1944 with fade
     play music theme_calm fadein 3.0
 
     n_narr "4 июля 1944 года. Минск."
@@ -187,7 +187,7 @@ label epilogue_a:
     scene black with dissolve
     n_narr "80 лет спустя…"
 
-    scene bg minsk_memorial_2025_day with fade
+    scene minsk_memorial_2025_day with fade
     stop music fadeout 2.0
     play sound birds_morning
 
@@ -212,7 +212,7 @@ label epilogue_a:
 
 # === ЭПИЛОГ B: «ПОСЛЕДНИЙ ШАГ» ===
 label epilogue_b:
-    scene bg minsk_freedom_square_1944_night with fade
+    scene minsk_freedom_square_1944_night with fade
     play music theme_tense fadeout 2.0
     play sound wind_low
 
@@ -228,7 +228,7 @@ label epilogue_b:
     scene black with dissolve
     n_narr "80 лет спустя…"
 
-    scene bg minsk_hero_city_memorial_2025 with fade
+    scene minsk_hero_city_memorial_2025 with fade
     play sound birds_morning
 
     grandson "Ты когда-нибудь его видел?"

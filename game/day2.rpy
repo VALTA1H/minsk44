@@ -145,7 +145,7 @@ label day2_basement:
 
     play music warum loop
     masha "Это было гетто… Здесь жили евреи."
-    scene bg ghetto with dissolve
+    scene ghetto with dissolve
     masha "Осенью сорок первого… их всех согнали сюда. А потом… потом большую часть повели в лес, за город."
     masha "Говорят, крики были слышны на другом берегу Березины. А потом — тишина. Их больше не было."
 
