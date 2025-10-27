@@ -8,3 +8,5 @@ traceback.txt
 errors.txt
 game/tl/None/common.rpymc
 project.json
+android.keystore
+bundle.keystore
