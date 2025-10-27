@@ -36,7 +36,6 @@ define old_kolya = Character("Коля (в 2025)", color="#add8e6")  # если 
 
 # === ГЛОБАЛЬНЫЕ ФЛАГИ (добавьте ЭТО в начало script.rpy) ===
 default avoided_ambush = False
-default protected_masha = False
 default saved_wounded = False
 default saved_soldier = False
 default spared_civilians = False
@@ -122,7 +121,7 @@ label start:
 
     scene trench_night with fade
 
-    narr "Ночь на 28 июня. Восточный берег реки Березина. Если переживу — запомню это."
+    narr "Ночь на 28 июня. Восточный берег реки Березина. Если from _call_disclaimer переживу — запомню эт from _call_pre_historyо."
 
     n_narr "Тяжёлые капли дождя барабанят по каске. Вдалеке — приглушённый гул артиллерии и частая дробь пулемётов."
     n_narr "Отряд сидит в укрытии, прижавшись к мокрой земле. До переправы — меньше часа."

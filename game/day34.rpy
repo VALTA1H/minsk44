@@ -9,7 +9,7 @@ label day34_start:
     nvl hide
     nvl clear
 
-    scene bg forest_swamp_morning with fade
+    scene forest_swamp_morning with fade
     play sound distant_gunfire loop
     play sound crickets_sound
 
@@ -34,9 +34,8 @@ label day34_start:
             $ avoided_ambush = True
             jump road_march
 
-# === ПОГОНЯ И ЛАГЕРЬ ===
 label trail_pursuit:
-    scene bg swamp_clearing with fade
+    scene abandoned_camp with fade
     #МУЗЫКА ДЛЯ ЗВЕРСТВ
     n_narr "След приводит к заброшенному лагерю. Палатки, кострище… и тела наших пленных."
 
@@ -46,19 +45,9 @@ label trail_pursuit:
     masha "Под палаткой — ящик. И… документы."
     n_narr "В портфеле — карты Минска. И список партизан. Имя Маши — подчёркнуто красным."
 
-    menu:
-        "Сжечь документы — защитить Машу":
-            n_narr "Я рву бумаги и бросаю в костёр."
-            masha "…"  # Тихое: "Спасибо."
-            $ protected_masha = True
-
-        "Сохранить документы":
-            n_narr "Сворачиваю карты. Маша отворачивается."
-            $ protected_masha = False
-
     if not avoided_ambush:
         play sound machine_gun
-        scene bg swamp_clearing with hpunch
+        scene swamp_clearing with hpunch
         n_narr "Из кустов — очередь! Засада!"
         ivan "В укрытие!"
 
@@ -76,11 +65,11 @@ label trail_pursuit:
 
 # === МАРШ ПО ДОРОГЕ ===
 label road_march:
-    scene bg forest_road_dust with fade
+    scene forest_road_dust with fade
     n_narr "Дорога пуста. Только дым от горящих деревень и следы гусениц."
     politruk "Так фашисты прощаются с Беларусью — огнём и пеплом."
 
-    scene bg roadside_village with fade
+    scene roadside_village with fade
     old_woman "Спасибо, сыны… Пусть ангел хранит вас."
     n_narr "Она даёт кусок хлеба и иконку. Мы идём дальше."
 
@@ -88,7 +77,7 @@ label road_march:
 
 # === НОЧЬ У КОСТРА ===
 label night_camp:
-    scene bg forest_camp_night with fade
+    scene forest_camp_night with fade
     stop music fadeout 2.0
     play sound crickets_sound loop
     play music theme_calm fadein 3.0
@@ -96,7 +85,7 @@ label night_camp:
     n_narr "Ночь. Костёр потрескивает. Усталость — до костей."
 
     # Речь Маши — зависит от милосердия ГГ
-    if (saved_soldier or spared_civilians) and protected_masha:
+    if (saved_soldier or spared_civilians):
         masha "Ты помнишь, что мы — люди. Даже здесь."
         masha "Я из Борок… Там, где сожгли деревню."
         masha "Загнали всех в сарай… маму, отца, сестрёнку…"
@@ -114,7 +103,7 @@ label night_camp:
 
     # === УТРО 2 ИЮЛЯ ===
     scene black with dissolve
-    scene bg forest_bridge_dawn with fade
+    scene forest_bridge_dawn with fade
     play music theme_tense fadein 2.0
     play sound distant_gunfire loop
 
