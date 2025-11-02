@@ -292,8 +292,11 @@ screen navigation():
     vbox:
         style_prefix "navigation"
 
-        xpos gui.navigation_xpos
-        yalign 0.5
+        if renpy.get_screen("main_menu"):
+            xalign 0.5
+        else:
+            xoffset 30
+        yalign 0.6
 
         spacing gui.navigation_spacing
 
@@ -332,6 +335,8 @@ screen navigation():
             ## версии.
             textbutton _("Выход") action Quit(confirm=not main_menu)
 
+            textbutton _("Вернуться") action Return()
+
 
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
@@ -342,7 +347,7 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.text_properties("navigation_button")
-
+    xalign 0.5
 
 ## Экран главного меню #########################################################
 ##
@@ -388,7 +393,7 @@ style main_menu_frame:
     xsize 420
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    # background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0
@@ -476,10 +481,9 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
 
     use navigation
 
-    textbutton _("Вернуться"):
-        style "return_button"
-
-        action Return()
+    # textbutton _("Вернуться"):
+    #     style "return_button"
+    #     action Return()
 
     label title
 

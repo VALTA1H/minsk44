@@ -29,14 +29,14 @@ define config.check_conflicting_properties = True
 define gui.accent_color = '#cc6600'
 
 ## Цвет, используемый в текстовой кнопке, когда она не выбрана и не наведена.
-define gui.idle_color = '#888888'
+define gui.idle_color = '#FCF7FF'
 
 ## Small_color используется в маленьком тексте, который должен быть ярче/
 ## темнее, для того, чтобы выделяться.
 define gui.idle_small_color = '#aaaaaa'
 
 ## Цвет, используемых в кнопках и панелях, когда они наведены.
-define gui.hover_color = '#e0a366'
+define gui.hover_color = '#cc6600'
 
 ## Цвет, используемый текстовой кнопкой, когда она выбрана, но не наведена.
 ## Кнопка может быть выбрана, если это текущий экран или текущее значение
@@ -74,7 +74,7 @@ define gui.text_size = 25
 define gui.name_text_size = 37
 
 ## Размер текста в пользовательском интерфейсе.
-define gui.interface_text_size = 25
+define gui.interface_text_size = 48
 
 ## Размер заголовков в пользовательском интерфейсе.
 define gui.label_text_size = 28
@@ -253,7 +253,7 @@ define gui.file_slot_rows = 2
 
 ## Местоположение левого края навигационных кнопок по отношению к левому краю
 ## экрана.
-define gui.navigation_xpos = 60
+define gui.navigation_xpos = 900
 
 ## Вертикальная позиция индикатора пропуска.
 define gui.skip_ypos = 15
