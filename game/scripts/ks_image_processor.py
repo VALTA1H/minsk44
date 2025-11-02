@@ -22,7 +22,7 @@ DEFAULT_CONFIG: Dict[str, Any] = {
     # Layer 2
     "OILIFY2_R": 6, "OILIFY2_EXPONENT": 5, "OILIFY2_OPACITY": 20,
     # Layer 3
-    "MEDIAN1_K": 7, "LAPLACE_K": 3, "EDGE_SUB_OPACITY": 60, 
+    "MEDIAN1_K": 7, "LAPLACE_K": 3, "EDGE_SUB_OPACITY": 20, 
     # Layer 4
     "MEDIAN2_K": 33, "LCH_OPACITY": 25, "LCH_SHIFT": 10, 
     
