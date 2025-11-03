@@ -13,6 +13,8 @@ define incoming_shell_rising = "audio/incoming_shell_rising.opus"
 define explosion_loud = "audio/explosion_loud.opus"
 define theme_tense = "audio/theme_tense.opus"
 define wind_low = "audio/wind_low.opus"
+define alert = "audio/alert.opus"
+define mgs_over = "audio/mgs_over.opus"
 
 # === ПЕРСОНАЖИ ===
 define n_narr = Character("Безымянный", color="#91d46a", kind=nvl)
