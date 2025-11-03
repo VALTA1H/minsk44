@@ -11,3 +11,4 @@ project.json
 android.keystore
 bundle.keystore
 game/script.rpy.bak
+android.json
