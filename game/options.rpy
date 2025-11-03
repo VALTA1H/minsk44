@@ -197,6 +197,7 @@ init python:
     build.classify('**/.**', None)
     build.classify('**/#**', None)
     build.classify('game/**.txt', None)
+    build.classify('game/images/old/**.**', None)
     build.classify('game/scripts/**.**', None)
     build.classify('game/scripts/**', None)
     build.classify('game/saves/**.**', None)
