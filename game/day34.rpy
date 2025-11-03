@@ -136,7 +136,7 @@ label bridge_assault:
             n_narr "Я вытаскиваю его из-под огня."
             play sound alert
             n_narr "В моменте я чувствую, что ноги становится ватными."
-            play sound mgs_death
+            play sound mgs_over
             n_narr "Резкая боль пронзает меня, в глазах темнеет..."
             $ kolya_saved = True
             jump coma
