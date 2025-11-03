@@ -178,6 +178,7 @@ label epilogue_setup:
 
 # === ЭПИЛОГ A: «РАССКАЗ ВЕТЕРАНА» ===
 label epilogue_a:
+    nvl clear
     scene minsk_memorial_1944 with fade
     play music theme_calm fadein 3.0
 
@@ -217,6 +218,7 @@ label epilogue_a:
 
 # === ЭПИЛОГ B: «ПОСЛЕДНИЙ ШАГ» ===
 label epilogue_b:
+    nvl clear
     scene black with fade
     play music theme_tense fadeout 2.0
     play sound wind_low
