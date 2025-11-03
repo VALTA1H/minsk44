@@ -26,7 +26,10 @@ define ivan = Character("Иван", color="#b0e0e6")
 define kolya = Character("Коля", color="#add8e6")
 define politruk = Character("Политрук", color="#ff7f7f")
 define masha = Character("Маша", color="#98fb98")
+define masha_not_known = Character("Женщина", color="#98fb98")
+define masha_lined = Character("Ж̶е̶н̶щ̶и̶н̶а̶ Маша", color="#98fb98")
 define soldier = Character("Рядовой", color="#ffffff")
+define hanz = Character("Немец",color="#b48282")
 
 # === ДОПОЛНИТЕЛЬНЫЕ ПЕРСОНАЖИ (жители, внук и др.) ===
 define civil = Character("Неизвестный", color="#9dff00ff")
@@ -96,12 +99,12 @@ label pre_history:
 
 # === НАЧАЛО: ПЕРВЫЙ ДЕНЬ ===
 label start:
-    call disclaimer
-    call pre_history
+    call disclaimer from _call_disclaimer
+    call pre_history from _call_pre_history
 
     scene trench_night with fade
 
-    ivan "Всем внимание! До сигнала меньше часа. Проверить снаряжение, подогнать ремни. Отдыхаем, пока можем."
+    ivan "Всем внимание! До сигнала мен from _call_disclaimerьше часа. Проверить сн from _call_pre_historyаряжение, подогнать ремни. Отдыхаем, пока можем."
     ivan "Сержант ..., подготовьте свою роту к наступлению. Убедитесь, что все знают свои задачи." # Добавлена точка в конце
     
     narr "Так точно!" # Удалены **
