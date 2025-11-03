@@ -1,5 +1,5 @@
 import customtkinter as ctk
-from tkinter import filedialog
+from tkinter import filedialog, messagebox
 import cv2
 import numpy as np
 from PIL import Image, ImageTk
@@ -52,8 +52,13 @@ CORE_SLIDER_KEYS = ["OILIFY1_R", "OILIFY1_OPACITY", "OILIFY2_R", "OILIFY2_OPACIT
 GLOBAL_ADJ_KEYS = ["BRIGHTNESS_ADJ", "CONTRAST_ADJ"]
 LAYER4_SLIDER_KEYS = ["LCH_OPACITY", "LCH_SHIFT"]
 
+# --- NEW BATCH PROCESSING CONSTANTS ---
+KS_TAG = "ksify"
+KS_SUFFIX = f"_{KS_TAG}.webp"
+SUPPORTED_INPUT_EXTENSIONS = ('.jpg', '.jpeg', '.png', '.bmp')
 
-# --- 1. Custom OpenCV Processing Functions ---
+# --- 1. Custom OpenCV Processing Functions (Existing functions omitted for brevity, assumed functional) ---
+# ... (ks_ffmpeg_like_downscale, ks_oilify_approx, ks_subtract_blend, ks_color_blend, ks_lch_color_adjust, ks_adjust_brightness_contrast)
 
 def ks_ffmpeg_like_downscale(img: np.ndarray, target_w: int, target_h: int) -> np.ndarray:
     return cv2.resize(img, (target_w, target_h), interpolation=cv2.INTER_AREA)
@@ -151,7 +156,89 @@ def ks_process_image(base_image_path: str, config: Dict[str, Any]) -> Tuple[np.n
     
     return original_img_for_display, processed_img, None
 
-# --- 2. CustomTkinter GUI Application ---
+
+# --- 2. NEW BATCH PROCESSING FUNCTIONS ---
+
+def convert_to_webp_with_metadata(image_path: str, output_dir: str, config: Dict[str, Any]) -> str | None:
+    """
+    Processes a single image, converts it to WebP, and saves it with a 
+    name that tags it as 'ksify' processed.
+    """
+    
+    # 1. Process the image
+    _, processed_img, error = ks_process_image(image_path, config)
+    
+    if error or processed_img is None:
+        print(f"Skipping {os.path.basename(image_path)} due to processing error: {error}")
+        return None
+
+    # 2. Generate automatic filename
+    base_name = os.path.splitext(os.path.basename(image_path))[0]
+    output_filename = base_name + KS_SUFFIX
+    output_path = os.path.join(output_dir, output_filename)
+    
+    # 3. Save as WebP with high quality
+    # WebP metadata support via cv2.imwrite is limited, so we rely on the filename tag.
+    # The image quality parameter here serves as the "image description" for quality.
+    webp_quality = 95 # A high-quality setting for WebP
+    success = cv2.imwrite(output_path, processed_img, [cv2.IMWRITE_WEBP_QUALITY, webp_quality])
+    
+    if success:
+        return output_path
+    else:
+        print(f"Error saving processed image to {output_path}")
+        return None
+
+def process_directory(input_dir: str, output_dir: str, config: Dict[str, Any]):
+    """
+    Processes all supported image files in a directory, converting them to WebP 
+    with filtering applied. Checks for and skips already processed files.
+    """
+    if not os.path.isdir(input_dir):
+        print(f"Error: Input directory not found: {input_dir}")
+        return
+
+    os.makedirs(output_dir, exist_ok=True)
+    
+    total_files = 0
+    processed_count = 0
+    skipped_count = 0
+
+    print(f"\n--- Starting Batch Processing ---\nInput: {input_dir}\nOutput: {output_dir}\n")
+
+    for filename in os.listdir(input_dir):
+        # 1. Filter for supported input image files
+        if not filename.lower().endswith(SUPPORTED_INPUT_EXTENSIONS):
+            continue
+            
+        total_files += 1
+        input_path = os.path.join(input_dir, filename)
+        
+        # 2. Check for already processed file (Image Description check logic)
+        base_name = os.path.splitext(filename)[0]
+        expected_output_filename = base_name + KS_SUFFIX
+        expected_output_path = os.path.join(output_dir, expected_output_filename)
+
+        if os.path.exists(expected_output_path):
+            # Prompt user that the file seems already processed by 'ksify'
+            print(f"[{total_files}] WARNING: '{filename}' seems already processed (found '{expected_output_filename}'). Skipping to avoid reprocessing. To reprocess, delete the existing output file.")
+            skipped_count += 1
+            continue
+
+        # 3. Process and convert
+        print(f"[{total_files}] Processing '{filename}'...")
+        output_path = convert_to_webp_with_metadata(input_path, output_dir, config)
+        
+        if output_path:
+            processed_count += 1
+            print(f"  -> SUCCESS: Saved as {os.path.basename(output_path)}")
+        else:
+            print(f"  -> FAILED processing {filename}.")
+
+    print(f"\n--- Batch Processing Complete ---\nTotal images found: {total_files}\nProcessed: {processed_count}\nSkipped (already processed): {skipped_count}\n")
+
+
+# --- 3. CustomTkinter GUI Application ---
 class KSApp(ctk.CTk):
     def __init__(self):
         super().__init__()
@@ -174,9 +261,9 @@ class KSApp(ctk.CTk):
         self._setup_sidebar()
         self._setup_command_bar()
         self._setup_image_display()
-
-    # --- UI EVENT HANDLERS ---
-
+        
+    # ... (UI Event Handlers omitted for brevity)
+    
     def _update_slider(self, value: float, key: str, label: ctk.CTkLabel, fmt: str):
         if fmt == 'd': 
             self.config[key] = int(value)
@@ -235,11 +322,46 @@ class KSApp(ctk.CTk):
         # E. Process Button (1 row)
         self.reprocess_button.grid_forget(); self.reprocess_button.grid(row=next_free_row, column=0, padx=10, pady=20); next_free_row += 1
         
-        # F. Set the weight to the last row
+        # F. Process Dir Button (1 row)
+        self.process_dir_button.grid_forget(); self.process_dir_button.grid(row=next_free_row, column=0, padx=10, pady=(5, 20)); next_free_row += 1
+        
+        # G. Set the weight to the last row
         self.control_frame.grid_rowconfigure(next_free_row, weight=1)
 
-    # --- IMAGE MANAGEMENT ---
+    # --- NEW: BATCH PROCESSING HANDLER ---
+    def _select_and_process_dir(self):
+        """Prompts user for input and output directories and starts batch processing."""
+        input_dir = filedialog.askdirectory(title="Select Input Directory (Images to Process)")
+        if not input_dir:
+            return
 
+        output_dir = filedialog.askdirectory(title="Select Output Directory (Processed WebP Files)")
+        if not output_dir:
+            return
+
+        if input_dir == output_dir:
+             messagebox.showerror("Error", "Input and Output directories must be different to prevent overwriting/conflicts.")
+             return
+             
+        self.reprocess_button.configure(state="disabled")
+        self.save_button.configure(state="disabled")
+        self.process_dir_button.configure(state="disabled", text="Processing...")
+        
+        # Run the batch process (ideally in a separate thread for a responsive GUI, 
+        # but for simplicity, we call it directly here with a warning)
+        print("\nNOTE: GUI may freeze during batch processing. Check console for progress.")
+        try:
+            process_directory(input_dir, output_dir, self.config)
+            messagebox.showinfo("Batch Complete", f"Directory processing finished! Check output folder: {output_dir}")
+        except Exception as e:
+            messagebox.showerror("Batch Error", f"An error occurred during batch processing: {e}")
+        finally:
+            self.reprocess_button.configure(state="normal" if self.input_image_path else "disabled")
+            self.process_dir_button.configure(state="normal", text="Process Directory to WebP")
+
+
+    # --- IMAGE MANAGEMENT (Existing methods omitted for brevity) ---
+    
     def load_image(self):
         """Opens file dialog, loads and displays image, and prepares UI for processing."""
         self.input_image_path = filedialog.askopenfilename(filetypes=[("Image files", "*.jpg *.jpeg *.png *.bmp")])
@@ -310,13 +432,24 @@ class KSApp(ctk.CTk):
         """Opens save dialog and writes the processed OpenCV image to file."""
         if self.output_cv_img is None: return
 
-        save_path = filedialog.asksaveasfilename(defaultextension=".png", filetypes=[("PNG files", "*.png"), ("JPEG files", "*.jpg")])
+        save_path = filedialog.asksaveasfilename(defaultextension=KS_SUFFIX, filetypes=[("WebP (ksify)", KS_SUFFIX), ("PNG files", "*.png"), ("JPEG files", "*.jpg")])
         
         if save_path:
-            cv2.imwrite(save_path, self.output_cv_img)
+            # Check if user selected webp/ksify option
+            if save_path.lower().endswith(KS_SUFFIX):
+                webp_quality = 95
+                cv2.imwrite(save_path, self.output_cv_img, [cv2.IMWRITE_WEBP_QUALITY, webp_quality])
+            elif save_path.lower().endswith('.webp'):
+                # General webp save without the suffix tag
+                webp_quality = 95
+                cv2.imwrite(save_path, self.output_cv_img, [cv2.IMWRITE_WEBP_QUALITY, webp_quality])
+            else:
+                 cv2.imwrite(save_path, self.output_cv_img)
+                 
             print(f"Image saved to {save_path}. Resolution: {self.output_cv_img.shape[1]}x{self.output_cv_img.shape[0]}")
 
-    # --- UI SETUP METHODS ---
+
+    # --- UI SETUP METHODS (Modified to include new button) ---
 
     def _setup_sidebar(self):
         self.control_frame = ctk.CTkScrollableFrame(self, width=250, corner_radius=0)
@@ -393,14 +526,20 @@ class KSApp(ctk.CTk):
         if self.config['OUTPUT_COMPRESS_ENABLED']: self.output_compress_checkbox.select()
         self.output_compress_checkbox.grid(row=self.row_idx, column=0, padx=10, pady=(0, 10)); self.row_idx += 1
         
-        # 5. SAVE BUTTON (Moved to Sidebar)
+        # 5. SAVE BUTTON 
         self.save_button = ctk.CTkButton(self.control_frame, text="Save Output Image", command=self.save_image, state="disabled")
         self.save_button.grid(row=self.row_idx, column=0, padx=10, pady=20); self.row_idx += 1
         
-        # 6. PROCESS BUTTON (Renamed from Re-Process Image)
+        # 6. PROCESS BUTTON
         self.reprocess_button = ctk.CTkButton(self.control_frame, text="Process Image", command=self.process_and_display, state="disabled")
         self.reprocess_button.grid(row=self.row_idx, column=0, padx=10, pady=20); self.row_idx += 1
 
+        # 7. NEW: PROCESS DIRECTORY BUTTON
+        self.process_dir_button = ctk.CTkButton(self.control_frame, text="Process Directory to WebP", command=self._select_and_process_dir)
+        self.process_dir_button.grid(row=self.row_idx, column=0, padx=10, pady=(5, 20)); self.row_idx += 1
+        
+        # Set the weight to the last row
+        self.control_frame.grid_rowconfigure(self.row_idx, weight=1)
 
     def _setup_command_bar(self):
         # Empty command bar at the top (only for layout)

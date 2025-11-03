@@ -12,7 +12,7 @@
 ##
 ## Символы "_()", окружающие название, отмечают его как пригодное для перевода.
 
-define config.name = _("minsk44")
+define config.name = _("Минск 1944")
 
 
 ## Определяет, показывать ли заголовок, данный выше, на экране главного меню.
@@ -47,7 +47,7 @@ define gui.about = _p("""
 ## постройке дистрибутивов. Оно должно содержать текст формата ASCII и не должно
 ## содержать пробелы, двоеточия и точки с запятой.
 
-define build.name = "Минск 1944"
+define build.name = "minsk44"
 
 
 ## Звуки и музыка ##############################################################
@@ -72,7 +72,7 @@ define config.has_voice = True
 ## проигрываться в главном меню. Этот файл продолжит проигрываться во время
 ## игры, если не будет остановлен, или не начнёт проигрываться другой аудиофайл.
 
-define config.main_menu_music = "audio/wiosna.mp3"
+define config.main_menu_music = "audio/wiosna.opus"
 
 
 ## Переходы ####################################################################
@@ -192,8 +192,16 @@ init python:
 
     build.classify('**~', None)
     build.classify('**.bak', None)
+    build.classify('**.mp3', None)
+    build.classify('**.ogg', None)
     build.classify('**/.**', None)
     build.classify('**/#**', None)
+    build.classify('game/**.txt', None)
+    build.classify('game/scripts/**.**', None)
+    build.classify('game/scripts/**', None)
+    build.classify('game/saves/**.**', None)
+    build.classify('game/cache/**.**', None)
+    build.classify('game/tl/**.**', None)
     build.classify('**/thumbs.db', None)
     build.classify('**.rpyc', None)
     build.classify('**.rpymc', None)

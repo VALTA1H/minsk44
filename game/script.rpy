@@ -1,18 +1,18 @@
 ﻿# === АУДИО ===
-define artillery = "audio/artillery.mp3"
-define rain = "audio/rain.mp3"
-define machine_gun = "audio/machine_gun.mp3"
-define birds_morning = "audio/birds_morning.mp3"
-define theme_calm = "audio/theme_calm.mp3"
-define crickets_sound = "audio/crickets_sound.mp3"
-define distant_gunfire = "audio/distant_gunfire.mp3"
-define grenade_throw = "audio/grenade_throw.mp3"
-define child_crying = "audio/child_crying.mp3"
-define distant_celebration = "audio/distant_celebration.mp3"
-define incoming_shell_rising = "audio/incoming_shell_rising.mp3"
-define explosion_loud = "audio/explosion_loud.mp3"
-define theme_tense = "audio/theme_tense.mp3"
-define wind_low = "audio/wind_low.mp3"
+define artillery = "audio/artillery.opus"
+define rain = "audio/rain.opus"
+define machine_gun = "audio/machine_gun.opus"
+define birds_morning = "audio/birds_morning.opus"
+define theme_calm = "audio/theme_calm.opus"
+define crickets_sound = "audio/crickets_sound.opus"
+define distant_gunfire = "audio/distant_gunfire.opus"
+define grenade_throw = "audio/grenade_throw.opus"
+define child_crying = "audio/child_crying.opus"
+define distant_celebration = "audio/distant_celebration.opus"
+define incoming_shell_rising = "audio/incoming_shell_rising.opus"
+define explosion_loud = "audio/explosion_loud.opus"
+define theme_tense = "audio/theme_tense.opus"
+define wind_low = "audio/wind_low.opus"
 
 # === ПЕРСОНАЖИ ===
 define n_narr = Character("Безымянный", color="#91d46a", kind=nvl)
@@ -24,7 +24,10 @@ define ivan = Character("Иван", color="#b0e0e6")
 define kolya = Character("Коля", color="#add8e6")
 define politruk = Character("Политрук", color="#ff7f7f")
 define masha = Character("Маша", color="#98fb98")
+define masha_not_known = Character("Женщина", color="#98fb98")
+define masha_lined = Character("Ж̶е̶н̶щ̶и̶н̶а̶ Маша", color="#98fb98")
 define soldier = Character("Рядовой", color="#ffffff")
+define hanz = Character("Немец",color="#b48282")
 
 # === ДОПОЛНИТЕЛЬНЫЕ ПЕРСОНАЖИ (жители, внук и др.) ===
 define civil = Character("Неизвестный", color="#9dff00ff")
@@ -94,12 +97,12 @@ label pre_history:
 
 # === НАЧАЛО: ПЕРВЫЙ ДЕНЬ ===
 label start:
-    call disclaimer
-    call pre_history
+    call disclaimer from _call_disclaimer
+    call pre_history from _call_pre_history
 
     scene trench_night with fade
 
-    ivan "Всем внимание! До сигнала меньше часа. Проверить снаряжение, подогнать ремни. Отдыхаем, пока можем."
+    ivan "Всем внимание! До сигнала мен from _call_disclaimerьше часа. Проверить сн from _call_pre_historyаряжение, подогнать ремни. Отдыхаем, пока можем."
     ivan "Сержант ..., подготовьте свою роту к наступлению. Убедитесь, что все знают свои задачи." # Добавлена точка в конце
     
     narr "Так точно!" # Удалены **
