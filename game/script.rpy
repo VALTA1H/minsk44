@@ -72,8 +72,7 @@ label splashscreen:
 # === ПРОЛОГ: СОН ===
 label pre_history:
     scene black with fade
-    play music theme_calm fadein 2.0
-    scene village_morning with fade
+    play music dramatic_theme fadein 5.0 loop
 
     n_narr "Заставил вас ждать, не так ли?"
     n_narr "Уже который год идёт кровопролитная война, которая решает наши судьбы."
@@ -81,10 +80,13 @@ label pre_history:
     n_narr "Те теплые майские дни. Те самые моменты, когда мы были счастливы."
     n_narr "Но потом началась война..."
     n_narr "Немцы, обманув западный мир и выставив себя миротворцами, начали преступную войну"
+    scene Poland with fade
     n_narr "Они заявили, что их обстреляли на границе поляки осенью 39-го года."
     n_narr "В то время как они обстреливали сами себя, чтобы выдать себя за жертву..."
+    scene 1941_2 with fade
     n_narr "Душу улиц, на которых раньше жили люди, заменила глухая тишина"
     n_narr "Столько людей, семей, чьих-то домов и сёл просто пропали, как будто их никогда и не было"
+    scene 1941_1 with fade
     n_narr "Сейчас весь наш великий народ ценой своих жизней и своего будущего дарит свет для будущих поколений, чтобы они никогда больше не познали ужасы и тяготы войн"
     n_narr "Сегодня, 28 июня, надеюсь, последнего года войны, мы форсируем реку Березину, чтобы не дать этим фрицам отступить и занять новые позиции"
 
@@ -100,7 +102,7 @@ label start:
     call pre_history from _call_pre_history
 
     scene trench_night with fade
-
+    play music high_tension fadein 5.0 loop
     ivan "Всем внимание! До сигнала меньше часа. Проверить снаряжение, подогнать ремни. Отдыхаем, пока можем."
     ivan "Сержант ..., подготовьте свою роту к наступлению. Убедитесь, что все знают свои задачи."
     
@@ -155,7 +157,9 @@ label kolya_meet:
 
     nvl hide
     nvl clear
-
+    
+    stop music
+    play music theme_tense loop
     play sound artillery loop
     scene river_crossing with vpunch
     play sound machine_gun loop
@@ -171,17 +175,17 @@ label kolya_meet:
     stop sound fadeout 2.0
 
     scene western_bank with fade
-    play music theme_tense
 
     n_narr "Спустя часы, казавшиеся вечностью, мы захватываем плацдарм. Мокрые, измученные… но живые."
     n_narr "На берегу — тела, обломки лодок, крики раненых. Но мы здесь. Мы переправились."
-
+    
     nvl hide
     nvl clear
 
     # === УТРО: МАРШ ВГЛУБЬ ===
     scene black with dissolve
     scene dusty_road_day with fade
+    play music theme_calm fadein 5.0 loop
 
     n_narr "Утро сменяет ночь. Мы совершаем стремительный марш при поддержке техники. Жара и пыль поднимаются столбом. Слышно лишь рёв моторов."
 
@@ -201,7 +205,10 @@ label kolya_meet:
     politruk "Вот они, товарищи! Авангард прорыва — кавалерийско-механизированная группа Плиева!"
     politruk "Их задача — рвать оборону. Наша — не отставать и зачищать фланги."
 
+    stop music
+
     # === ВСТРЕЧА С ПАРТИЗАНАМИ ===
+
     scene forest_ambush with dissolve
     n_narr "Проходя мимо леса, мы услышали шум."
     n_narr "Не ожидая ничего хорошего, мы направили оружие в сторону источника шума"
