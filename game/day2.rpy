@@ -11,7 +11,7 @@ label day2_sleep:
     jump day2_start
 
 label day2_start:
-    scene c  with fade
+    scene city_ruins_morning with fade
     play music theme_tense fadein 2.0
     play sound distant_gunfire loop
 
