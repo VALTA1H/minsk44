@@ -12,3 +12,4 @@ android.keystore
 bundle.keystore
 game/script.rpy.bak
 android.json
+game/scripts/venv/*
