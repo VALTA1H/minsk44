@@ -49,26 +49,24 @@ default chose_duty = False
 default chose_comrades = False
 define masha_rep = 0
 
-# === ДИСКЛЕЙМЕР ===
-label disclaimer:
-    scene black with fade
-
-    d_text "Этот проект представляет собой художественную визуальную новеллу, вдохновлённую историческими событиями операции «Багратион» в 1944 году."
-    d_text "Он стремится к честному, уважительному отображению трагических реалий войны и моральных дилемм, с которыми сталкивались люди."
-    d_text "Все персонажи и события вымышлены. Игра содержит травматичные эпизоды и описание военных действий."
-    d_text "Рекомендуется проявлять осторожность при знакомстве с содержанием."
-
-    menu:
-        "Я понимаю и хочу продолжить":
-            nvl hide
-            nvl clear
-            pass
-
-        "Я не хочу продолжать (Выход из игры)":
-            nvl hide
-            nvl clear
-            $ renpy.quit()
-
+label splashscreen:
+    $ mouse_visible = False
+    scene black
+    $ renpy.pause(1.0, hard=True)
+    show age_16 at truecenter with Dissolve(1.0)
+    $ renpy.pause(2.0, hard=True)
+    hide age_16 with Dissolve(1.0)
+    $ renpy.pause(1.0, hard=True)
+    show screen beta_version with Dissolve(1.0)
+    $ renpy.pause(4.0, hard=True)
+    hide screen beta_version with Dissolve(1.0)
+    $ renpy.pause(1.0, hard=True)
+    show halipov_ent with Dissolve(1.0)
+    $ renpy.pause(2.0, hard=True)
+    play sound mgs_over
+    $ renpy.pause(2.0, hard=True)
+    hide halipov_ent
+    $ mouse_visible = True
     return
 
 # === ПРОЛОГ: СОН ===
@@ -99,7 +97,6 @@ label pre_history:
 
 # === НАЧАЛО: ПЕРВЫЙ ДЕНЬ ===
 label start:
-    call disclaimer from _call_disclaimer
     call pre_history from _call_pre_history
 
     scene trench_night with fade
