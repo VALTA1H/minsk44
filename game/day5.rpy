@@ -238,6 +238,9 @@ label epilogue_a:
     scene black with dissolve
     d_text "80 лет спустя…"
 
+    nvl hide
+    nvl clear
+
     scene minsk_memorial_2025_day with fade
     stop music fadeout 2.0
     play sound birds_morning
