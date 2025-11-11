@@ -317,6 +317,9 @@ label epilogue_b:
 
 # === ЗАВЕРШЕНИЕ ИГРЫ ===
 label game_end:
+    stop audio fadeout 2.0
+    stop sound fadeout 2.0
+    play music letting_my_heart_speak fadein 2.0
     $ mouse_visible = False
     scene black
     $ renpy.pause(1.0, hard=True)
