@@ -40,8 +40,14 @@ label trail_pursuit:
     play music cold_iron fadein 2.0 loop
     n_narr "След приводит к заброшенному лагерю. Палатки, кострище… и тела наших пленных."
 
+    nvl hide
+    nvl clear
+
     soldier "Расстреляны… в упор."
     n_narr "На земле — обломки касок, окровавленные бинты. Немцы ушли недавно."
+
+    nvl hide
+    nvl clear
 
     masha "Под палаткой — ящик."
 
@@ -55,6 +61,9 @@ label trail_pursuit:
         nvl clear
 
         n_narr "После ожесточенного боя мы всё же смогли отбиться и выйти из засады живыми."
+
+        nvl hide
+        nvl clear
 
     stop sound
     jump night_camp
@@ -80,6 +89,9 @@ label night_camp:
 
     n_narr "Ночь. Костёр потрескивает. Усталость — до костей."
     n_narr "Мы с Колей и Машей сели у костра."
+
+    nvl hide
+    nvl clear
 
     # Речь Маши — зависит от репутации ГГ
     if masha_rep >= 1:
@@ -109,6 +121,9 @@ label night_camp:
     n_narr "2 июля. Рассвет. Мы вышли к мосту через болотистую реку."
     n_narr "Последний путь отступления врага. Если мост взорвут — котёл не замкнётся."
 
+    nvl hide
+    nvl clear
+
     ivan "Пулемёт на насыпи. Мины на подступах. И заряд под опорами — уже заложен."
 
     politruk "Если не возьмём за час — придут ястребы и сравняют всё."
@@ -127,6 +142,9 @@ label bridge_assault:
     n_narr "Пулемёт открывает огонь! Земля рвётся под ногами."
     kolya "А-а-а!" with hpunch
 
+    nvl hide
+    nvl clear
+
     n_narr "Коля застывает посреди поляны — парализован страхом."
     n_narr "У меня есть считанные мгновения на принятие решения."
 
@@ -139,27 +157,46 @@ label bridge_assault:
             play sound mgs_over
             n_narr "Резкая боль пронзает меня, в глазах темнеет..."
             $ kolya_saved = True
+            nvl hide
+            nvl clear
             jump coma
         "Подавить огонь":
             play sound grenade_throw
             n_narr "Граната в амбразуру. Коля остаётся стоять, дрожа."
             play sound explosion_loud
             $ kolya_saved = False
+            nvl hide
+            nvl clear
 
     stop sound
     jump bridge_victory
 
 label coma:
     n_narr "Очнулся уже после боя."
+
+    nvl hide
+    nvl clear
+
     masha "Наконец-то очнулся. Мы уже думали, что тебя не спасти."
+
     n_narr "Я перевожу свой взгляд на дрожащего Колю."
+
+    nvl hide
+    nvl clear
+
     kolya "Спасибо тебе большое. Я не знаю, что на меня нашло."
     kolya "Все тело в одночасье оцепенело, я не мог пошевелиться."
+
     narr "Я понимаю. Самое главное, что мы остались в живых."
+
     masha "Не прыгай больше под пули, дурак!"
     masha "А ты, Коля, не стой как баран. Тебе повезло, что тебя спасли в этот раз!"
     kolya "Прости меня..."
     n_narr "Рана была несущественная. Через несколько часов мы продолжили путь."
+
+    nvl hide
+    nvl clear
+
     jump bridge_victory
 
 
@@ -167,6 +204,8 @@ label bridge_artillery:
     play sound artillery
     n_narr "Залп «Катюш»! Пулемёт уничтожен. Мост — цел."
     $ kolya_saved = True
+    nvl hide
+    nvl clear
     jump bridge_victory
 
 # === ФИНАЛ ДНЯ ===
@@ -186,9 +225,15 @@ label bridge_victory:
 
     n_narr "Коля молча чистит винтовку. Его взгляд — пустой, безжизненный. Словно сама смерть чистит свою косу."
 
+    nvl hide
+    nvl clear
+
     scene black with fade
     n_narr "К вечеру 2 июля мы выходим к шоссе на Минск. Впереди — огни столицы."
     n_narr "Пятый день начнётся с атаки. Но сегодня… сегодня мы выжили."
+
+    nvl hide
+    nvl clear
 
     if kolya_saved:
         kolya "Слушай, извини за сегодняшнее."
@@ -196,5 +241,7 @@ label bridge_victory:
         kolya "И ты меня прости, товарищ."
         narr "Хоть твоё спасение и стоило мне ранения, но твоя жизнь важнее."
         n_narr "После этого диалога мы пошли спать, в надежде, что завтрашний день будет лучше."
+        nvl hide
+        nvl clear
     stop music
     jump day5_start
