@@ -72,7 +72,7 @@ label pows_camp_ruins:
 
     kolya "Зачем они это делали? Зачем так много зла?"
     ivan "Чтобы мы помнили. Чтобы никогда не допустили этого снова."
-    
+
     n_narr "Я поднимаю куклу. Кладу в карман — рядом с письмом с обещанием."
 
     nvl hide
@@ -285,7 +285,11 @@ label epilogue_b:
     # === ПЕРЕХОД В 2025 ГОД ===
     scene black with dissolve
     nvl clear
+    
     n_narr "80 лет спустя…"
+
+    nvl hide
+    nvl clear
 
     scene minsk_memorial_2025_day with fade
     play sound birds_morning
