@@ -330,4 +330,18 @@ label game_end:
     $ renpy.pause(2.0, hard=True)
     hide halipov_ent
     $ mouse_visible = True
-    $ MainMenu(confirm=False)()
+    $ _game_menu_screen = None
+    $ renpy.config.skipping = None
+    $ _skipping = False
+    $ renpy.pause(2.0, hard=True)
+    show screen support
+    if persistent.seen_titres:
+        pause supporter_screen_speed
+    else:
+        $ renpy.pause(supporter_screen_speed, hard=True)
+    $ persistent.seen_titres = True
+    $ renpy.pause(2.0, hard=True)
+    hide screen support with Dissolve(2.0)
+    $ _game_menu_screen = "save_screen"
+    $ _skipping = True
+    return
