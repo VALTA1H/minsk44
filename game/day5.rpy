@@ -243,15 +243,20 @@ label epilogue_a:
     play sound birds_morning
 
     grandson "Дед… ты гордишься собой?"
-    old_narr "Я горжусь теми, кто не вернулся. А я… я просто выжил."
+    narr "Я горжусь теми, кто не вернулся. А я… я просто выжил."
 
     grandson "Но благодаря тебе у нас есть сегодняшний день."
     grandson "И я обещаю — мы сохраним эту память и сделаем нашу Беларусь сильной."
+
+    nvl hide
+    nvl clear
 
     d_text "Внук кладёт цветы к мемориалу. На граните — тысячи имён. Среди них — Иван, Маша, Коля…"
     d_text "Современный Минск — живой, чистый, благоустроенный."
     d_text "Аллея Победы. Дети играют. Студенты читают. Жизнь продолжается!"
 
+    nvl hide
+    nvl clear
     scene black with fade
     d_text "Памяти всех, кто пал в боях за Беларусь. 1941–1944."
     d_text "80 лет Победы."
@@ -283,7 +288,7 @@ label epilogue_b:
     play sound birds_morning
 
     grandson "Ты когда-нибудь его видел?"
-    old_kolya "Каждый день: в своих снах, в зеркале, в лицах молодых солдат!"
+    kolya "Каждый день: в своих снах, в зеркале, в лицах молодых солдат!"
 
     d_text "Внук стоит у Мемориала «Минск — Город-герой». На чёрном граните — тысячи имён."
     d_text "Его палец останавливается на одном:"
@@ -294,6 +299,8 @@ label epilogue_b:
 
     d_text "Солнце садится. Ветер шелестит листвой. Где-то играет гармонь."
 
+    nvl hide
+    nvl clear
     scene black with fade
     d_text "Он не вернулся. Но благодаря ему — вернулись другие!"
     d_text "80 лет Победы."
@@ -303,7 +310,21 @@ label epilogue_b:
 
 # === ЗАВЕРШЕНИЕ ИГРЫ ===
 label game_end:
-    scene black with fade
-    d_text "Спасибо, что прошли этот путь памяти."
-    d_text "Проект посвящается 80-летию освобождения Республики Беларусь от немецко-фашистских захватчиков."
+    $ mouse_visible = False
+    scene black
+    $ renpy.pause(1.0, hard=True)
+    show age_16 at truecenter with Dissolve(1.0)
+    $ renpy.pause(2.0, hard=True)
+    hide age_16 with Dissolve(1.0)
+    $ renpy.pause(1.0, hard=True)
+    show screen end_credit with Dissolve(1.0)
+    $ renpy.pause(4.0, hard=True)
+    hide screen end_credit with Dissolve(1.0)
+    $ renpy.pause(1.0, hard=True)
+    show halipov_ent with Dissolve(1.0)
+    $ renpy.pause(2.0, hard=True)
+    play sound mgs_over
+    $ renpy.pause(2.0, hard=True)
+    hide halipov_ent
+    $ mouse_visible = True
     $ MainMenu(confirm=False)()

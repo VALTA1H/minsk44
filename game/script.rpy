@@ -36,8 +36,6 @@ define civil = Character("Неизвестный", color="#9dff00ff")
 define old_man = Character("Старик", color="#d3d3d3")
 define old_woman = Character("Старуха", color="#f5deb3")
 define grandson = Character("Внук", color="#90ee90")
-define old_narr = Character("Дед", color="#91d46a")  # пожилой ГГ в эпилоге A
-define old_kolya = Character("Коля (в 2025)", color="#add8e6")  # если Коля дожил
 
 # === ГЛОБАЛЬНЫЕ ФЛАГИ ===
 default avoided_ambush = False

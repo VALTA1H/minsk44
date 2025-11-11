@@ -102,6 +102,14 @@ screen say(who, what):
     if not renpy.variant("small"):
         add SideImage() xalign 0.0 yalign 1.0
 
+screen end_credit():
+    vbox:
+        xalign 0.5 yalign 0.5 spacing 20 xmaximum 1200
+        text _("Конец!") xalign 0.5 font gui.interface_text_font color "#f8696a" size 40
+        null height 30
+        text _("Спасибо, что прошли этот путь памяти.") style "beta_warning"
+        text _("Проект посвящается 80-летию освобождения Республики Беларусь от немецко-фашистских захватчиков.") style "beta_warning"
+
 screen beta_version():
     vbox:
         xalign 0.5 yalign 0.5 spacing 20 xmaximum 1200
