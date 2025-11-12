@@ -35,11 +35,12 @@ screen support(bg = "black"):
                 text "Арсений Дерновский & Каджакулак Алтай"
             vbox:
                 spacing 40 align(0.5, 0.5)
-                text _("Художник по персонажам:") size 40 bold True
-                text "Футер пжпжпжпжпж"
+                add "gui/credits/title.webp"
+                text _("Великий Художник:") size 40 bold True
+                text "Footer Heart"
             vbox:
                 spacing 40 align(0.5, 0.5)
-                text _("Художник по окружению:") size 40 bold True
+                text _("Дизайнер:") size 40 bold True
                 text "Арсений Дерновский & Каджакулак Алтай"
             vbox:
                 spacing 40 align(0.5, 0.5)

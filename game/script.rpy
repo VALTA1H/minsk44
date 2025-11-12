@@ -48,6 +48,13 @@ default chose_duty = False
 default chose_comrades = False
 define masha_rep = 0
 
+# config.custom_text_tags["bt"] = bounce_tag
+# config.custom_text_tags["fi"] = fade_in_tag
+# config.custom_text_tags["sc"] = scare_tag
+# config.custom_text_tags["rotat"] = rotate_tag
+# config.custom_text_tags["chaos"] = chaos_tag
+# config.custom_text_tags["move"] = move_tag
+
 label splashscreen:
     $ mouse_visible = False
     scene black
