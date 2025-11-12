@@ -149,6 +149,10 @@ label find_solider:
 label kolya_meet:
 
     n_narr "Подойдя к нему поближе, я коснулся его плеча"
+
+    nvl hide
+    nvl clear
+    
     narr "Ты рядовой Захаров?"
     kolya "я.. Я!" with hpunch
     narr "Как звать тебя?"

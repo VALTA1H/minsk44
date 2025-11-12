@@ -148,6 +148,9 @@ label bridge_assault:
     n_narr "Коля застывает посреди поляны — парализован страхом."
     n_narr "У меня есть считанные мгновения на принятие решения."
 
+    nvl hide
+    nvl clear
+
     menu:
         "Спасти его":
             play sound grenade_throw
