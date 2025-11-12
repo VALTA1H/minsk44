@@ -177,20 +177,20 @@ label minsk_liberated:
     politruk "Сегодня — великий день! Беларусь свободна!"
     n_narr "Но в этом празднике — горечь. Слишком много имён, что не вернутся домой."
 
-    nvl hide
-    nvl clear
-
-    scene black with fade
-
-    n_narr "Ночью город не спит. Люди обнимаются, плачут, поют."
-    n_narr "Я стою у разрушенного фонтана."
-
-    nvl hide
-    nvl clear
-
     scene black with fade
 
     if chose_duty:
+        nvl hide
+        nvl clear
+
+        scene black with fade
+
+        n_narr "Ночью город не спит. Люди обнимаются, плачут, поют."
+        n_narr "Я стою у разрушенного фонтана."
+
+        nvl hide
+        nvl clear
+
         n_narr "Я выжил. Но смогу ли я защитить страну?"
     elif chose_comrades:
         n_narr "Я не вернулся домой. Но, может, именно поэтому другие вернулись."

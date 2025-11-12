@@ -30,7 +30,16 @@ NARRATOR_VARS_TO_EXCLUDE = {
     "hover_color",
     "scrollbars",
     "if",
-    "textbutton"
+    "textbutton",
+    "kolya",
+    "grandson",
+    "ivan",
+    "politruk",
+    "soldier",
+    "civil",
+    "hanz",
+    "old_man",
+    "old_woman"
 }
 
 OUTPUT_FILENAME = "dialogues_output.txt"

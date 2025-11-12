@@ -85,7 +85,7 @@ label pre_history:
 
     scene poland with fade
     n_narr "Они заявили, что их обстреляли на границе поляки осенью 39-го года."
-    n_narr "В то время как они обстреливали сами себя, чтобы выдать себя за жертву..."
+    n_narr "В то время как они обстреливали себя САМИ, чтобы выдать себя за жертву..."
 
     nvl hide
     nvl clear
@@ -104,7 +104,7 @@ label pre_history:
     nvl hide
     nvl clear
 
-    stop music fadeout 3.0
+    stop music fadeout 5.0
 
     return
 
