@@ -590,8 +590,8 @@ translate None strings:
     new "джойстик"
 
     # renpy/common/00preferences.rpy:352
-    old "joystick..."
-    new "джойстик..."
+    old "joystick…"
+    new "джойстик…"
 
     # renpy/common/00preferences.rpy:359
     old "skip"
@@ -918,8 +918,8 @@ translate None strings:
     new "\n{color=#fff}Скопировано в буфер обмена.{/color}"
 
     # renpy/common/00iap.rpy:231
-    old "Contacting App Store\nPlease Wait..."
-    new "Связываюсь с App Store\nПожалуйста, ждите..."
+    old "Contacting App Store\nPlease Wait…"
+    new "Связываюсь с App Store\nПожалуйста, ждите…"
 
     # renpy/common/00updater.rpy:415
     old "No update methods found."
@@ -999,7 +999,7 @@ translate None strings:
 
     # renpy/common/00updater.rpy:1949
     old "Finishing up."
-    new "Завершаю..."
+    new "Завершаю…"
 
     # renpy/common/00updater.rpy:1951
     old "The updates have been installed. The program will restart."

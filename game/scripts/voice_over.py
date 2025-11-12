@@ -108,7 +108,7 @@ def process_rpy_files_and_write_to_file(rpy_files: List[str], source_desc: str, 
         print("Список файлов для обработки пуст. Работа завершена.")
         return
 
-    print(f"Найдено {len(rpy_files)} .rpy файлов для обработки. Начинаю сбор данных...")
+    print(f"Найдено {len(rpy_files)} .rpy файлов для обработки. Начинаю сбор данных…")
 
     # Сначала собираем все диалоги
     for file_path in rpy_files:

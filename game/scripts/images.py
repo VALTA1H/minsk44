@@ -74,7 +74,7 @@ def main():
             print(f"          {script_dir}")
             continue
         
-        print(f"   ✅ Directory exists! Scanning for .webp files...")
+        print(f"   ✅ Directory exists! Scanning for .webp files…")
         found_any = True
         
         # Walk through directory
@@ -117,7 +117,7 @@ def main():
     for i, (identifier, path) in enumerate(all_images[:5]):
         print(f"   {i+1}. image {identifier} = \"{path}\"")
     if len(all_images) > 5:
-        print(f"   ... and {len(all_images)-5} more")
+        print(f"   … and {len(all_images)-5} more")
 
 if __name__ == "__main__":
     print("="*50)

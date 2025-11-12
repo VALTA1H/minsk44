@@ -224,7 +224,7 @@ def process_directory(input_dir: str, output_dir: str, config: Dict[str, Any]):
             continue
 
         # 3. Process and convert
-        print(f"[{total_files}] Processing '{filename}'...")
+        print(f"[{total_files}] Processing '{filename}'…")
         output_path = convert_to_webp_with_metadata(input_path, output_dir, config)
         
         if output_path:
@@ -347,7 +347,7 @@ class KSApp(ctk.CTk):
 
         self.reprocess_button.configure(state="disabled")
         self.save_button.configure(state="disabled")
-        self.process_dir_button.configure(state="disabled", text="Processing...")
+        self.process_dir_button.configure(state="disabled", text="Processing…")
         
         print("\nNOTE: GUI may freeze during batch processing. Check console for progress.")
         try:
@@ -384,7 +384,7 @@ class KSApp(ctk.CTk):
         
         # UI Feedback during processing
         self.reprocess_button.configure(state="disabled") 
-        self.output_canvas.configure(text="Processing...", text_color="yellow")
+        self.output_canvas.configure(text="Processing…", text_color="yellow")
 
         try:
             input_img_original, processed_img, error = ks_process_image(self.input_image_path, self.config)
