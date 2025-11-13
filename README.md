@@ -6,7 +6,7 @@
 [![OS](https://img.shields.io/badge/OS-Windows%2C%20macOS%2C%20Linux-0078D4)](https://www.renpy.org/doc/html/build.html)
 [![Features](https://img.shields.io/badge/Features-Core%20Mechanics-4EC5C2)](#⚙️-core-features)
 [![Dependencies](https://img.shields.io/badge/Dependencies-Kinetic%20Text%20%26%20Achievements-FF8C00)](#✨-credits-&-acknowledgments)
-[![Version](https://img.shields.io/badge/Version-1.0.0--beta-brightgreen)](#✨-whats-new)
+[![Version](https://img.shields.io/badge/Version-1.1--beta-brightgreen)](#✨-whats-new)
 [![GitHub last commit](https://img.shields.io/github/last-commit/sehaxe/minsk44)](#)
 
 ⭐ Star us on GitHub — your support motivates us a lot! 🙏😊
