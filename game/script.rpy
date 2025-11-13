@@ -48,13 +48,6 @@ default chose_duty = False
 default chose_comrades = False
 define masha_rep = 0
 
-# config.custom_text_tags["bt"] = bounce_tag
-# config.custom_text_tags["fi"] = fade_in_tag
-# config.custom_text_tags["sc"] = scare_tag
-# config.custom_text_tags["rotat"] = rotate_tag
-# config.custom_text_tags["chaos"] = chaos_tag
-# config.custom_text_tags["move"] = move_tag
-
 label splashscreen:
     $ mouse_visible = False
     scene black
@@ -80,7 +73,7 @@ label pre_history:
     scene black with fade
     play music dramatic_theme fadein 5.0 loop
 
-    n_narr "Заставил вас ждать, не так ли?"
+    show screen achievement_unlock("{size=14}Заставил тебя ждать, да?{/size}", box_len=300, read_len=3.0)
     n_narr "Уже который год идёт кровопролитная война, которая решает наши судьбы."
     n_narr "Я помню, как в своей родной деревне проводил чудесное время со своей женой."
     n_narr "Те теплые майские дни. Те самые моменты, когда мы были счастливы."
@@ -161,6 +154,7 @@ label kolya_meet:
     nvl clear
 
     narr "Ты рядовой Захаров?"
+    show screen achievement_unlock("{size=14}Новый товарищ?{/size}", box_len=300, read_len=3.0)
     kolya "я.. Я!" with hpunch
     narr "Как звать тебя?"
     kolya "Захаров Николай Павлович" with hpunch
@@ -273,11 +267,13 @@ label kolya_meet:
         "Атаковать немедленно":
             narr "Припасы никогда не будут лишними. Нам не помешает их пополнить."
             ivan "Хорошо. Берём в кольцо. Атака!"
+            show screen achievement_unlock("{size=14}Кто не рискует — тот не пьет шампанского{/size}", box_len=300, read_len=3.0)
             jump convoy_fight
 
         "Сообщить командованию по рации":
             narr "Риск неоправдан. Лучше передать координаты основным силам."
             politruk "Верное решение, солдат. Разумная предосторожность."
+            show screen achievement_unlock("{size=14}Тише едешь — дальше будешь{/size}", box_len=300, read_len=3.0)
             jump convoy_report
 
 # === БОЙ ЗА ОБОЗ ===

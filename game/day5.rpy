@@ -139,6 +139,7 @@ label freedom_square_approach:
             $ chose_duty = True
             nvl hide
             nvl clear
+            show screen achievement_unlock("{size=14}Не стоит понимать доброту за слабость, грубость за силу, а подлость за умение жить.{/size}", box_len=400, read_len=5.0)
             jump minsk_liberated
 
         "Спасти Ивана — броситься к нему":
@@ -149,6 +150,7 @@ label freedom_square_approach:
             $ chose_comrades = True
             nvl hide
             nvl clear
+            show screen achievement_unlock("{size=14}Жизнь можно начать с чистого листа, но почерк изменить невозможно.{/size}", box_len=400, read_len=5.0)
             jump minsk_liberated
 
 # === ОСВОБОЖДЕНИЕ МИНСКА ===
