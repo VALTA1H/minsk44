@@ -1,25 +1,25 @@
-This **README.md** is formatted to mimic the structure and aesthetic of the GitHub template you provided, while incorporating all the specific information about your Ren'Py Visual Novel and custom tools.
-
-<a name="top"></a>
+# Minsk 1944: No Name
 [![Minsk 1944: No Name](https://img.shields.io/badge/Project-Minsk%201944%3A%20No%20Name-BB2020)](https://github.com/sehaxe/minsk44)
 [![Engine](https://img.shields.io/badge/Engine-Ren%27Py-F05030)](https://www.renpy.org/)
 [![Language](https://img.shields.io/badge/Language-Ren%27Py%20Script%2C%20Python-306998)](https://www.renpy.org/doc/html/language.html)
-[![Genre](https://img.shields.io/badge/Genre-Historical%20Drama%2C%20VN-512BD4)](#-about)
+[![Genre](https://img.shields.io/badge/Genre-Historical%20Drama%2C%20VN-512BD4)](#🚀-about)
 [![OS](https://img.shields.io/badge/OS-Windows%2C%20macOS%2C%20Linux-0078D4)](https://www.renpy.org/doc/html/build.html)
-[![Dependencies](https://img.shields.io/badge/Dependencies-Kinetic%20Text%20%26%20Achievements-FF8C00)](#✨-credits--acknowledgments)
+[![Features](https://img.shields.io/badge/Features-Core%20Mechanics-4EC5C2)](#⚙️-core-features)
+[![Dependencies](https://img.shields.io/badge/Dependencies-Kinetic%20Text%20%26%20Achievements-FF8C00)](#✨-credits-&-acknowledgments)
 [![Version](https://img.shields.io/badge/Version-1.0.0--beta-brightgreen)](#✨-whats-new)
 [![GitHub last commit](https://img.shields.io/github/last-commit/sehaxe/minsk44)](#)
 
 ⭐ Star us on GitHub — your support motivates us a lot! 🙏😊
 
 ## Table of Contents
-- [About](#-about)
-- [What's New](#-whats-new)
-- [Core Features](#-core-features)
-- [How to Run](#-how-to-run)
-- [Custom Tools & Scripts](#-custom-tools-scripts)
-- [Credits & Acknowledgments](#-credits--acknowledgments)
-- [License](#-license)
+- [About](#🚀-about)
+- [What's New](#✨-whats-new)
+- [Core Features](#⚙️-core-features)
+- [Screenshots](#🖼️-screenshots)
+- [How to Run](#📝-how-to-run)
+- [Custom Tools & Scripts](#🛠️-custom-tools-&-scripts)
+- [Credits & Acknowledgments](#✨-credits-&-acknowledgments)
+- [License](#📃-license)
 
 ## 🚀 About
 
@@ -62,6 +62,15 @@ This project utilizes advanced Ren'Py features to enhance the player experience.
 > [!NOTE]
 > The game uses the `nvl` mode for extended narration and `adv` mode for direct character dialogue, providing a varied reading experience.
 
+## 🖼️ Screenshots
+
+A visual look into **Minsk 1944: No Name**, showcasing the custom, stylized background art and the intense atmosphere of the Eastern Front.
+
+<img width="1920" height="1108" alt="Screenshot_20251113_172819" src="https://github.com/user-attachments/assets/36d63034-ba03-4456-8035-cd993dcc507a" />
+<img width="1920" height="1108" alt="Screenshot_20251113_172841" src="https://github.com/user-attachments/assets/7255e9d2-b3df-4910-9051-58f2a47f24ff" />
+<img width="1920" height="1108" alt="Screenshot_20251113_172912" src="https://github.com/user-attachments/assets/49ab41cf-1ff7-4ca6-9e87-024817f589ce" />
+
+
 ## 📝 How to Run
 
 To run the Visual Novel, you only need the Ren'Py engine installed.
@@ -97,6 +106,8 @@ The `scripts/` directory contains powerful custom Python tools used to simplify 
 ### 2. KS-ify Image Processor (`ks_ify_image_processor.py`)
 
 A GUI tool that applies custom OpenCV filters to images to create a highly stylized, painted visual novel background aesthetic.
+
+<img width="1800" height="928" alt="Screenshot_20251113_173725" src="https://github.com/user-attachments/assets/345a38a6-3376-469f-9ddf-79f4d777484f" />
 
 | Feature | Description |
 | :--- | :--- |
