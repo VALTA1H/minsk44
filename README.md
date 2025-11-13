@@ -66,6 +66,9 @@ A GUI-based tool that processes real photos to give them a "Katawa Shoujo like b
     *   **Batch Processing:** Can process entire folders of images at once.
     *   **Compression:** Automatically resizes to 1920x1080 and saves as WebP.
 *   **Usage:** Run the script to open the GUI. Select "Process Directory" to convert a folder of assets.
+    ```bash
+    python ks_ify_image_processor.py
+    ```
 
 ### 3. Image Definition Generator (`image_definition_generator.py`)
 Automates the tedious process of writing `image name = "path/file.webp"` lines in Ren'Py.
@@ -84,7 +87,7 @@ Automates the tedious process of writing `image name = "path/file.webp"` lines i
 
 ## 📂 Project Structure
 
-*   `script.rpy`: Contains the main story flow, character definitions, and logic.
+*   `script.rpy + day2.rpy...`: Contains the main story flow, character definitions, and logic.
 *   `images.rpy`: (Generated) Contains image definitions.
 *   `gui/`: Interface assets.
 *   `audio/`: Music and sound effects.
@@ -95,4 +98,4 @@ Automates the tedious process of writing `image name = "path/file.webp"` lines i
 ## 📜 License
 *   **Game Assets:** Creative Commons
 *   **Code:** This project is under GPL3
-*   **Third-Party:** Kinetic Text Tags and Achievements RPY belong to their respective creators.
+*   **Third-Party:** Kinetic Text Tags and Renpy Achievement belong to their respective creators.
