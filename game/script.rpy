@@ -242,6 +242,8 @@ label kolya_meet:
     masha_not_known "Свои! Не стреляйте!"
 
     n_narr "Из леса выходит молодая партизантка."
+    show masha at center
+    with zoomin
     n_narr "На вид, ей было лет 20-25."
 
     nvl hide
@@ -267,7 +269,7 @@ label kolya_meet:
         "Атаковать немедленно":
             narr "Припасы никогда не будут лишними. Нам не помешает их пополнить."
             ivan "Хорошо. Берём в кольцо. Атака!"
-            show screen achievement_unlock("{size=14}Кто не рискует — тот не пьет шампанского{/size}", box_len=300, read_len=3.0)
+            show screen achievement_unlock("{size=12}Кто не рискует — тот не пьет шампанского{/size}", box_len=400, read_len=3.0)
             jump convoy_fight
 
         "Сообщить командованию по рации":

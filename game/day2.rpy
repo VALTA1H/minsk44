@@ -88,6 +88,9 @@ label day2_start:
     nvl hide
     nvl clear
 
+    show masha at left
+    with easeinleft
+    with hpunch
     masha "Я знаю это здание! Слева — разрушенная лестница на второй этаж, а справа - подвал, выходящий во двор."
     masha "Могу провести в обход с тыла, но нужно удостовериться в безопасности."
 
@@ -114,6 +117,7 @@ label day2_start:
             show screen achievement_unlock("{size=14}Только идиот доверит свою жизнь оружию.{/size}", box_len=300, read_len=3.0)
             narr "Лучше не рисковать. Вдруг там гражданские…"
             masha "За мной. И чтоб тише воды…"
+            scene black with dissolve 
             n_narr "Мы пробираемся по завалам во двор, затем — в подвал здания."
             n_narr "Из темноты на нас смотрят две пары испуганных глаз. Старуха прижимает к себе ребёнка."
             n_narr "Рядом с ними — деревянный ящик с красным крестом."
@@ -148,6 +152,8 @@ label day2_basement:
     jump choice_med
 
 label choice_med:
+    show masha at left
+    with easeinleft
     menu choice_medicine:
         "Что сделать с ящиком?"
         "Забрать всё содержимое":
@@ -176,6 +182,9 @@ label choice_med:
 
     scene ghetto with dissolve
     play music warum loop
+    show masha scared at left
+    with easeinleft
+    with hpunch
     masha "{bt=1}Здесь был концентрационный {sc=3}{color=#E10600}лагерь… концлагерь{/color}{/sc}. Тут держали евреев.{/bt}"
     masha "{bt=1}Осенью сорок первого… их всех согнали сюда. А потом… потом большую часть{para}повели в сарай на окраине деревни.{/bt}"
     masha "{bt=1}Говорят, крики были слышны в соседних сёлах. А потом — тишина… и черные облака.{/bt}"

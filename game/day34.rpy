@@ -14,6 +14,8 @@ label day34_start:
     play sound crickets_sound
 
     ivan "След свежий. Колёса, гусеницы… и кровь."
+    show masha at right
+    with easeinright
     masha "Они везли офицеров. Может, даже штабников."
 
     n_narr "Маша — как лиса в лесу. Видит то, что скрыто от других."
@@ -49,6 +51,8 @@ label trail_pursuit:
     nvl hide
     nvl clear
 
+    show masha scared at left
+    with easeinleft
     masha "Под палаткой — ящик."
 
     if not avoided_ambush:
@@ -95,6 +99,9 @@ label night_camp:
 
     # Речь Маши — зависит от репутации ГГ
     if masha_rep >= 1:
+        show masha scared at right:
+            linear 2.0 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
+        with easeinright
         masha "Ты помнишь, что мы — люди. Даже здесь."
         masha "Я из Борок… Там, где сожгли деревню."
         masha "Загнали всех в сарай… маму, отца, сестрёнку…"
@@ -103,6 +110,9 @@ label night_camp:
         masha "Я выскочила первой. Слышала, как кричали дети…"
 
     else:
+        show masha scared at right:
+            linear 2.0 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
+        with easeinright
         masha "Я из Борок. Из той деревни, что стёрли с лица земли…"
         masha "Я помню их глаза. Так что не говори мне про необходимость."
 
@@ -181,9 +191,15 @@ label coma:
     nvl hide
     nvl clear
 
+    show masha scared at left:
+        ease 0.25 zoom 1.5 yoffset 512
+    with easeinleft
     masha "Наконец-то очнулся. Мы уже думали, что тебя не спасти."
 
     n_narr "Я перевожу свой взгляд на дрожащего Колю."
+    show masha scared at right:
+        ease 0.25 zoom 1.0 yoffset 0
+    with easeinright
 
     nvl hide
     nvl clear
@@ -193,6 +209,8 @@ label coma:
 
     narr "Я понимаю. Самое главное, что мы остались в живых."
 
+    show masha angry at left
+    with easeinleft
     masha "Не прыгай больше под пули, дурак!"
     masha "А ты, Коля, не стой как баран. Тебе повезло, что тебя спасли в этот раз!"
     kolya "Прости меня…"
@@ -240,7 +258,11 @@ label bridge_victory:
     nvl clear
 
     if kolya_saved:
+        scene forest_camp_night
         kolya "Слушай, извини за сегодняшнее."
+        show masha at right:
+            linear 2.0 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
+        with easeinright
         masha "Да ладно. Главное, что мы все остались живы."
         kolya "И ты меня прости, товарищ."
         narr "Хоть твоё спасение и стоило мне ранения, но твоя жизнь важнее."
