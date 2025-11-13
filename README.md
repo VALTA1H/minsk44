@@ -93,6 +93,6 @@ Automates the tedious process of writing `image name = "path/file.webp"` lines i
 ---
 
 ## 📜 License
-*   **Game Assets:** All rights reserved by the development team.
-*   **Code:** Custom scripts are provided for use within this project.
+*   **Game Assets:** Creative Commons
+*   **Code:** This project is under GPL3
 *   **Third-Party:** Kinetic Text Tags and Achievements RPY belong to their respective creators.
