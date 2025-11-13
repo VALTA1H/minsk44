@@ -9,9 +9,9 @@ The story explores themes of duty, camaraderie, the horrors of war, and memory.
 
 This project exists thanks to the incredible tools and modules provided by the community:
 
-*   **Ren'Py Engine:** Special thanks to **Ren'Py Tom (Tom Rothamel)** for creating the engine that makes this possible.
-*   **Kinetic Text Tags:** Huge thanks to the creators of the Kinetic Text Tags module for allowing dynamic text effects.
-*   **Achievements RPY:** Sincere gratitude to the developers of the Achievements module for their work, which allows us to track player progress.
+*   **[Ren'Py Engine](https://www.renpy.org/):** Special thanks to **Ren'Py Tom (Tom Rothamel)** for creating the engine that makes this possible.
+*   **[Kinetic Text Tags](https://github.com/SoDaRa/Kinetic-Text-Tags):** Huge thanks to the creators of the Kinetic Text Tags module for allowing dynamic text effects.
+*   **[Renpy Achievement](https://github.com/shawna-p/renpy-achievement):** Sincere gratitude to the developers of the Achievement module for their work, which allows us to track player progress.
 
 ### Development Team
 *   **Scenario:** Arseniy Dernovskiy & Kajakulak Altay
@@ -88,7 +88,7 @@ Automates the tedious process of writing `image name = "path/file.webp"` lines i
 *   `images.rpy`: (Generated) Contains image definitions.
 *   `gui/`: Interface assets.
 *   `audio/`: Music and sound effects.
-*   `tools/`: Directory containing the Python helper scripts.
+*   `scripts/`: Directory containing the Python helper scripts.
 
 ---
 
