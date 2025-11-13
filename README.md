@@ -11,16 +11,6 @@
 
 ⭐ Star us on GitHub — your support motivates us a lot! 🙏😊
 
-## Table of Contents
-- [About](#🚀-about)
-- [What's New](#✨-whats-new)
-- [Core Features](#⚙️-core-features)
-- [Screenshots](#🖼️-screenshots)
-- [How to Run](#📝-how-to-run)
-- [Custom Tools & Scripts](#🛠️-custom-tools-&-scripts)
-- [Credits & Acknowledgments](#✨-credits-&-acknowledgments)
-- [License](#📃-license)
-
 ## 🚀 About
 
 **Minsk 1944: No Name** is a historical drama Visual Novel set during the pivotal **Operation Bagration** in 1944. The story follows an unnamed protagonist, a sergeant in the Soviet army, through five intense days of combat, moral dilemmas, and the brutal reality of the Second World War on the Eastern Front.
