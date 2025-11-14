@@ -68,6 +68,7 @@ label coma:
     show masha scared at left:
         ease 0.25 zoom 1.5 yoffset 512
     with easeinleft
+    voice "audio/voice/masha/masha_24.opus"
     masha "Наконец-то очнулся. Мы уже думали, что тебя не спасти."
 
     n_narr "Я перевожу свой взгляд на дрожащего Колю."
@@ -85,7 +86,7 @@ label coma:
 
     show masha angry at left
     with easeinleft
-    masha "Не прыгай больше под пули, дурак!"
+    voice "audio/voice/masha/masha_25.opus"
     masha "А ты, Коля, не стой как баран. Тебе повезло, что тебя спасли в этот раз!"
     kolya "Прости меня…"
     n_narr "Рана была несущественная. Через несколько часов мы продолжили путь."
@@ -136,6 +137,7 @@ label bridge_victory:
         show masha at right:
             linear 2.0 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
         with easeinright
+        voice "audio/voice/masha/masha_26.opus"
         masha "Да ладно. Главное, что мы все остались живы."
         kolya "И ты меня прости, товарищ."
         narr "Хоть твоё спасение и стоило мне ранения, но твоя жизнь важнее."

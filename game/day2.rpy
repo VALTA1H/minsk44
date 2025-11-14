@@ -88,7 +88,11 @@ label day2_start:
     show masha at left
     with easeinleft
     with hpunch
+
+    voice "audio/voice/masha/masha_6.opus"
     masha "Я знаю это здание! Слева — разрушенная лестница на второй этаж, а справа - подвал, выходящий во двор."
+
+    voice "audio/voice/masha/masha_7.opus"
     masha "Могу провести в обход с тыла, но нужно удостовериться в безопасности."
 
     n_narr "Старшина Иван смотрит на меня. Время решать."
@@ -113,6 +117,7 @@ label day2_start:
         "Пойти на обход с Машей":
             show screen achievement_unlock("{size=14}Только идиот доверит свою жизнь оружию.{/size}", box_len=300, read_len=3.0)
             narr "Лучше не рисковать. Вдруг там гражданские…"
+            voice "audio/voice/masha/masha_8.opus"
             masha "За мной. И чтоб тише воды…"
             scene black with dissolve 
             n_narr "Мы пробираемся по завалам во двор, затем — в подвал здания."
@@ -163,6 +168,7 @@ label choice_med:
             n_narr "Я вынимаю из ящика только самое необходимое для полевого госпиталя — бинты и пакеты."
             n_narr "Старуха кивает, её глаза полны слёз благодарности."
             n_narr "Маша кладёт руку мне на плечо и шепчет:"
+            voice "audio/voice/masha/masha_9.opus"
             masha "Спасибо"
             $ masha_rep +=1
 
@@ -182,9 +188,15 @@ label choice_med:
     show masha scared at left
     with easeinleft
     with hpunch
+
+    voice "audio/voice/masha/masha_10.opus"
     masha "{bt=1}Здесь был концентрационный {sc=3}{color=#E10600}лагерь… концлагерь{/color}{/sc}. Тут держали евреев.{/bt}"
+    voice "audio/voice/masha/masha_11.opus"
     masha "{bt=1}Осенью сорок первого… их всех согнали сюда. А потом… потом большую часть{para}повели в сарай на окраине деревни.{/bt}"
-    masha "{bt=1}Говорят, крики были слышны в соседних сёлах. А потом — тишина… и черные облака.{/bt}"
+    voice "audio/voice/masha/masha_12.opus"
+    masha "{bt=1}Говорят, крики были слышны в соседних сёлах. А потом — тишина…"
+    voice "audio/voice/masha/masha_13.opus"
+    masha "{bt=1}И черные облака.{/bt}"
 
     n_narr "Она не плачет. Её боль глубже слёз. Она — память о тех, кого уже не вернуть."
     n_narr "Я кладу руку на обгоревшую дверь. {b}Три года{/b} оккупации. Тысячи убитых мирных жителей. Сотни расстрелянных семей." 
