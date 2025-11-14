@@ -1,53 +1,3 @@
-﻿# === АУДИО ===
-define artillery = "audio/artillery.opus"
-define rain = "audio/rain.opus"
-define machine_gun = "audio/machine_gun.opus"
-define birds_morning = "audio/birds_morning.opus"
-define theme_calm = "audio/theme_calm.opus"
-define crickets_sound = "audio/crickets_sound.opus"
-define distant_gunfire = "audio/distant_gunfire.opus"
-define dramatic_theme = "audio/dramatic_theme.opus"
-define grenade_throw = "audio/grenade_throw.opus"
-define child_crying = "audio/child_crying.opus"
-define distant_celebration = "audio/distant_celebration.opus"
-define incoming_shell_rising = "audio/incoming_shell_rising.opus"
-define explosion_loud = "audio/explosion_loud.opus"
-define theme_tense = "audio/theme_tense.opus"
-define wind_low = "audio/wind_low.opus"
-define alert = "audio/alert.opus"
-define mgs_over = "audio/mgs_over.opus"
-
-# === ПЕРСОНАЖИ ===
-define n_narr = Character("Безымянный", color="#91d46a", kind=nvl)
-define narr = Character("Безымянный", color="#91d46a")
-define d_text = Character("Автор", color="#ffffff", kind=nvl)
-define scene_narr = Character(None)
-
-define ivan = Character("Иван", color="#b0e0e6")
-define kolya = Character("Коля", color="#add8e6")
-define politruk = Character("Политрук", color="#ff7f7f")
-define masha = Character("Маша", color="#98fb98")
-define masha_not_known = Character("Женщина", color="#98fb98")
-define masha_lined = Character("Ж̶е̶н̶щ̶и̶н̶а̶ Маша", color="#98fb98")
-define soldier = Character("Рядовой", color="#ffffff")
-define hanz = Character("Немец",color="#b48282")
-
-# === ДОПОЛНИТЕЛЬНЫЕ ПЕРСОНАЖИ (жители, внук и др.) ===
-define civil = Character("Неизвестный", color="#9dff00ff")
-define old_man = Character("Старик", color="#d3d3d3")
-define old_woman = Character("Старуха", color="#f5deb3")
-define grandson = Character("Внук", color="#90ee90")
-
-# === ГЛОБАЛЬНЫЕ ФЛАГИ ===
-default avoided_ambush = False
-default saved_wounded = False
-default saved_soldier = False
-default spared_civilians = False
-default kolya_saved = False
-default chose_duty = False
-default chose_comrades = False
-define masha_rep = 0
-
 label splashscreen:
     $ mouse_visible = False
     scene black
@@ -68,7 +18,6 @@ label splashscreen:
     $ mouse_visible = True
     return
 
-# === ПРОЛОГ: СОН ===
 label pre_history:
     scene black with fade
     play music dramatic_theme fadein 5.0 loop
@@ -108,7 +57,6 @@ label pre_history:
 
     return
 
-# === НАЧАЛО: ПЕРВЫЙ ДЕНЬ ===
 label start:
     call pre_history from _call_pre_history
 
@@ -198,7 +146,6 @@ label kolya_meet:
     nvl hide
     nvl clear
 
-    # === УТРО: МАРШ ВГЛУБЬ ===
     scene black with dissolve
     scene dusty_road_day with fade
     play music theme_calm fadein 5.0 loop
@@ -223,8 +170,6 @@ label kolya_meet:
 
     stop music
 
-    # === ВСТРЕЧА С ПАРТИЗАНАМИ ===
-
     scene forest_ambush with dissolve
     n_narr "Проходя мимо леса, мы услышали шум."
     n_narr "Не ожидая ничего хорошего, мы направили оружие в сторону источника шума"
@@ -239,7 +184,8 @@ label kolya_meet:
     nvl hide
     nvl clear
 
-    masha_not_known "Свои! Не стреляйте!"
+    voice "audio/voice/masha/masha_1.opus"
+    masha_not_known "Это свои! Не стреляйте!"
 
     n_narr "Из леса выходит молодая партизантка."
     show masha at center
@@ -249,15 +195,20 @@ label kolya_meet:
     nvl hide
     nvl clear
 
+    voice "audio/voice/masha/masha_2.opus"
     masha_lined "Я партизантка. Меня зовут Маша."
 
     narr "И зачем ты пришла, Маша?"
 
+    voice "audio/voice/masha/masha_3.opus"
     masha "Там застрял немецкий обоз. Два грузовика под охраной тыловиков. Есть шанс пополнить припасы."
+
+    voice "audio/voice/masha/masha_4.opus"
     masha "У них медикаменты, патроны… даже хлеб. Нам это жизненно необходимо."
 
     ivan "Это ловушка, Маша? Или…?"
 
+    voice "audio/voice/masha/masha_5.opus"
     masha "Нет. Они застряли в грязи после дождя. К ним врядли придут на помощь."
 
     n_narr "Старшина смотрит на меня. Припасы нужны, но риск велик. Особенно после переправы."
@@ -278,7 +229,6 @@ label kolya_meet:
             show screen achievement_unlock("{size=14}Тише едешь — дальше будешь{/size}", box_len=300, read_len=3.0)
             jump convoy_report
 
-# === БОЙ ЗА ОБОЗ ===
 label convoy_fight:
     scene black with fade
     play sound machine_gun
@@ -289,7 +239,6 @@ label convoy_fight:
     nvl clear
     jump end_of_day1
 
-# === ПЕРЕДАЧА КООРДИНАТ ===
 label convoy_report:
     n_narr "Передаём координаты обоза. Через полчаса — глухой взрыв вдалеке. Скорее всего, немцы сами уничтожили грузы при отступлении… или их перехватили союзные войска."
     n_narr "Мы остаёмся с тем, что имеем, но избегаем потерь."
@@ -298,7 +247,6 @@ label convoy_report:
     nvl clear
     jump end_of_day1
 
-# === ВЕЧЕР ПЕРВОГО ДНЯ ===
 label end_of_day1:
     scene forest_camp with fade
     stop music
@@ -311,7 +259,6 @@ label end_of_day1:
     nvl hide
     nvl clear
 
-    # Рефлексия
     n_narr "Коля спит, прижавшись к винтовке. Иван точит нож. Политрук пишет письмо."
     n_narr "А я смотрю на закат и думаю: «Как нам победить в этом аду?»"
 

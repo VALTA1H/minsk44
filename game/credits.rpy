@@ -32,16 +32,15 @@ screen support(bg = "black"):
             vbox:
                 spacing 40 align(0.5, 0.5)
                 text _("Автор сценария:") size 40 bold True
-                text "Арсений Дерновский & Каджакулак Алтай"
+                text "Арсений Дерновский & Коджакулак Алтай"
             vbox:
                 spacing 40 align(0.5, 0.5)
-                add "gui/credits/title.webp"
-                text _("Великий Художник:") size 40 bold True
+                text _("Художник:") size 40 bold True
                 text "Footer Heart"
             vbox:
                 spacing 40 align(0.5, 0.5)
                 text _("Дизайнер:") size 40 bold True
-                text "Арсений Дерновский & Каджакулак Алтай"
+                text "Арсений Дерновский & Коджакулак Алтай"
             vbox:
                 spacing 40 align(0.5, 0.5)
                 text _("Программист:") size 40 bold True
@@ -94,7 +93,7 @@ screen support(bg = "black"):
             null height 500
             text _("Создано с помощью Ren'Py") size 40 bold True
             null height 500
-            add "gui/credits/title.webp"
+            add "gui/title.png"
 style credits_hbox:
     spacing 40
     ysize 30
