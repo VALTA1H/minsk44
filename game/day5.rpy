@@ -1,5 +1,3 @@
-# === ДЕНЬ 5: «МИНСК» (3 июля 1944 г.) ===
-
 label day5_start:
     scene black with fade
     play music theme_tense fadein 2.0
@@ -53,12 +51,11 @@ label day5_start:
 
     jump pows_camp_ruins
 
-# === РУИНЫ ЛАГЕРЯ ВОЕННОПЛЕННЫХ ===
 label pows_camp_ruins:
     scene minsk_pows_camp_ruins with fade
     stop sound
     play sound wind_low loop
-    #МУЗЫКУ ТРАГИЧНУЮ
+    play music caged_heart loop fadein 2.0
     n_narr "Забор из колючей проволоки. Обгоревшие бараки. И… детская игрушка — обугленная кукла у ворот."
 
     nvl hide
@@ -81,12 +78,13 @@ label pows_camp_ruins:
 
     n_narr "Я поднимаю куклу. Кладу в карман — рядом с письмом."
 
+    stop music fadeout 2.0
+
     nvl hide
     nvl clear
 
     jump freedom_square_approach
 
-# === ПОДХОД К ПЛОЩАДИ СВОБОДЫ ===
 label freedom_square_approach:
     scene minsk_freedom_square_ruins with fade
     play music theme_tense fadein 2.0
@@ -107,7 +105,6 @@ label freedom_square_approach:
     nvl hide
     nvl clear
 
-    # === АТАКА НАЧИНАЕТСЯ ===
     play sound machine_gun
     scene minsk_freedom_square_ruins with vpunch
 
@@ -127,12 +124,11 @@ label freedom_square_approach:
 
     n_narr "Иван лежит у подножия лестницы. Кровь на гимнастёрке. Но он смотрит на меня — и кивает в сторону окна."
 
-    ivan "Выпол… няй… приказ…"  # Хрипло, с кровью
+    ivan "Выпол… няй… приказ…"
 
     nvl hide
     nvl clear
 
-    # === ФИНАЛЬНЫЙ ВЫБОР ===
     menu:
         "Выполнить приказ — уничтожить пулемёт":
             narr "Минск должен быть свободен. Даже ценой его жизни."
@@ -156,7 +152,6 @@ label freedom_square_approach:
             show screen achievement_unlock("{size=14}Жизнь можно начать с чистого листа, но почерк изменить невозможно.{/size}", box_len=400, read_len=5.0)
             jump minsk_liberated
 
-# === ОСВОБОЖДЕНИЕ МИНСКА ===
 label minsk_liberated:
     scene minsk_freedom_square_evening with fade
     stop music fadeout 3.0
@@ -206,7 +201,6 @@ label minsk_liberated:
     nvl hide
     nvl clear
 
-    # === ПОДГОТОВКА К ЭПИЛОГУ ===
     scene black with dissolve
     n_narr "Через 80 лет… кто вспомнит нас? Кто сохранит память?"
 
@@ -216,18 +210,14 @@ label minsk_liberated:
     stop music
     jump epilogue_setup
 
-    # === ПОДГОТОВКА К ЭПИЛОГУ ===
 label epilogue_setup:
-    # Проверяем, какой путь был выбран
     if chose_duty:
         jump epilogue_a
     elif chose_comrades:
         jump epilogue_b
     else:
-        # На случай, если флаги не установлены (резерв)
         jump epilogue_a
 
-# === ЭПИЛОГ A: «РАССКАЗ ВЕТЕРАНА» ===
 label epilogue_a:
     nvl clear
     scene minsk_memorial_1944 with fade
@@ -244,7 +234,6 @@ label epilogue_a:
     nvl hide
     nvl clear
 
-    # === ПЕРЕХОД В 2025 ГОД ===
     scene black with dissolve
     d_text "80 лет спустя…"
 
@@ -277,7 +266,6 @@ label epilogue_a:
 
     jump game_end
 
-# === ЭПИЛОГ B: «ПОСЛЕДНИЙ ШАГ» ===
 label epilogue_b:
     nvl clear
     scene black with fade
@@ -292,7 +280,6 @@ label epilogue_b:
     nvl hide
     nvl clear
 
-    # === ПЕРЕХОД В 2025 ГОД ===
     scene black with dissolve
     nvl clear
 
@@ -325,7 +312,6 @@ label epilogue_b:
 
     jump game_end
 
-# === ЗАВЕРШЕНИЕ ИГРЫ ===
 label game_end:
     stop audio fadeout 2.0
     stop sound fadeout 2.0

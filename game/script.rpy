@@ -18,7 +18,6 @@
     $ mouse_visible = True
     return
 
-# === ПРОЛОГ: СОН ===
 label pre_history:
     scene black with fade
     play music dramatic_theme fadein 5.0 loop
@@ -58,7 +57,6 @@ label pre_history:
 
     return
 
-# === НАЧАЛО: ПЕРВЫЙ ДЕНЬ ===
 label start:
     call pre_history from _call_pre_history
 
@@ -148,7 +146,6 @@ label kolya_meet:
     nvl hide
     nvl clear
 
-    # === УТРО: МАРШ ВГЛУБЬ ===
     scene black with dissolve
     scene dusty_road_day with fade
     play music theme_calm fadein 5.0 loop
@@ -172,8 +169,6 @@ label kolya_meet:
     politruk "Их задача — рвать оборону. Наша — не отставать и зачищать фланги."
 
     stop music
-
-    # === ВСТРЕЧА С ПАРТИЗАНАМИ ===
 
     scene forest_ambush with dissolve
     n_narr "Проходя мимо леса, мы услышали шум."
@@ -228,7 +223,6 @@ label kolya_meet:
             show screen achievement_unlock("{size=14}Тише едешь — дальше будешь{/size}", box_len=300, read_len=3.0)
             jump convoy_report
 
-# === БОЙ ЗА ОБОЗ ===
 label convoy_fight:
     scene black with fade
     play sound machine_gun
@@ -239,7 +233,6 @@ label convoy_fight:
     nvl clear
     jump end_of_day1
 
-# === ПЕРЕДАЧА КООРДИНАТ ===
 label convoy_report:
     n_narr "Передаём координаты обоза. Через полчаса — глухой взрыв вдалеке. Скорее всего, немцы сами уничтожили грузы при отступлении… или их перехватили союзные войска."
     n_narr "Мы остаёмся с тем, что имеем, но избегаем потерь."
@@ -248,7 +241,6 @@ label convoy_report:
     nvl clear
     jump end_of_day1
 
-# === ВЕЧЕР ПЕРВОГО ДНЯ ===
 label end_of_day1:
     scene forest_camp with fade
     stop music
@@ -261,7 +253,6 @@ label end_of_day1:
     nvl hide
     nvl clear
 
-    # Рефлексия
     n_narr "Коля спит, прижавшись к винтовке. Иван точит нож. Политрук пишет письмо."
     n_narr "А я смотрю на закат и думаю: «Как нам победить в этом аду?»"
 

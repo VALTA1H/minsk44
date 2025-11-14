@@ -1,4 +1,3 @@
-# === ГЛОБАЛЬНЫЕ ФЛАГИ ===
 default avoided_ambush = False
 default saved_wounded = False
 default saved_soldier = False

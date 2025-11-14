@@ -1,4 +1,3 @@
-# === ПЕРСОНАЖИ ===
 define n_narr = Character("Безымянный", color="#91d46a", kind=nvl)
 define narr = Character("Безымянный", color="#91d46a")
 define d_text = Character("Автор", color="#ffffff", kind=nvl)
@@ -13,7 +12,6 @@ define masha_lined = Character("Ж̶е̶н̶щ̶и̶н̶а̶ Маша", color="#
 define soldier = Character("Рядовой", color="#ffffff")
 define hanz = Character("Немец",color="#b48282")
 
-# === ДОПОЛНИТЕЛЬНЫЕ ПЕРСОНАЖИ (жители, внук и др.) ===
 define civil = Character("Неизвестный", color="#9dff00ff")
 define old_man = Character("Старик", color="#d3d3d3")
 define old_woman = Character("Старуха", color="#f5deb3")

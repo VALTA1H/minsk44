@@ -1,4 +1,3 @@
-# === ДЕНЬ 3–4: «БЕГСТВО В АД» (1–2 июля 1944) ===
 label day34_start:
     scene black with fade
     play music theme_tense fadein 2.0
@@ -72,7 +71,6 @@ label trail_pursuit:
     stop sound
     jump night_camp
 
-# === МАРШ ПО ДОРОГЕ ===
 label road_march:
     scene forest_road_dust with fade
     n_narr "Дорога пуста. Только дым от горящих деревень и следы гусениц."
@@ -84,7 +82,6 @@ label road_march:
 
     jump night_camp
 
-# === НОЧЬ У КОСТРА ===
 label night_camp:
     scene forest_camp_night with fade
     stop music fadeout 2.0
@@ -97,7 +94,6 @@ label night_camp:
     nvl hide
     nvl clear
 
-    # Речь Маши — зависит от репутации ГГ
     if masha_rep >= 1:
         show masha scared at right:
             linear 2.0 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
@@ -123,7 +119,6 @@ label night_camp:
     nvl clear
     stop music fadeout 2.0
 
-    # === УТРО 2 ИЮЛЯ ===
     scene black with dissolve
     scene forest_bridge_dawn with fade
     play music theme_tense fadein 2.0
@@ -145,7 +140,6 @@ label night_camp:
         "Ждать артиллерию":
             jump bridge_artillery
 
-# === АТАКА НА МОСТ ===
 label bridge_assault:
     play sound machine_gun loop
     scene forest_bridge_dawn with vpunch
@@ -230,7 +224,6 @@ label bridge_artillery:
     nvl clear
     jump bridge_victory
 
-# === ФИНАЛ ДНЯ ===
 label bridge_victory:
     scene forest_bridge_dawn with fade
     stop music fadeout 2.0
