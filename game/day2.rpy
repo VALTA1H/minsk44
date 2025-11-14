@@ -218,4 +218,4 @@ label choice_med:
     n_narr "День второй позади. Впереди — леса, болота и погоня за отступающим врагом."
     nvl hide
     nvl clear
-    jump day34_start
+    jump day3_start

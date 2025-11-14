@@ -261,7 +261,6 @@ label epilogue_a:
     nvl clear
     scene black with fade
     d_text "Памяти всех, кто пал в боях за Беларусь. 1941–1944."
-    d_text "80 лет Победы."
     pause 5.0
 
     jump game_end
@@ -307,7 +306,6 @@ label epilogue_b:
     nvl clear
     scene black with fade
     d_text "Он не вернулся. Но благодаря ему — вернулись другие!"
-    d_text "80 лет Победы."
     pause 5.0
 
     jump game_end

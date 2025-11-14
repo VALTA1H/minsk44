@@ -1,4 +1,4 @@
-﻿label splashscreen:
+label splashscreen:
     $ mouse_visible = False
     scene black
     $ renpy.pause(1.0, hard=True)
