@@ -46,10 +46,10 @@ screen achievement_unlock(description="Description", box_len=max_achievement_len
                 pause 0.3
                 align (0.0, 0.5)
             # These are the circles that grow in size
-            add 'lime_circle' at grow_circle(0.0)
-            add 'green_circle' at grow_circle(0.25)
-            add 'dark_green_circle' at grow_circle(0.5)
-            add 'lime_circle' at grow_circle(0.75)
+            add 'orange_circle' at grow_circle(0.0)
+            add 'orange_circle' at grow_circle(0.25)
+            add 'dark_orange_circle' at grow_circle(0.5)
+            add 'orange_circle' at grow_circle(0.75)
             # This is the background behind the trophy symbol
             add 'trophy_bg' at appear(1.25)
             # This is the trophy symbol
@@ -167,13 +167,13 @@ transform stretch_x():
 
 # These images overlap and grow larger over each other to make up the trophy
 # effect. Uses the Circle displayable defined earlier.
-image green_circle = Circle(circle_size, color="#080")
-image dark_green_circle = Circle(circle_size, color="#045a04")
-image lime_circle = Circle(circle_size, color="#0f0")
+image orange_circle = Circle(circle_size, color="#FFA500")  # Orange
+image dark_orange_circle = Circle(circle_size, color="#8B4500")  # Dark Orange (Darker hue)
+image orange_circle = Circle(circle_size, color="#ff8400")  # orange remains the same
 
 # This is the image shown behind the trophy icon
-image trophy_bg = 'lime_circle'
+image trophy_bg = 'orange_circle'
 
 # This is the background for the entire achievement once the text slides out.
 # Should be variable-width, likely inside a Frame as seen here.
-image achievement_bg = Frame('green_circle', circle_size//2, circle_size//2)
+image achievement_bg = Frame('orange_circle', circle_size//2, circle_size//2)
