@@ -1,0 +1,20 @@
+# === ПЕРСОНАЖИ ===
+define n_narr = Character("Безымянный", color="#91d46a", kind=nvl)
+define narr = Character("Безымянный", color="#91d46a")
+define d_text = Character("Автор", color="#ffffff", kind=nvl)
+define scene_narr = Character(None)
+
+define ivan = Character("Иван", color="#b0e0e6")
+define kolya = Character("Коля", color="#add8e6")
+define politruk = Character("Политрук", color="#ff7f7f")
+define masha = Character("Маша", color="#98fb98")
+define masha_not_known = Character("Женщина", color="#98fb98")
+define masha_lined = Character("Ж̶е̶н̶щ̶и̶н̶а̶ Маша", color="#98fb98")
+define soldier = Character("Рядовой", color="#ffffff")
+define hanz = Character("Немец",color="#b48282")
+
+# === ДОПОЛНИТЕЛЬНЫЕ ПЕРСОНАЖИ (жители, внук и др.) ===
+define civil = Character("Неизвестный", color="#9dff00ff")
+define old_man = Character("Старик", color="#d3d3d3")
+define old_woman = Character("Старуха", color="#f5deb3")
+define grandson = Character("Внук", color="#90ee90")
