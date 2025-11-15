@@ -43,6 +43,13 @@ screen support(bg = "black"):
                 text "Арсений Дерновский & Коджакулак Алтай"
             vbox:
                 spacing 40 align(0.5, 0.5)
+                text _("Озвучка:") size 40 bold True
+                text "Маша - Александра Дерновская"
+                text "Политрук - Александр Хаев"
+                text "Коля - Александра Дерновская"
+                text "Иван - Александра Дерновская"
+            vbox:
+                spacing 40 align(0.5, 0.5)
                 text _("Программист:") size 40 bold True
                 text "Арсений Дерновский"
             null height 200
@@ -89,10 +96,12 @@ screen support(bg = "black"):
                     spacing 10 xalign 0.5 yalign 0.5
                     text "Александр Хаев"
                     text "Александра Дерновская"
+                    text "Footer Heart"
                     text "Наталья Дерновская"
+                    text "Антон Семенченко"
             null height 500
             text _("Создано с помощью Ren'Py") size 40 bold True
-            null height 500
+            null height 1100
             add "gui/title.png"
 style credits_hbox:
     spacing 40
