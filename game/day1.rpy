@@ -190,7 +190,7 @@ label kolya_meet:
     voice "audio/voice/masha/normolized_masha_1.opus"
     masha_not_known "Это свои! Не стреляйте!"
 
-    n_narr "Из леса выходит молодая партизантка."
+    n_narr "Из леса выходит молодая партизанка."
     show masha at center
     with zoomin
     n_narr "На вид, ей было лет 20-25."
@@ -199,7 +199,7 @@ label kolya_meet:
     nvl clear
 
     voice "audio/voice/masha/normolized_masha_2.opus"
-    masha_lined "Я партизантка. Меня зовут Маша."
+    masha_lined "Я партизанка. Меня зовут Маша."
 
     narr "И зачем ты пришла, Маша?"
 
