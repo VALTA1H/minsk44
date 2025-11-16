@@ -318,33 +318,24 @@ label game_end:
     play music letting_my_heart_speak fadein 2.0
     $ mouse_visible = False
     scene black
-    $ renpy.pause(1.0, hard=True)
-    show age_16 at truecenter with Dissolve(1.0)
+    $ renpy.pause(1.544, hard=True)
+    show age_16 at truecenter with Dissolve(0.3) 
+    # 1.844
     $ renpy.pause(2.0, hard=True)
     hide age_16 with Dissolve(1.0)
-    $ renpy.pause(1.0, hard=True)
-    show screen end_credit with Dissolve(1.0)
-    $ renpy.pause(4.0, hard=True)
-    hide screen end_credit with Dissolve(1.0)
-    $ renpy.pause(1.0, hard=True)
-    show halipov_ent with Dissolve(1.0)
-    $ renpy.pause(2.0, hard=True)
-    play sound mgs_over
-    $ renpy.pause(2.0, hard=True)
-    hide halipov_ent
+    $ renpy.pause(1.5, hard=True)
+    show screen end_credit with Dissolve(0.3)
+    # 6.644
+    $ renpy.pause(4.5, hard=True)
+    hide screen end_credit with Dissolve(2.0)
+    $ renpy.pause(1.3, hard=True)
+    show halipov_ent with Dissolve(0.3)
+    #14.444
+    $ renpy.pause(2.099, hard=True)
+    play sound mgs_over 
+    #16.7
+    $ renpy.pause(3.757, hard=True)
+    hide halipov_ent with Dissolve(2.0)
+    # 22.3
     $ mouse_visible = True
-    $ _game_menu_screen = None
-    $ renpy.config.skipping = None
-    $ _skipping = False
-    $ renpy.pause(2.0, hard=True)
-    show screen support
-    if persistent.seen_titres:
-        pause supporter_screen_speed
-    else:
-        $ renpy.pause(supporter_screen_speed, hard=True)
-    $ persistent.seen_titres = True
-    $ renpy.pause(2.0, hard=True)
-    hide screen support with Dissolve(2.0)
-    $ _game_menu_screen = "save_screen"
-    $ _skipping = True
-    return
+    jump game_credits

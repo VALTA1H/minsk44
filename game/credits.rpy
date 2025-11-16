@@ -111,12 +111,12 @@ style credits_label:
 style credits_text:
     xalign 0.5
 default titres_white = False  
-label titres:
-    
+
+label game_credits:
     $ _game_menu_screen = None
     $ renpy.config.skipping = None
     $ _skipping = False
-    $ renpy.pause(2.0, hard=True)
+    $ renpy.pause(0.6, hard=True)
     show screen support
     if persistent.seen_titres:
         pause supporter_screen_speed
@@ -124,8 +124,8 @@ label titres:
         $ renpy.pause(supporter_screen_speed, hard=True)
     $ persistent.seen_titres = True
     $ renpy.pause(2.0, hard=True)
-    
-    hide screen support with Dissolve(2.0)
+    stop music fadeout 4.0
+    hide screen support with Dissolve(4.0)
     $ _game_menu_screen = "save_screen"
     $ _skipping = True
     
