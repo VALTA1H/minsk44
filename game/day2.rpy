@@ -90,10 +90,10 @@ label day2_start:
     with easeinleft
     with hpunch
 
-    voice "audio/voice/masha/normolized_masha_5_2.opus"
+    voice "audio/voice/masha/loud_masha_5_2.opus"
     masha "Я знаю это здание! Слева — разрушенная лестница на второй этаж, а справа - подвал, выходящий во двор."
 
-    voice "audio/voice/masha/normolized_masha_6.opus"
+    voice "audio/voice/masha/loud_masha_6.opus"
     masha "Могу провести в обход с тыла, но нужно удостовериться в безопасности."
 
     n_narr "Старшина Иван смотрит на меня. Время решать."
@@ -118,7 +118,7 @@ label day2_start:
         "Пойти на обход с Машей":
             show screen achievement_unlock("{size=14}Только идиот доверит свою жизнь оружию.{/size}", box_len=300, read_len=3.0)
             narr "Лучше не рисковать. Вдруг там гражданские…"
-            voice "audio/voice/masha/normolized_masha_7.opus"
+            voice "audio/voice/masha/loud_masha_7.opus"
             masha "За мной. И чтоб тише воды…"
             scene black with dissolve 
             n_narr "Мы пробираемся по завалам во двор, затем — в подвал здания."
@@ -169,7 +169,7 @@ label choice_med:
             n_narr "Я вынимаю из ящика только самое необходимое для полевого госпиталя — бинты и пакеты."
             n_narr "Старуха кивает, её глаза полны слёз благодарности."
             n_narr "Маша кладёт руку мне на плечо и шепчет:"
-            voice "audio/voice/masha/normolized_masha_8.opus"
+            voice "audio/voice/masha/loud_masha_8.opus"
             masha "Спасибо"
             $ masha_rep +=1
 
@@ -185,20 +185,20 @@ label choice_med:
     nvl clear
 
     scene ghetto with dissolve
-    play music warum volume 0.05 loop
+    play music warum loop
     show masha scared at left
     with easeinleft
     with hpunch
 
-    voice "audio/voice/masha/normolized_masha_9.opus"
+    voice "audio/voice/masha/loud_masha_9.opus"
     masha "{bt=1}Здесь был концентрационный {sc=3}{color=#E10600}лагерь… концлагерь{/color}{/sc}. Тут держали евреев.{/bt}"
-    voice "audio/voice/masha/normolized_masha_10.opus"
+    voice "audio/voice/masha/loud_masha_10.opus"
     masha "{bt=1}Осенью сорок первого… их всех согнали сюда. А потом… потом большую часть{para}повели в сарай на окраине деревни.{/bt}"
-    voice "audio/voice/masha/normolized_masha_11.opus"
+    voice "audio/voice/masha/loud_masha_11.opus"
     masha "{bt=1}Говорят, крики были слышны в соседних сёлах."
-    voice "audio/voice/masha/normolized_masha_12.opus"
+    voice "audio/voice/masha/loud_masha_12.opus"
     masha "А потом — тишина…"
-    voice "audio/voice/masha/normolized_masha_13.opus"
+    voice "audio/voice/masha/loud_masha_13.opus"
     masha "{bt=1}И черные облака.{/bt}"
 
     n_narr "Она не плачет. Её боль глубже слёз. Она — память о тех, кого уже не вернуть."

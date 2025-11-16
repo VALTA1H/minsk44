@@ -6,7 +6,7 @@
 [![OS](https://img.shields.io/badge/OS-Windows%2C%20macOS%2C%20Linux-0078D4)](https://www.renpy.org/doc/html/build.html)
 [![Features](https://img.shields.io/badge/Features-Core%20Mechanics-4EC5C2)](#⚙️-core-features)
 [![Dependencies](https://img.shields.io/badge/Dependencies-Kinetic%20Text%20%26%20Achievements-FF8C00)](#✨-credits-&-acknowledgments)
-[![Version](https://img.shields.io/badge/Version-1.1--beta-brightgreen)](#✨-whats-new)
+[![Version](https://img.shields.io/badge/Version-1.2--beta-brightgreen)](#✨-whats-new)
 [![GitHub last commit](https://img.shields.io/github/last-commit/sehaxe/minsk44)](#)
 
 ⭐ Star us on GitHub — your support motivates us a lot! 🙏😊
@@ -45,7 +45,7 @@ This project utilizes advanced Ren'Py features to enhance the player experience.
 | Feature | Ren'Py Implementation | Script Variables |
 | :--- | :--- | :--- |
 | **Kinetic Text** | Used for dynamic, high-impact dialogue delivery (e.g., punch, shake effects). | Included via external module. |
-| **Achievements** | Tracks key decisions and major milestones in the game. | Included via external `achievements.rpy` module. |
+| **Achievements** | Tracks key decisions and major milestones in the game. | Included via external `achievement.rpy` module. |
 | **Moral/Story Flags** | Tracks major choices that affect character survival and the ending. | `avoided_ambush`, `kolya_saved`, `spared_civilians`, `masha_rep`. |
 | **Dynamic Audio** | Defined audio channels for music, SFX, and ambient loops. | `artillery`, `machine_gun`, `theme_tense`, `distant_celebration`. |
 

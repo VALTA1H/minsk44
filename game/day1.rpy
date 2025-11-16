@@ -103,20 +103,25 @@ label kolya_meet:
 
     narr "Ты рядовой Захаров?"
     show screen achievement_unlock("{size=14}Новый товарищ?{/size}", box_len=300, read_len=3.0)
+    voice "audio/voice/kolya/kolya_01.opus"
     kolya "я.. Я!" with hpunch
     narr "Как звать тебя?"
+    voice "audio/voice/kolya/kolya_02.opus"
     kolya "Захаров Николай Павлович" with hpunch
     narr "Мы сегодня форсируем реку. Твоя задача - держаться рядом со взводом. Задача ясна?"
     narr "Чуть что — обращайся. Здесь любая ошибка может стоить тебе жизни"
+    voice "audio/voice/kolya/kolya_03.opus"
     kolya "так… Точно!" with hpunch
 
     n_narr "Коля, молодой боец, явно нервничает. Его дыхание сбивается."
     n_narr "Тяжёлые капли дождя барабанят по каске. Вдалеке — приглушённый гул артиллерии и частая дробь пулемётов."
     n_narr "Отряд сидит в укрытии, прижавшись к мокрой земле."
 
+    voice "audio/voice/kolya/kolya_04.opus"
     kolya "А что будет дальше?"
 
     narr "Спокойно, Коля. Первый раз всегда страшно. Держись рядом."
+    voice "audio/voice/kolya/kolya_05.opus"
     kolya "П-понял… спасибо, товарищ…"
 
     nvl hide
@@ -187,7 +192,7 @@ label kolya_meet:
     nvl hide
     nvl clear
 
-    voice "audio/voice/masha/normolized_masha_1.opus"
+    voice "audio/voice/masha/loud_masha_1.opus"
     masha_not_known "Это свои! Не стреляйте!"
 
     n_narr "Из леса выходит молодая партизантка."
@@ -198,20 +203,20 @@ label kolya_meet:
     nvl hide
     nvl clear
 
-    voice "audio/voice/masha/normolized_masha_2.opus"
+    voice "audio/voice/masha/loud_masha_2.opus"
     masha_lined "Я партизантка. Меня зовут Маша."
 
     narr "И зачем ты пришла, Маша?"
 
-    voice "audio/voice/masha/normolized_masha_3.opus"
+    voice "audio/voice/masha/loud_masha_3.opus"
     masha "Там застрял немецкий обоз. Два грузовика под охраной тыловиков. Есть шанс пополнить припасы."
 
-    voice "audio/voice/masha/normolized_masha_4.opus"
+    voice "audio/voice/masha/loud_masha_4.opus"
     masha "У них медикаменты, патроны… и даже хлеб. Нам это жизненно необходимо."
 
     ivan "Это ловушка, Маша? Или…?"
 
-    voice "audio/voice/masha/normolized_masha_5.opus"
+    voice "audio/voice/masha/loud_masha_5.opus"
     masha "Нет. Они застряли в грязи после дождя. У них нет времени ждать подмогу. К ним врядли придут на помощь."
 
     n_narr "Старшина смотрит на меня. Припасы нужны, но риск велик. Особенно после переправы."

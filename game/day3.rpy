@@ -16,7 +16,7 @@ label day3_start:
     show masha at right
     with easeinright
 
-    voice "audio/voice/masha/normolized_masha_14.opus"
+    voice "audio/voice/masha/loud_masha_14.opus"
     masha "Они везли офицеров. Может, даже штабников."
 
     n_narr "Маша — как лиса в лесу. Видит то, что скрыто от других."
@@ -55,7 +55,7 @@ label trail_pursuit:
 
     show masha scared at left
     with easeinleft
-    voice "audio/voice/masha/normolized_masha_15.opus"
+    voice "audio/voice/masha/loud_masha_15.opus"
     masha "Под палаткой — ящик."
 
     if not avoided_ambush:
@@ -104,27 +104,28 @@ label night_camp:
         show masha scared at right:
             linear 2.0 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
         with easeinright
-        voice "audio/voice/masha/normolized_masha_16.opus"
+        voice "audio/voice/masha/loud_masha_16.opus"
         masha "Ты помнишь, что мы — люди. Даже здесь."
-        voice "audio/voice/masha/normolized_masha_17.opus"
+        voice "audio/voice/masha/loud_masha_17.opus"
         masha "Я из Борок… Там, где сожгли деревню."
-        voice "audio/voice/masha/normolized_masha_18.opus"
+        voice "audio/voice/masha/loud_masha_18.opus"
         masha "Загнали всех в сарай… маму, отца, сестрёнку…"
-        voice "audio/voice/masha/normolized_masha_19.opus"
+        voice "audio/voice/masha/loud_masha_19.opus"
         masha "Больше никто не выжил. Я помню каждое лицо."
+        voice "audio/voice/kolya/kolya_06.opus"
         kolya "А как ты смогла выбраться?"
-        voice "audio/voice/masha/normolized_masha_20.opus"
+        voice "audio/voice/masha/loud_masha_20.opus"
         masha "Я выскочила первой."
-        voice "audio/voice/masha/normolized_masha_21.opus"
+        voice "audio/voice/masha/loud_masha_21.opus"
         masha "Слышала, как кричали дети…"
 
     else:
         show masha scared at right:
             linear 2.0 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
         with easeinright
-        voice "audio/voice/masha/normolized_masha_22.opus"
+        voice "audio/voice/masha/loud_masha_22.opus"
         masha "Я из Борок. Из той деревни, что стёрли с лица земли…"
-        voice "audio/voice/masha/normolized_masha_23.opus"
+        voice "audio/voice/masha/loud_masha_23.opus"
         masha "Я помню их глаза. Так что не говори мне про необходимость."
 
     n_narr "Её слова — как нож в сердце. Но мы молчим. Завтра — снова в бой."
