@@ -82,6 +82,7 @@ label road_march:
     politruk "Так фашисты уходят из Беларуси — с огнём и пеплом."
 
     scene roadside_village with fade
+    voice "audio/voice/old_woman/old_woman_1.opus"
     old_woman "Спасибо, хлопцы… Буду молиться за ваше здравие."
     n_narr "Она даёт кусок хлеба и иконку. Мы её поблагодарили и пошли дальше."
 
