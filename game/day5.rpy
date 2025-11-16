@@ -30,7 +30,7 @@ label day5_start:
 
     old_man "Спасибо… спасибо, хлопцы! Мы ждали… ждали вас каждый день!"
 
-    voice "audio/voice/old_woman/normolized_old_woman_2.opus"
+    voice "audio/voice/old_woman/loud_old_woman_2.opus"
     old_woman "Мои дети… они живы? Вы видели их?"
     n_narr "На её лице — надежда и страх. Мы не знаем, что ответить."
 
@@ -44,7 +44,7 @@ label day5_start:
     show masha at center
     with easeoutleft
 
-    voice "audio/voice/masha/normolized_masha_27.opus"
+    voice "audio/voice/masha/loud_masha_27.opus"
     masha "Там, где был Дом торговли… теперь — их последний опорный пункт. Пулемёт на третьем этаже."
 
     n_narr "Я смотрю на разрушенные дома, обгоревшие трамваи… и вдруг — замечаю что-то в стороне."
@@ -76,6 +76,7 @@ label pows_camp_ruins:
     nvl hide
     nvl clear
 
+    voice "audio/voice/kolya/kolya_013.opus"
     kolya "Зачем они это делали? Зачем так много зла?"
     ivan "Чтобы мы помнили. Чтобы никогда не допустили этого снова."
 
@@ -124,6 +125,7 @@ label freedom_square_approach:
     nvl hide
     nvl clear
 
+    voice "audio/voice/kolya/kolya_014.opus"
     kolya "СТАРШИНА!!!"
 
     n_narr "Иван лежит у подножия лестницы. Кровь на гимнастёрке. Но он смотрит на меня — и кивает в сторону окна."
@@ -170,6 +172,7 @@ label minsk_liberated:
         nvl hide
         nvl clear
 
+        voice "audio/voice/kolya/kolya_015.opus"
         kolya "Он заслужил похоронить его не на чужбине… а здесь. В освобождённом городе."
 
     elif chose_comrades:
@@ -179,6 +182,7 @@ label minsk_liberated:
         nvl hide
         nvl clear
 
+        voice "audio/voice/kolya/kolya_016.opus"
         kolya "Ты спас его честь. И свою. Мы похоронили его на площади — как героя."
 
     voice "audio/voice/politruk/politruk_14.opus"
@@ -233,8 +237,9 @@ label epilogue_a:
     show masha at center
     with easeoutleft
 
+    voice "audio/voice/kolya/kolya_017.opus"
     kolya "Он заслужил покой в освобождённом городе."
-    voice "audio/voice/masha/normolized_masha_28.opus"
+    voice "audio/voice/masha/loud_masha_28.opus"
     masha "Мы будем помнить. Все."
 
     nvl hide
@@ -297,6 +302,7 @@ label epilogue_b:
     play sound birds_morning
 
     grandson "Ты когда-нибудь его видел?"
+    voice "audio/voice/kolya/kolya_018.opus"
     kolya "Каждый день: в своих снах, в зеркале, в лицах молодых солдат!"
 
     d_text "Внук стоит у Мемориала «Минск — Город-герой». На чёрном граните — тысячи имён."

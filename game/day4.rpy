@@ -26,6 +26,7 @@ label bridge_assault:
     scene forest_bridge_dawn with vpunch
 
     n_narr "Пулемёт открывает огонь! Земля рвётся под ногами."
+    voice "audio/voice/kolya/kolya_07.opus"
     kolya "А-а-а!" with hpunch
 
     nvl hide
@@ -69,7 +70,7 @@ label coma:
     show masha scared at left:
         ease 0.25 zoom 1.5 yoffset 512
     with easeinleft
-    voice "audio/voice/masha/normolized_masha_24.opus"
+    voice "audio/voice/masha/loud_masha_24.opus"
     masha "Наконец-то очнулся. Мы уже думали, что тебя не спасти."
 
     n_narr "Я перевожу свой взгляд на дрожащего Колю."
@@ -80,15 +81,18 @@ label coma:
     nvl hide
     nvl clear
 
+    voice "audio/voice/kolya/kolya_08.opus"
     kolya "Спасибо тебе большое. Я не знаю, что на меня нашло."
+    voice "audio/voice/kolya/kolya_09.opus"
     kolya "Все тело в одночасье оцепенело, я не мог пошевелиться."
 
     narr "Я понимаю. Самое главное, что мы остались в живых."
 
     show masha angry at left
     with easeinleft
-    voice "audio/voice/masha/normolized_masha_25.opus"
+    voice "audio/voice/masha/loud_masha_25.opus"
     masha "А ты, Коля, не стой как баран. Тебе повезло, что тебя спасли в этот раз!"
+    voice "audio/voice/kolya/kolya_010.opus"
     kolya "Прости меня…"
     n_narr "Рана была несущественная. Через несколько часов мы продолжили путь."
 
@@ -135,12 +139,14 @@ label bridge_victory:
 
     if kolya_saved:
         scene forest_camp_night
+        voice "audio/voice/kolya/kolya_011.opus"
         kolya "Слушай, извини за сегодняшнее."
         show masha at right:
             linear 2.0 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
         with easeinright
-        voice "audio/voice/masha/normolized_masha_26.opus"
+        voice "audio/voice/masha/loud_masha_26.opus"
         masha "Да ладно. Главное, что мы все остались живы."
+        voice "audio/voice/kolya/kolya_012.opus"
         kolya "И ты меня прости, товарищ."
         narr "Хоть твоё спасение и стоило мне ранения, но твоя жизнь важнее."
         n_narr "После этого диалога мы пошли спать, в надежде, что завтрашний день будет лучше."
