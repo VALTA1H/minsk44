@@ -44,7 +44,7 @@ label day5_start:
     show masha at center
     with easeoutleft
 
-    voice "audio/voice/masha/masha_27.opus"
+    voice "audio/voice/masha/normolized_masha_27.opus"
     masha "Там, где был Дом торговли… теперь — их последний опорный пункт. Пулемёт на третьем этаже."
 
     n_narr "Я смотрю на разрушенные дома, обгоревшие трамваи… и вдруг — замечаю что-то в стороне."
@@ -234,7 +234,7 @@ label epilogue_a:
     with easeoutleft
 
     kolya "Он заслужил покой в освобождённом городе."
-    voice "audio/voice/masha/masha_28.opus"
+    voice "audio/voice/masha/normolized_masha_28.opus"
     masha "Мы будем помнить. Все."
 
     nvl hide

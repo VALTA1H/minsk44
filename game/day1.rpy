@@ -187,7 +187,7 @@ label kolya_meet:
     nvl hide
     nvl clear
 
-    voice "audio/voice/masha/masha_1.opus"
+    voice "audio/voice/masha/normolized_masha_1.opus"
     masha_not_known "Это свои! Не стреляйте!"
 
     n_narr "Из леса выходит молодая партизантка."
@@ -198,20 +198,20 @@ label kolya_meet:
     nvl hide
     nvl clear
 
-    voice "audio/voice/masha/masha_2.opus"
+    voice "audio/voice/masha/normolized_masha_2.opus"
     masha_lined "Я партизантка. Меня зовут Маша."
 
     narr "И зачем ты пришла, Маша?"
 
-    voice "audio/voice/masha/masha_3.opus"
+    voice "audio/voice/masha/normolized_masha_3.opus"
     masha "Там застрял немецкий обоз. Два грузовика под охраной тыловиков. Есть шанс пополнить припасы."
 
-    voice "audio/voice/masha/masha_4.opus"
+    voice "audio/voice/masha/normolized_masha_4.opus"
     masha "У них медикаменты, патроны… и даже хлеб. Нам это жизненно необходимо."
 
     ivan "Это ловушка, Маша? Или…?"
 
-    voice "audio/voice/masha/masha_5.opus"
+    voice "audio/voice/masha/normolized_masha_5.opus"
     masha "Нет. Они застряли в грязи после дождя. У них нет времени ждать подмогу. К ним врядли придут на помощь."
 
     n_narr "Старшина смотрит на меня. Припасы нужны, но риск велик. Особенно после переправы."
