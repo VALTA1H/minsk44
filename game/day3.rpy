@@ -24,6 +24,7 @@ label day3_start:
     nvl hide
     nvl clear
 
+    voice "audio/voice/politruk/politruk_8.opus"
     politruk "Если поймаем их — получим планы обороны Минска!"
     ivan "А если засада — потеряешь отряд."
 
@@ -77,6 +78,7 @@ label trail_pursuit:
 label road_march:
     scene forest_road_dust with fade
     n_narr "Дорога пуста. Только дым от горящих деревень и следы гусениц."
+    voice "audio/voice/politruk/politruk_9.opus"
     politruk "Так фашисты уходят из Беларуси — с огнём и пеплом."
 
     scene roadside_village with fade

@@ -154,8 +154,9 @@ label kolya_meet:
 
     nvl hide
     nvl clear
-
+    voice "audio/voice/politruk/politruk_1.opus"
     politruk "Держать темп, товарищи! Каждая минута — это километры, отделяющие нас от фашистского зверя!"
+    voice "audio/voice/politruk/politruk_2.opus"
     politruk "Именно наша скорость — ключ к успеху операции по освобождению Минска! Нельзя дать врагу подготовить оборону!"
 
     scene spearhead_view with dissolve
@@ -165,7 +166,9 @@ label kolya_meet:
     nvl hide
     nvl clear
 
+    voice "audio/voice/politruk/politruk_3.opus"
     politruk "Вот они, товарищи! Авангард прорыва — кавалерийско-механизированная группа Плиева!"
+    voice "audio/voice/politruk/politruk_4.opus"
     politruk "Их задача — рвать оборону. Наша — не отставать и зачищать фланги."
 
     stop music
@@ -225,6 +228,7 @@ label kolya_meet:
 
         "Сообщить командованию по рации":
             narr "Риск неоправдан. Лучше передать координаты основным силам."
+            voice "audio/voice/politruk/politruk_5.opus"
             politruk "Верное решение, солдат. Разумная предосторожность."
             show screen achievement_unlock("{size=14}Тише едешь — дальше будешь{/size}", box_len=300, read_len=3.0)
             jump convoy_report

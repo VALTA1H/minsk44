@@ -12,6 +12,7 @@ label day4_start:
 
     ivan "Пулемёт на насыпи. Мины на подступах. И заряд под опорами — уже заложен."
 
+    voice "audio/voice/politruk/politruk_10.opus"
     politruk "Если не возьмём за час — придут ястребы и сравняют всё."
 
     menu:
@@ -112,6 +113,7 @@ label bridge_victory:
     play music theme_calm loop
 
     n_narr "Мост захвачен. Котёл под Бобруйском — закрыт. Десятки тысяч врагов — в ловушке."
+    voice "audio/voice/politruk/politruk_11.opus"
     politruk "Теперь — на Минск! На столицу!"
 
     nvl hide
