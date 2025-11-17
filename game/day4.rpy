@@ -10,6 +10,7 @@ label day4_start:
     nvl hide
     nvl clear
 
+    voice "audio/voice/ivan/ivan-12.opus"
     ivan "Пулемёт на насыпи. Мины на подступах. И заряд под опорами — уже заложен."
 
     voice "audio/voice/politruk/politruk_10.opus"
@@ -67,14 +68,14 @@ label coma:
     nvl hide
     nvl clear
 
-    show masha scared at left:
+    show masha alarm at left: # Тревога/Облегчение
         ease 0.25 zoom 1.5 yoffset 512
     with easeinleft
     voice "audio/voice/masha/loud_masha_24.opus"
     masha "Наконец-то очнулся. Мы уже думали, что тебя не спасти."
 
     n_narr "Я перевожу свой взгляд на дрожащего Колю."
-    show masha scared at right:
+    show masha neutral at right: # Нейтральный, наблюдательный вид
         ease 0.25 zoom 1.0 yoffset 0
     with easeinright
 
@@ -88,7 +89,7 @@ label coma:
 
     narr "Я понимаю. Самое главное, что мы остались в живых."
 
-    show masha angry at left
+    show masha angry at left # Гнев, выговор Коле
     with easeinleft
     voice "audio/voice/masha/loud_masha_25.opus"
     masha "А ты, Коля, не стой как баран. Тебе повезло, что тебя спасли в этот раз!"
@@ -98,6 +99,7 @@ label coma:
 
     nvl hide
     nvl clear
+    hide masha
 
     jump bridge_victory
 
@@ -117,12 +119,13 @@ label bridge_victory:
     play music theme_calm loop
 
     n_narr "Мост захвачен. Котёл под Бобруйском — закрыт. Десятки тысяч врагов — в ловушке."
-    voice "audio/voice/politruk/politruk_11.opus"
+    voice "audio/voice/ivan/ivan_11.opus"
     politruk "Теперь — на Минск! На столицу!"
 
     nvl hide
     nvl clear
 
+    voice "audio/voice/ivan/ivan-13.opus"
     ivan "Отдыхаем 20 минут — и марш."
 
     n_narr "Коля молча чистит винтовку. Его взгляд — пустой, безжизненный. Словно сама смерть чистит свою косу."
@@ -141,7 +144,7 @@ label bridge_victory:
         scene forest_camp_night
         voice "audio/voice/kolya/kolya_011.opus"
         kolya "Слушай, извини за сегодняшнее."
-        show masha at right:
+        show masha happy at right: # Утешение и доброта
             linear 2.0 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
         with easeinright
         voice "audio/voice/masha/loud_masha_26.opus"
@@ -152,5 +155,6 @@ label bridge_victory:
         n_narr "После этого диалога мы пошли спать, в надежде, что завтрашний день будет лучше."
         nvl hide
         nvl clear
+        hide masha
     stop music
     jump day5_start

@@ -62,10 +62,13 @@ label start:
 
     scene trench_night with fade
     play music high_tension fadein 5.0 loop
+    voice "audio/voice/ivan/ivan-01.opus"
     ivan "Всем внимание! До сигнала меньше часа. Проверить снаряжение, подогнать ремни. Отдыхаем, пока можем."
+    voice "audio/voice/ivan/ivan-02.opus"
     ivan "Сержант …, подготовьте свою роту к наступлению. Убедитесь, что все знают свои задачи."
     
     narr "Так точно!"
+    voice "audio/voice/ivan/ivan-03.opus"
     ivan "Также у нас появился новобранец: Захаров. Расскажи ему, что да как"
     narr "Есть!"
 
@@ -196,8 +199,8 @@ label kolya_meet:
     masha_not_known "Это свои! Не стреляйте!"
 
     n_narr "Из леса выходит молодая партизантка."
-    show masha at center
-    with zoomin
+    show masha neutral 2 at center # Первое появление, настороженность
+    with dissolve
     n_narr "На вид, ей было лет 20-25."
 
     nvl hide
@@ -209,14 +212,17 @@ label kolya_meet:
     narr "И зачем ты пришла, Маша?"
 
     voice "audio/voice/masha/loud_masha_3.opus"
+    show masha tension 2 at center # Сфокусированная, передает важную информацию
     masha "Там застрял немецкий обоз. Два грузовика под охраной тыловиков. Есть шанс пополнить припасы."
 
     voice "audio/voice/masha/loud_masha_4.opus"
     masha "У них медикаменты, патроны… и даже хлеб. Нам это жизненно необходимо."
 
+    voice "audio/voice/ivan/ivan-04.opus"
     ivan "Это ловушка, Маша? Или…?"
 
     voice "audio/voice/masha/loud_masha_5.opus"
+    show masha neutral at center # Спокойное заверение, не ловушка
     masha "Нет. Они застряли в грязи после дождя. У них нет времени ждать подмогу. К ним врядли придут на помощь."
 
     n_narr "Старшина смотрит на меня. Припасы нужны, но риск велик. Особенно после переправы."
@@ -224,9 +230,12 @@ label kolya_meet:
     nvl hide
     nvl clear
 
+    hide masha # Скрываем Машу для выбора
+
     menu choice_convoy:
         "Атаковать немедленно":
             narr "Припасы никогда не будут лишними. Нам не помешает их пополнить."
+            voice "audio/voice/ivan/ivan-05.opus"
             ivan "Хорошо. Берём в кольцо. Атака!"
             show screen achievement_unlock("{size=12}Кто не рискует — тот не пьет шампанского{/size}", box_len=400, read_len=3.0)
             jump convoy_fight
@@ -256,7 +265,7 @@ label convoy_report:
     nvl clear
     jump end_of_day1
 
-label end_of_day1:
+    label end_of_day1:
     scene forest_camp with fade
     stop music
     play music theme_calm fadein 2.0

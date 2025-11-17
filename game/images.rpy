@@ -34,3 +34,43 @@ image swamp_clearing = "images/swamp_clearing.webp"
 image trench_night = "images/trench_night.webp"
 image village_morning = "images/village_morning.webp"
 image western_bank = "images/western_bank.webp"
+
+image masha alarm:
+    "images/masha alarm.png"
+    zoom 0.75
+
+image masha angry:
+    "images/masha angry.png"
+    zoom 0.75
+
+image masha cringe:
+    "images/masha cringe.png"
+    zoom 0.75
+
+image masha happy 2:
+    "images/masha happy 2.png"
+    zoom 0.75
+
+image masha happy:
+    "images/masha happy.png"
+    zoom 0.75
+
+image masha neutral 2:
+    "images/masha neutral 2.png"
+    zoom 0.75
+
+image masha neutral:
+    "images/masha neutral.png"
+    zoom 0.75
+
+image masha scared:
+    "images/masha scared.png"
+    zoom 0.75
+
+image masha shoked:
+    "images/masha shoked.png"
+    zoom 0.75
+
+image masha tension 2:
+    "images/masha tension 2.png"
+    zoom 0.75

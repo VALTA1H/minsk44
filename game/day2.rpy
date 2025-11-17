@@ -23,6 +23,7 @@ label day2_start:
     nvl hide
     nvl clear
 
+    voice "audio/voice/ivan/ivan-06.opus"
     ivan "Внимание! Враг отступил, но оставил «крыс» — снайперов и миномётчиков. Двигаемся осторожно, по укрытиям!"
     voice "audio/voice/politruk/politruk_6.opus"
     politruk "Помните, товарищи! Этот город — наша земля. Каждый дом, каждая улица — свидетель зверств оккупантов. Наша задача зачистить его до конца!"
@@ -42,6 +43,7 @@ label day2_start:
     nvl clear
 
     civil "Мой брат… он ранен! Вчера, когда начался штурм, его ранило и теперь он не может идти!"
+    voice "audio/voice/ivan/ivan-07.opus"
     ivan "Где он? Проведи наc к нему."
     civil "Там, в подвале соседнего дома. Но… там ещё и фриц… Раненый… Они вместе, как в ловушке."
 
@@ -86,7 +88,7 @@ label day2_start:
     nvl hide
     nvl clear
 
-    show masha at left
+    show masha tension 2 at left # Напряженная, сфокусированная
     with easeinleft
     with hpunch
 
@@ -110,6 +112,7 @@ label day2_start:
             scene city_street_ruins with vpunch
             n_narr "Взрыв. Облако пыли и дыма. Огонь прекратился."
             n_narr "Мы врываемся внутрь… В подвале, под завалами, слышен детский плач."
+            hide masha # Скрываем перед jump
             nvl hide
             nvl clear
 
@@ -119,6 +122,7 @@ label day2_start:
             show screen achievement_unlock("{size=14}Только идиот доверит свою жизнь оружию.{/size}", box_len=300, read_len=3.0)
             narr "Лучше не рисковать. Вдруг там гражданские…"
             voice "audio/voice/masha/loud_masha_7.opus"
+            show masha tension 2 at left # Сфокусирована
             masha "За мной. И чтоб тише воды…"
             scene black with dissolve 
             n_narr "Мы пробираемся по завалам во двор, затем — в подвал здания."
@@ -127,6 +131,7 @@ label day2_start:
             $ masha_rep += 1
             nvl hide
             nvl clear
+            hide masha # Скрываем перед jump
 
             jump day2_basement_peaceful
 
@@ -155,7 +160,7 @@ label day2_basement:
     jump choice_med
 
 label choice_med:
-    show masha at left
+    show masha neutral at left # Нейтральный вид перед выбором
     with easeinleft
     menu choice_medicine:
         "Что сделать с ящиком?"
@@ -168,6 +173,7 @@ label choice_med:
             narr "Они тоже люди. Оставим им хоть что-то."
             n_narr "Я вынимаю из ящика только самое необходимое для полевого госпиталя — бинты и пакеты."
             n_narr "Старуха кивает, её глаза полны слёз благодарности."
+            show masha happy at left # Благодарность за милосердие
             n_narr "Маша кладёт руку мне на плечо и шепчет:"
             voice "audio/voice/masha/loud_masha_8.opus"
             masha "Спасибо"
@@ -176,6 +182,8 @@ label choice_med:
     stop sound
     nvl hide
     nvl clear
+
+    hide masha # Скрываем перед следующей сценой
 
     scene destroyed_house with dissolve
     n_narr "Пока отряд отдыхает, я замечаю полуразрушенный дом с выгоревшим фасадом. А за ним здание с обугленной дверью где вырезана шестиконечная звезда, вырезанная топором."
@@ -186,18 +194,23 @@ label choice_med:
 
     scene ghetto with dissolve
     play music warum loop
-    show masha scared at left
+    show masha scared at left # Шокирована увиденным
     with easeinleft
     with hpunch
 
     voice "audio/voice/masha/loud_masha_9.opus"
     masha "{bt=1}Здесь был концентрационный {sc=3}{color=#E10600}лагерь… концлагерь{/color}{/sc}. Тут держали евреев.{/bt}"
+    
     voice "audio/voice/masha/loud_masha_10.opus"
+    show masha scared at left # Переход к травме/страху
     masha "{bt=1}Осенью сорок первого… их всех согнали сюда. А потом… потом большую часть{para}повели в сарай на окраине деревни.{/bt}"
+    
     voice "audio/voice/masha/loud_masha_11.opus"
     masha "{bt=1}Говорят, крики были слышны в соседних сёлах."
+    
     voice "audio/voice/masha/loud_masha_12.opus"
     masha "А потом — тишина…"
+    
     voice "audio/voice/masha/loud_masha_13.opus"
     masha "{bt=1}И черные облака.{/bt}"
 
@@ -207,6 +220,8 @@ label choice_med:
 
     nvl hide
     nvl clear
+
+    hide masha # Скрываем перед переходом
 
     scene city_square_evening with fade
     stop music fadeout 2.0
@@ -220,6 +235,7 @@ label choice_med:
     nvl hide
     nvl clear
 
+    voice "audio/voice/ivan/ivan-08.opus"
     ivan "Молодцы, ребята! Но расслабляться рано. Получен приказ: преследовать отступающего врага. Направление — Минск."
     voice "audio/voice/politruk/politruk_7.opus"
     politruk "Минск ждёт нас! Путь к столице открыт!"

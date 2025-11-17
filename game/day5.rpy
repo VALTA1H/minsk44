@@ -39,9 +39,10 @@ label day5_start:
 
     voice "audio/voice/politruk/politruk_12.opus"
     politruk "Товарищи! Минск — столица Беларуси! Сегодня мы освободим её до конца!"
+    voice "audio/voice/ivan/ivan-14.opus"
     ivan "Но немцы засели в центре. Особенно — на площади Свободы."
 
-    show masha at center
+    show masha tension 2 at center # Сфокусирована на боевой задаче
     with easeoutleft
 
     voice "audio/voice/masha/loud_masha_27.opus"
@@ -51,6 +52,7 @@ label day5_start:
 
     nvl hide
     nvl clear
+    hide masha
 
     jump pows_camp_ruins
 
@@ -78,6 +80,7 @@ label pows_camp_ruins:
 
     voice "audio/voice/kolya/kolya_013.opus"
     kolya "Зачем они это делали? Зачем так много зла?"
+    voice "audio/voice/ivan/ivan-15.opus"
     ivan "Чтобы мы помнили. Чтобы никогда не допустили этого снова."
 
     n_narr "Я поднимаю куклу. Кладу в карман — рядом с письмом."
@@ -103,6 +106,7 @@ label freedom_square_approach:
     voice "audio/voice/politruk/politruk_13.opus"
     politruk "Это последний очаг сопротивления в центре! Берём его — и Минск свободен!"
 
+    voice "audio/voice/ivan/ivan-16.opus"
     ivan "Группа А — слева по развалинам. Группа Б — за мной. Искатель — прикрываешь."
 
     n_narr "Мы занимаем позиции. Воздух — густой от пыли и страха."
@@ -114,6 +118,7 @@ label freedom_square_approach:
     scene minsk_freedom_square_ruins with vpunch
 
     n_narr "Пулемёт открывает огонь! Кирпичи летят в щепки!"
+    voice "audio/voice/ivan/ivan-17.opus"
     ivan "Вперёд! Не дать им перезарядиться!"
 
     nvl hide
@@ -130,6 +135,7 @@ label freedom_square_approach:
 
     n_narr "Иван лежит у подножия лестницы. Кровь на гимнастёрке. Но он смотрит на меня — и кивает в сторону окна."
 
+    voice "audio/voice/ivan/ivan-18.opus"
     ivan "Выпол… няй… приказ…"
 
     nvl hide
@@ -234,7 +240,7 @@ label epilogue_a:
 
     n_narr "4 июля 1944 года. Минск."
     n_narr "Коля и Маша стоят у импровизированного памятника — груда камней с красной звездой."
-    show masha at center
+    show masha neutral at center # Скорбь/нейтралитет
     with easeoutleft
 
     voice "audio/voice/kolya/kolya_017.opus"
@@ -244,6 +250,7 @@ label epilogue_a:
 
     nvl hide
     nvl clear
+    hide masha
 
     scene black with dissolve
     d_text "80 лет спустя…"
@@ -321,7 +328,6 @@ label epilogue_b:
     pause 5.0
 
     jump game_end
-
 label game_end:
     stop audio fadeout 2.0
     stop sound fadeout 2.0

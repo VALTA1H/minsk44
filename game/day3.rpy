@@ -11,9 +11,9 @@ label day3_start:
     scene forest_swamp_morning with fade
     play sound distant_gunfire loop
     play sound crickets_sound
-
+    voice "audio/voice/ivan/ivan-09.opus"
     ivan "След свежий. Колёса, гусеницы… и кровь."
-    show masha at right
+    show masha tension 2 at right # Сфокусированная, профессиональная
     with easeinright
 
     voice "audio/voice/masha/loud_masha_14.opus"
@@ -26,7 +26,10 @@ label day3_start:
 
     voice "audio/voice/politruk/politruk_8.opus"
     politruk "Если поймаем их — получим планы обороны Минска!"
+    voice "audio/voice/ivan/ivan-10.opus"
     ivan "А если засада — потеряешь отряд."
+
+    hide masha # Скрываем Машу для выбора
 
     menu:
         "Что сделаем?"
@@ -53,7 +56,7 @@ label trail_pursuit:
     nvl hide
     nvl clear
 
-    show masha scared at left
+    show masha alarm at left # Найденные пленные - эмоциональный удар
     with easeinleft
     voice "audio/voice/masha/loud_masha_15.opus"
     masha "Под палаткой — ящик."
@@ -62,6 +65,7 @@ label trail_pursuit:
         play sound machine_gun loop
         scene swamp_clearing with hpunch
         n_narr "Из кустов — очередь! Засада!"
+        voice "audio/voice/ivan/ivan-11.opus"
         ivan "В укрытие!"
 
         nvl hide
@@ -73,6 +77,7 @@ label trail_pursuit:
         nvl clear
 
     stop sound
+    hide masha # Скрываем Машу перед jump
     jump night_camp
 
 label road_march:
@@ -101,26 +106,33 @@ label night_camp:
     nvl clear
 
     if masha_rep >= 1:
-        show masha scared at right:
-            linear 2.0 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
+        show masha neutral at right: # Начинаем спокойно
+            linear 0.5 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
         with easeinright
         voice "audio/voice/masha/loud_masha_16.opus"
         masha "Ты помнишь, что мы — люди. Даже здесь."
+        
         voice "audio/voice/masha/loud_masha_17.opus"
+        show masha scared at right: # Переход к травме
+            linear 0.5 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
         masha "Я из Борок… Там, где сожгли деревню."
+        
         voice "audio/voice/masha/loud_masha_18.opus"
         masha "Загнали всех в сарай… маму, отца, сестрёнку…"
+        
         voice "audio/voice/masha/loud_masha_19.opus"
         masha "Больше никто не выжил. Я помню каждое лицо."
         voice "audio/voice/kolya/kolya_06.opus"
         kolya "А как ты смогла выбраться?"
+        
         voice "audio/voice/masha/loud_masha_20.opus"
         masha "Я выскочила первой."
+        
         voice "audio/voice/masha/loud_masha_21.opus"
         masha "Слышала, как кричали дети…"
 
     else:
-        show masha scared at right:
+        show masha angry at right: # Упрек и гнев
             linear 2.0 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
         with easeinright
         voice "audio/voice/masha/loud_masha_22.opus"
@@ -133,5 +145,6 @@ label night_camp:
 
     nvl hide
     nvl clear
+    hide masha # Скрываем Машу перед jump
     stop music fadeout 2.0
     jump day4_start
