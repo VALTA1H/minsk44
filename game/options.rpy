@@ -23,7 +23,7 @@ define gui.show_name = False
 
 ## Версия игры.
 
-define config.version = "1.1"
+define config.version = "1.2.b"
 
 
 ## Текст, помещённый в экран "Об игре". Поместите текст между тройными
@@ -205,6 +205,7 @@ init python:
     build.classify('game/saves/**.**', None)
     build.classify('game/cache/**.**', None)
     build.classify('game/tl/**.**', None)
+    build.classify('game/audio/old_voice/**', None)
     build.classify('**/thumbs.db', None)
     build.classify('**.rpyc', None)
     build.classify('**.rpymc', None)

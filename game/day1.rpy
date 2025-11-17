@@ -198,7 +198,7 @@ label kolya_meet:
     voice "audio/voice/masha/loud_masha_1.opus"
     masha_not_known "Это свои! Не стреляйте!"
 
-    n_narr "Из леса выходит молодая партизантка."
+    n_narr "Из леса выходит молодая партизанка."
     show masha neutral 2 at center # Первое появление, настороженность
     with dissolve
     n_narr "На вид, ей было лет 20-25."
