@@ -50,6 +50,7 @@ label trail_pursuit:
     nvl hide
     nvl clear
 
+    voice "audio/voice/soldier/soldier_1.opus"
     soldier "Расстреляны… в упор."
     n_narr "На земле — обломки касок, окровавленные бинты. Немцы ушли недавно."
 

@@ -28,6 +28,7 @@ label day5_start:
     nvl hide
     nvl clear
 
+    voice "audio/voice/old_man/old_man_1.opus"
     old_man "Спасибо… спасибо, хлопцы! Мы ждали… ждали вас каждый день!"
 
     voice "audio/voice/old_woman/loud_old_woman_2.opus"
@@ -66,6 +67,7 @@ label pows_camp_ruins:
     nvl hide
     nvl clear
 
+    voice "audio/voice/soldier/soldier_2.opus"
     soldier "Лагерь для наших пленных. Немцы сожгли его при отступлении."
     n_narr "На земле — обрывки документов. Фотографии. Имена…"
 
@@ -274,10 +276,13 @@ label epilogue_a:
     stop music fadeout 2.0
     play sound birds_morning
 
+    voice "audio/voice/grandson/grandson_1.opus"
     grandson "Дед… ты гордишься собой?"
     narr "Я горжусь теми, кто не вернулся. А я… я просто выжил."
 
+    voice "audio/voice/grandson/grandson_2.opus"
     grandson "Но благодаря тебе у нас есть сегодняшний день."
+    voice "audio/voice/grandson/grandson_3.opus"
     grandson "И я обещаю — мы сохраним эту память и сделаем нашу Беларусь сильной."
 
     nvl hide
@@ -320,6 +325,7 @@ label epilogue_b:
     scene minsk_memorial_2025_day with fade
     play sound birds_morning
 
+    voice "audio/voice/grandson/grandson_4.opus"
     grandson "Ты когда-нибудь его видел?"
     voice "audio/voice/kolya/kolya_18.opus"
     kolya "Каждый день: в своих снах, в зеркале, в лицах молодых солдат!"
