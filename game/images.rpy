@@ -102,3 +102,15 @@ image kolya sad:
 image kolya scared:
     "images/kolya scared.png"
     zoom 0.75
+
+image politruk mad:
+    "politruk mad.png"
+    zoom 0.75
+
+image politruk smile:
+    "politruk smile.png"
+    zoom 0.75
+    
+image politruk neutral:
+    "politruk.png"
+    zoom 0.75

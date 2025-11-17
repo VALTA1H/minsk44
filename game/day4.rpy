@@ -13,8 +13,10 @@ label day4_start:
     voice "audio/voice/ivan/ivan-12.opus"
     ivan "Пулемёт на насыпи. Мины на подступах. И заряд под опорами — уже заложен."
 
+    show politruk neutral at center with dissolve
     voice "audio/voice/politruk/politruk_10.opus"
     politruk "Если не возьмём за час — придут ястребы и сравняют всё."
+    hide politruk with dissolve
 
     menu:
         "Атаковать сейчас":
@@ -128,8 +130,10 @@ label bridge_victory:
     play music theme_calm loop
 
     n_narr "Мост захвачен. Котёл под Бобруйском — закрыт. Десятки тысяч врагов — в ловушке."
+    show politruk neutral at center with dissolve
     voice "audio/voice/ivan/ivan_11.opus"
     politruk "Теперь — на Минск! На столицу!"
+    hide politruk with dissolve
 
     nvl hide
     nvl clear

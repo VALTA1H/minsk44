@@ -38,8 +38,10 @@ label day5_start:
     nvl hide
     nvl clear
 
+    show politruk neutral at center with dissolve
     voice "audio/voice/politruk/politruk_12.opus"
     politruk "Товарищи! Минск — столица Беларуси! Сегодня мы освободим её до конца!"
+    hide politruk with dissolve
     voice "audio/voice/ivan/ivan-14.opus"
     ivan "Но немцы засели в центре. Особенно — на площади Свободы."
 
@@ -108,8 +110,10 @@ label freedom_square_approach:
     nvl hide
     nvl clear
 
+    show politruk neutral at center with dissolve
     voice "audio/voice/politruk/politruk_13.opus"
     politruk "Это последний очаг сопротивления в центре! Берём его — и Минск свободен!"
+    hide politruk with dissolve
 
     voice "audio/voice/ivan/ivan-16.opus"
     ivan "Группа А — слева по развалинам. Группа Б — за мной. Искатель — прикрываешь."
@@ -202,8 +206,10 @@ label minsk_liberated:
         kolya "Ты спас его честь. И свою. Мы похоронили его на площади — как героя."
         hide kolya
 
+    show politruk neutral at center with dissolve
     voice "audio/voice/politruk/politruk_14.opus"
     politruk "Сегодня — великий день! Беларусь свободна!"
+    hide politruk with dissolve
     n_narr "Но в этом празднике — горечь. Слишком много имён, что не вернутся домой."
 
     scene black with fade
