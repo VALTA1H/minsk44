@@ -110,7 +110,27 @@ image politruk mad:
 image politruk smile:
     "politruk smile.png"
     zoom 0.75
-    
+
 image politruk neutral:
     "politruk.png"
+    zoom 0.75
+
+image ivan angry:
+    "ivan angry.png"
+    zoom 0.75
+
+image ivan dead:
+    "ivan dead.png"
+    zoom 0.75
+
+image ivan mad:
+    "ivan mad.png"
+    zoom 0.75
+
+image ivan smile:
+    "ivan smile.png"
+    zoom 0.75
+
+image ivan neutral:
+    "ivan.png" 
     zoom 0.75

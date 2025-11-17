@@ -10,8 +10,10 @@ label day4_start:
     nvl hide
     nvl clear
 
+    show ivan mad at left with dissolve
     voice "audio/voice/ivan/ivan-12.opus"
     ivan "Пулемёт на насыпи. Мины на подступах. И заряд под опорами — уже заложен."
+    hide ivan
 
     show politruk neutral at center with dissolve
     voice "audio/voice/politruk/politruk_10.opus"
@@ -138,8 +140,10 @@ label bridge_victory:
     nvl hide
     nvl clear
 
+    show ivan neutral at right with dissolve
     voice "audio/voice/ivan/ivan-13.opus"
     ivan "Отдыхаем 20 минут — и марш."
+    hide ivan
 
     show kolya neutral at center with dissolve
     n_narr "Коля молча чистит винтовку. Его взгляд — пустой, безжизненный. Словно сама смерть чистит свою косу."

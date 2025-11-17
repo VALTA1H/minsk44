@@ -11,8 +11,10 @@ label day3_start:
     scene forest_swamp_morning with fade
     play sound distant_gunfire loop
     play sound crickets_sound
+    show ivan neutral at left with dissolve
     voice "audio/voice/ivan/ivan-09.opus"
     ivan "След свежий. Колёса, гусеницы… и кровь."
+    hide ivan
     show masha tension 2 at right
     with easeinright
 
@@ -28,8 +30,10 @@ label day3_start:
     voice "audio/voice/politruk/politruk_8.opus"
     politruk "Если поймаем их — получим планы обороны Минска!"
     hide politruk with dissolve
+    show ivan mad at right with dissolve
     voice "audio/voice/ivan/ivan-10.opus"
     ivan "А если засада — потеряешь отряд."
+    hide ivan
 
     hide masha
 
@@ -52,7 +56,7 @@ label trail_pursuit:
     nvl hide
     nvl clear
 
-    voice "audio/voice/soldier/soldier_1.opus"
+    voice "audio/voice/soldier/soldier_2.opus"
     soldier "Расстреляны… в упор."
     n_narr "На земле — обломки касок, окровавленные бинты. Немцы ушли недавно."
 
@@ -68,8 +72,10 @@ label trail_pursuit:
         play sound machine_gun loop
         scene swamp_clearing with hpunch
         n_narr "Из кустов — очередь! Засада!"
+        show ivan mad at center
         voice "audio/voice/ivan/ivan-11.opus"
         ivan "В укрытие!"
+        hide ivan
 
         nvl hide
         nvl clear

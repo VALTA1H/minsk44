@@ -42,8 +42,11 @@ label day5_start:
     voice "audio/voice/politruk/politruk_12.opus"
     politruk "Товарищи! Минск — столица Беларуси! Сегодня мы освободим её до конца!"
     hide politruk with dissolve
+
+    show ivan mad at right with dissolve
     voice "audio/voice/ivan/ivan-14.opus"
     ivan "Но немцы засели в центре. Особенно — на площади Свободы."
+    hide ivan
 
     show masha tension 2 at center
     with easeoutleft
@@ -86,8 +89,10 @@ label pows_camp_ruins:
     voice "audio/voice/kolya/kolya_13.opus"
     kolya "Зачем они это делали? Зачем так много зла?"
     
+    show ivan angry at right with dissolve
     voice "audio/voice/ivan/ivan-15.opus"
     ivan "Чтобы мы помнили. Чтобы никогда не допустили этого снова."
+    hide ivan
 
     n_narr "Я поднимаю куклу. Кладу в карман — рядом с письмом."
 
@@ -115,8 +120,10 @@ label freedom_square_approach:
     politruk "Это последний очаг сопротивления в центре! Берём его — и Минск свободен!"
     hide politruk with dissolve
 
+    show ivan mad at right with dissolve
     voice "audio/voice/ivan/ivan-16.opus"
     ivan "Группа А — слева по развалинам. Группа Б — за мной. Искатель — прикрываешь."
+    hide ivan
 
     n_narr "Мы занимаем позиции. Воздух — густой от пыли и страха."
 
@@ -126,9 +133,10 @@ label freedom_square_approach:
     play sound machine_gun
     scene minsk_freedom_square_ruins with vpunch
 
-    n_narr "Пулемёт открывает огонь! Кирпичи летят в щепки!"
+    show ivan mad at right with dissolve
     voice "audio/voice/ivan/ivan-17.opus"
     ivan "Вперёд! Не дать им перезарядиться!"
+    hide ivan
 
     nvl hide
     nvl clear
@@ -145,9 +153,10 @@ label freedom_square_approach:
     hide kolya
 
     n_narr "Иван лежит у подножия лестницы. Кровь на гимнастёрке. Но он смотрит на меня — и кивает в сторону окна."
-
+    show ivan dead at right
     voice "audio/voice/ivan/ivan-18.opus"
     ivan "Выпол… няй… приказ…"
+    hide ivan
 
     nvl hide
     nvl clear

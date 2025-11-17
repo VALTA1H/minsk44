@@ -62,14 +62,18 @@ label start:
 
     scene trench_night with fade
     play music high_tension fadein 5.0 loop
+    
+    show ivan mad at center with dissolve
     voice "audio/voice/ivan/ivan-01.opus"
     ivan "Всем внимание! До сигнала меньше часа. Проверить снаряжение, подогнать ремни. Отдыхаем, пока можем."
     voice "audio/voice/ivan/ivan-02.opus"
     ivan "Сержант …, подготовьте свою роту к наступлению. Убедитесь, что все знают свои задачи."
     
     narr "Так точно!"
+    show ivan neutral at center
     voice "audio/voice/ivan/ivan-03.opus"
     ivan "Также у нас появился новобранец: Захаров. Расскажи ему, что да как"
+    hide ivan
     narr "Есть!"
 
     narr "Итак, нужно найти этого новобранца"
@@ -234,8 +238,10 @@ label kolya_meet:
     voice "audio/voice/masha/loud_masha_4.opus"
     masha "У них медикаменты, патроны… и даже хлеб. Нам это жизненно необходимо."
 
+    show ivan neutral at right with dissolve
     voice "audio/voice/ivan/ivan-04.opus"
     ivan "Это ловушка, Маша? Или…?"
+    hide ivan
 
     voice "audio/voice/masha/loud_masha_5.opus"
     show masha neutral at center
@@ -251,8 +257,10 @@ label kolya_meet:
     menu choice_convoy:
         "Атаковать немедленно":
             narr "Припасы никогда не будут лишними. Нам не помешает их пополнить."
+            show ivan mad at center
             voice "audio/voice/ivan/ivan-05.opus"
             ivan "Хорошо. Берём в кольцо. Атака!"
+            hide ivan
             show screen achievement_unlock("{size=12}Кто не рискует — тот не пьет шампанского{/size}", box_len=400, read_len=3.0)
             jump convoy_fight
 
@@ -299,9 +307,11 @@ label end_of_day1:
     nvl hide
     nvl clear
 
-    show politruk neutral at right with dissolve
+    show ivan neutral at right with dissolve
+    show politruk neutral at left with dissolve
     n_narr "Коля спит, прижавшись к винтовке. Иван точит нож. Политрук пишет письмо."
-    hide politruk with dissolve
+    hide ivan
+    hide politruk
     n_narr "А я смотрю на закат и думаю: «Как нам победить в этом аду?»"
 
     nvl hide

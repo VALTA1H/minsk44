@@ -23,8 +23,10 @@ label day2_start:
     nvl hide
     nvl clear
 
+    show ivan mad at center with dissolve
     voice "audio/voice/ivan/ivan-06.opus"
     ivan "Внимание! Враг отступил, но оставил «крыс» — снайперов и миномётчиков. Двигаемся осторожно, по укрытиям!"
+    hide ivan
     show politruk neutral at center with dissolve
     voice "audio/voice/politruk/politruk_6.opus"
     politruk "Помните, товарищи! Этот город — наша земля. Каждый дом, каждая улица — свидетель зверств оккупантов. Наша задача зачистить его до конца!"
@@ -47,8 +49,10 @@ label day2_start:
     
     voice "audio/voice/civil/civil_2.opus"
     civil "Мой брат… он ранен! Вчера, когда начался штурм, его ранило и теперь он не может идти!"
+    show ivan neutral at right with dissolve
     voice "audio/voice/ivan/ivan-07.opus"
     ivan "Где он? Проведи наc к нему."
+    hide ivan
     voice "audio/voice/civil/civil_3.opus"
     civil "Там, в подвале соседнего дома. Но… там ещё и фриц… Раненый… Они вместе, как в ловушке."
 
@@ -71,7 +75,9 @@ label day2_start:
             hanz "Те дети, которых мы оставить в живых.. Они все будут должны служить и восхвалять нашего фюрреру!"
             n_narr "Не обращая внимания на его возгласы, мы продолжаем операцию по спасению."            
             n_narr "Я бросаю свой бинт местному жителю: «Перевяжи его. Быстро!»"
+            show ivan neutral at right
             n_narr "Иван приказывает: «Забираем своего. Немца оставляем. Пусть медсанбат разбирается»."
+            hide ivan
             $ showed_mercy = True
 
         "Забрать только нашего":
@@ -82,7 +88,9 @@ label day2_start:
             n_narr "В подвале остаётся стон раненого немца. Коля смотрит вниз с ужасом, но молчит."
             hide kolya
             
+            show ivan angry at right
             n_narr "Иван коротко командует: «Закройте вход. Пусть сидит там, пока не подохнет или пока его не найдут»."
+            hide ivan
             $ showed_mercy = False
 
     nvl hide
@@ -248,8 +256,10 @@ label choice_med:
     nvl hide
     nvl clear
 
+    show ivan neutral at right with dissolve
     voice "audio/voice/ivan/ivan-08.opus"
     ivan "Молодцы, ребята! Но расслабляться рано. Получен приказ: преследовать отступающего врага. Направление — Минск."
+    hide ivan
     show politruk smile at center with dissolve
     voice "audio/voice/politruk/politruk_7.opus"
     politruk "Минск ждёт нас! Путь к столице открыт!"
