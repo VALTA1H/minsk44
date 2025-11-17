@@ -48,6 +48,7 @@ screen support(bg = "black"):
                 text "Политрук - Александр Хаев"
                 text "Коля - Арсений Дерновский"
                 text "Иван - Коджакулак Алтай"
+                text "Внук - Ольга Конон"
             vbox:
                 spacing 40 align(0.5, 0.5)
                 text _("Программист:") size 40 bold True
