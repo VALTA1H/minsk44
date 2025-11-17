@@ -35,16 +35,19 @@ label day2_start:
     nvl clear
 
     scene city_courtyard with dissolve
+    voice "audio/voice/civil/civil_1.opus"
     civil "Кто-нибудь, помогите!"
 
     n_narr "Из подвала одного из домов выбегает мужчина лет сорока. Его лицо покрыто сажей, руки в ожогах и ссадинах, глаза полны отчаяния."
 
     nvl hide
     nvl clear
-
+    
+    voice "audio/voice/civil/civil_2.opus"
     civil "Мой брат… он ранен! Вчера, когда начался штурм, его ранило и теперь он не может идти!"
     voice "audio/voice/ivan/ivan-07.opus"
     ivan "Где он? Проведи наc к нему."
+    voice "audio/voice/civil/civil_3.opus"
     civil "Там, в подвале соседнего дома. Но… там ещё и фриц… Раненый… Они вместе, как в ловушке."
 
     n_narr "Старшина Иван переглядывается со мной. Ситуация сложная. Раненый враг — это опасность и отвестенность за соотечественника."
