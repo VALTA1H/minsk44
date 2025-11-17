@@ -27,6 +27,8 @@ label bridge_assault:
     scene forest_bridge_dawn with vpunch
 
     n_narr "Пулемёт открывает огонь! Земля рвётся под ногами."
+    
+    show kolya scared at center with dissolve
     voice "audio/voice/kolya/kolya_07.opus"
     kolya "А-а-а!" with hpunch
 
@@ -60,6 +62,7 @@ label bridge_assault:
             nvl clear
 
     stop sound
+    hide kolya
     jump bridge_victory
 
 label coma:
@@ -75,7 +78,9 @@ label coma:
     masha "Наконец-то очнулся. Мы уже думали, что тебя не спасти."
 
     n_narr "Я перевожу свой взгляд на дрожащего Колю."
-    show masha neutral at right:
+    
+    show kolya sad at right
+    show masha neutral at left:
         ease 0.25 zoom 1.0 yoffset 0
     with easeinright
 
@@ -93,12 +98,16 @@ label coma:
     with easeinleft
     voice "audio/voice/masha/loud_masha_25.opus"
     masha "А ты, Коля, не стой как баран. Тебе повезло, что тебя спасли в этот раз!"
+    
+    show kolya sad at right
     voice "audio/voice/kolya/kolya_010.opus"
     kolya "Прости меня…"
+    
     n_narr "Рана была несущественная. Через несколько часов мы продолжили путь."
 
     nvl hide
     nvl clear
+    hide kolya
     hide masha
 
     jump bridge_victory
@@ -128,7 +137,9 @@ label bridge_victory:
     voice "audio/voice/ivan/ivan-13.opus"
     ivan "Отдыхаем 20 минут — и марш."
 
+    show kolya neutral at center with dissolve
     n_narr "Коля молча чистит винтовку. Его взгляд — пустой, безжизненный. Словно сама смерть чистит свою косу."
+    hide kolya
 
     nvl hide
     nvl clear
@@ -142,19 +153,29 @@ label bridge_victory:
 
     if kolya_saved:
         scene forest_camp_night
+        
+        show kolya sad at left:
+            linear 2.0 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
+        with easeinleft
         voice "audio/voice/kolya/kolya_11.opus"
         kolya "Слушай, извини за сегодняшнее."
+        
         show masha happy at right:
             linear 2.0 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
         with easeinright
         voice "audio/voice/masha/loud_masha_26.opus"
         masha "Да ладно. Главное, что мы все остались живы."
+        
+        show kolya sad at left:
+            matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
         voice "audio/voice/kolya/kolya_012.opus"
         kolya "И ты меня прости, товарищ."
+        
         narr "Хоть твоё спасение и стоило мне ранения, но твоя жизнь важнее."
         n_narr "После этого диалога мы пошли спать, в надежде, что завтрашний день будет лучше."
         nvl hide
         nvl clear
+        hide kolya
         hide masha
     stop music
     jump day5_start

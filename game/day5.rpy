@@ -78,14 +78,17 @@ label pows_camp_ruins:
     nvl hide
     nvl clear
 
+    show kolya sad at center with dissolve
     voice "audio/voice/kolya/kolya_13.opus"
     kolya "Зачем они это делали? Зачем так много зла?"
+    
     voice "audio/voice/ivan/ivan-15.opus"
     ivan "Чтобы мы помнили. Чтобы никогда не допустили этого снова."
 
     n_narr "Я поднимаю куклу. Кладу в карман — рядом с письмом."
 
     stop music fadeout 2.0
+    hide kolya
 
     nvl hide
     nvl clear
@@ -130,8 +133,10 @@ label freedom_square_approach:
     nvl hide
     nvl clear
 
+    show kolya angry2 at center with hpunch
     voice "audio/voice/kolya/kolya_14.opus"
     kolya "СТАРШИНА!!!"
+    hide kolya
 
     n_narr "Иван лежит у подножия лестницы. Кровь на гимнастёрке. Но он смотрит на меня — и кивает в сторону окна."
 
@@ -178,8 +183,10 @@ label minsk_liberated:
         nvl hide
         nvl clear
 
+        show kolya angry at center with dissolve
         voice "audio/voice/kolya/kolya_15.opus"
         kolya "Он заслужил похоронить его не на чужбине… а здесь. В освобождённом городе."
+        hide kolya
 
     elif chose_comrades:
         n_narr "Очнулся я в госпитале. Минск — свободен."
@@ -188,8 +195,10 @@ label minsk_liberated:
         nvl hide
         nvl clear
 
+        show kolya sad at center with dissolve
         voice "audio/voice/kolya/kolya_16.opus"
         kolya "Ты спас его честь. И свою. Мы похоронили его на площади — как героя."
+        hide kolya
 
     voice "audio/voice/politruk/politruk_14.opus"
     politruk "Сегодня — великий день! Беларусь свободна!"
@@ -240,8 +249,10 @@ label epilogue_a:
 
     n_narr "4 июля 1944 года. Минск."
     n_narr "Коля и Маша стоят у импровизированного памятника — груда камней с красной звездой."
-    show masha neutral at center
-    with easeoutleft
+    
+    show kolya sad at right
+    show masha neutral at left
+    with ease
 
     voice "audio/voice/kolya/kolya_17.opus"
     kolya "Он заслужил покой в освобождённом городе."
@@ -250,6 +261,7 @@ label epilogue_a:
 
     nvl hide
     nvl clear
+    hide kolya
     hide masha
 
     scene black with dissolve
@@ -328,6 +340,7 @@ label epilogue_b:
     pause 5.0
 
     jump game_end
+
 label game_end:
     stop audio fadeout 2.0
     stop sound fadeout 2.0

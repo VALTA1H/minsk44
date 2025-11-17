@@ -106,9 +106,12 @@ label night_camp:
     nvl clear
 
     if masha_rep >= 1:
+        show kolya neutral at left:
+            linear 0.5 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
         show masha neutral at right:
             linear 0.5 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
-        with easeinright
+        with ease
+        
         voice "audio/voice/masha/loud_masha_16.opus"
         masha "Ты помнишь, что мы — люди. Даже здесь."
         
@@ -122,6 +125,9 @@ label night_camp:
         
         voice "audio/voice/masha/loud_masha_19.opus"
         masha "Больше никто не выжил. Я помню каждое лицо."
+        
+        show kolya neutral at left:
+            matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
         voice "audio/voice/kolya/kolya_06.opus"
         kolya "А как ты смогла выбраться?"
         
@@ -132,9 +138,12 @@ label night_camp:
         masha "Слышала, как кричали дети…"
 
     else:
+        show kolya neutral at left:
+            linear 2.0 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
         show masha angry at right:
             linear 2.0 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
-        with easeinright
+        with ease
+        
         voice "audio/voice/masha/loud_masha_22.opus"
         masha "Я из Борок. Из той деревни, что стёрли с лица земли…"
         voice "audio/voice/masha/loud_masha_23.opus"
@@ -145,6 +154,7 @@ label night_camp:
 
     nvl hide
     nvl clear
+    hide kolya
     hide masha
     stop music fadeout 2.0
     jump day4_start

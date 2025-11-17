@@ -74,3 +74,31 @@ image masha shoked:
 image masha tension 2:
     "images/masha tension 2.png"
     zoom 0.75
+
+image kolya neutral:
+    "images/kolya neutral.png"
+    zoom 0.75
+
+image kolya angry:
+    "images/kolya angry.png"
+    zoom 0.75
+
+image kolya angry2:
+    "images/kolya angry 2.png"
+    zoom 0.75
+
+image kolya happy:
+    "images/kolya hands crossed happy.png"
+    zoom 0.75
+
+image kolya mad:
+    "images/kolya mad.png"
+    zoom 0.75
+
+image kolya sad:
+    "images/kolya sad.png"
+    zoom 0.75
+
+image kolya scared:
+    "images/kolya scared.png"
+    zoom 0.75

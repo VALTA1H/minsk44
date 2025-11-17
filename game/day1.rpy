@@ -106,13 +106,20 @@ label kolya_meet:
 
     narr "Ты рядовой Захаров?"
     show screen achievement_unlock("{size=14}Новый товарищ?{/size}", box_len=300, read_len=3.0)
+    
+    show kolya scared at center with dissolve
     voice "audio/voice/kolya/kolya_01.opus"
     kolya "я.. Я!" with hpunch
+    
     narr "Как звать тебя?"
+    
     voice "audio/voice/kolya/kolya_02.opus"
     kolya "Захаров Николай Павлович" with hpunch
+    
     narr "Мы сегодня форсируем реку. Твоя задача - держаться рядом со взводом. Задача ясна?"
     narr "Чуть что — обращайся. Здесь любая ошибка может стоить тебе жизни"
+    
+    show kolya neutral at center with ease
     voice "audio/voice/kolya/kolya_03.opus"
     kolya "так… Точно!" with hpunch
 
@@ -120,15 +127,19 @@ label kolya_meet:
     n_narr "Тяжёлые капли дождя барабанят по каске. Вдалеке — приглушённый гул артиллерии и частая дробь пулемётов."
     n_narr "Отряд сидит в укрытии, прижавшись к мокрой земле."
 
+    show kolya scared at center
     voice "audio/voice/kolya/kolya_04.opus"
     kolya "А что будет дальше?"
 
     narr "Спокойно, Коля. Первый раз всегда страшно. Держись рядом."
+    
+    show kolya neutral at center
     voice "audio/voice/kolya/kolya_05.opus"
     kolya "П-понял… спасибо, товарищ…"
 
     nvl hide
     nvl clear
+    hide kolya
     
     stop music
     play music theme_tense loop
@@ -261,12 +272,16 @@ label convoy_fight:
 label convoy_report:
     n_narr "Передаём координаты обоза. Через полчаса — глухой взрыв вдалеке. Скорее всего, немцы сами уничтожили грузы при отступлении… или их перехватили союзные войска."
     n_narr "Мы остаёмся с тем, что имеем, но избегаем потерь."
+    
+    show kolya sad at center with dissolve
     n_narr "Коля смотрит на пустой мешок: «Надеюсь, завтра будет лучше…»"
+    hide kolya
+    
     nvl hide
     nvl clear
     jump end_of_day1
 
-    label end_of_day1:
+label end_of_day1:
     scene forest_camp with fade
     stop music fadeout 2.0
     play music theme_calm fadein 2.0
