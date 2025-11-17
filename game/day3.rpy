@@ -30,7 +30,7 @@ label day3_start:
     voice "audio/voice/politruk/politruk_8.opus"
     politruk "Если поймаем их — получим планы обороны Минска!"
     hide politruk with dissolve
-    show ivan mad at right with dissolve
+    show ivan mad at left with dissolve
     voice "audio/voice/ivan/ivan-10.opus"
     ivan "А если засада — потеряешь отряд."
     hide ivan

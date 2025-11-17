@@ -70,6 +70,7 @@ label bridge_assault:
     jump bridge_victory
 
 label coma:
+    hide kolya
     n_narr "Очнулся уже после боя."
 
     nvl hide
@@ -164,7 +165,7 @@ label bridge_victory:
         
         show kolya sad at left:
             linear 2.0 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
-        with easeinleft
+        with dissolve
         voice "audio/voice/kolya/kolya_11.opus"
         kolya "Слушай, извини за сегодняшнее."
         

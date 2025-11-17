@@ -343,6 +343,7 @@ label epilogue_b:
     voice "audio/voice/grandson/grandson_4.opus"
     grandson "Ты когда-нибудь его видел?"
     voice "audio/voice/kolya/kolya_18.opus"
+    show kolya sad at right with dissolve
     kolya "Каждый день: в своих снах, в зеркале, в лицах молодых солдат!"
 
     d_text "Внук стоит у Мемориала «Минск — Город-герой». На чёрном граните — тысячи имён."
