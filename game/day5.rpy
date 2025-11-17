@@ -42,7 +42,7 @@ label day5_start:
     voice "audio/voice/ivan/ivan-14.opus"
     ivan "Но немцы засели в центре. Особенно — на площади Свободы."
 
-    show masha tension 2 at center # Сфокусирована на боевой задаче
+    show masha tension 2 at center
     with easeoutleft
 
     voice "audio/voice/masha/loud_masha_27.opus"
@@ -240,7 +240,7 @@ label epilogue_a:
 
     n_narr "4 июля 1944 года. Минск."
     n_narr "Коля и Маша стоят у импровизированного памятника — груда камней с красной звездой."
-    show masha neutral at center # Скорбь/нейтралитет
+    show masha neutral at center
     with easeoutleft
 
     voice "audio/voice/kolya/kolya_017.opus"

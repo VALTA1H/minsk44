@@ -88,7 +88,7 @@ label day2_start:
     nvl hide
     nvl clear
 
-    show masha tension 2 at left # Напряженная, сфокусированная
+    show masha tension 2 at left
     with easeinleft
     with hpunch
 
@@ -112,7 +112,7 @@ label day2_start:
             scene city_street_ruins with vpunch
             n_narr "Взрыв. Облако пыли и дыма. Огонь прекратился."
             n_narr "Мы врываемся внутрь… В подвале, под завалами, слышен детский плач."
-            hide masha # Скрываем перед jump
+            hide masha
             nvl hide
             nvl clear
 
@@ -122,7 +122,7 @@ label day2_start:
             show screen achievement_unlock("{size=14}Только идиот доверит свою жизнь оружию.{/size}", box_len=300, read_len=3.0)
             narr "Лучше не рисковать. Вдруг там гражданские…"
             voice "audio/voice/masha/loud_masha_7.opus"
-            show masha tension 2 at left # Сфокусирована
+            show masha tension 2 at left
             masha "За мной. И чтоб тише воды…"
             scene black with dissolve 
             n_narr "Мы пробираемся по завалам во двор, затем — в подвал здания."
@@ -131,7 +131,7 @@ label day2_start:
             $ masha_rep += 1
             nvl hide
             nvl clear
-            hide masha # Скрываем перед jump
+            hide masha
 
             jump day2_basement_peaceful
 
@@ -160,7 +160,7 @@ label day2_basement:
     jump choice_med
 
 label choice_med:
-    show masha neutral at left # Нейтральный вид перед выбором
+    show masha neutral at left
     with easeinleft
     menu choice_medicine:
         "Что сделать с ящиком?"
@@ -173,7 +173,7 @@ label choice_med:
             narr "Они тоже люди. Оставим им хоть что-то."
             n_narr "Я вынимаю из ящика только самое необходимое для полевого госпиталя — бинты и пакеты."
             n_narr "Старуха кивает, её глаза полны слёз благодарности."
-            show masha happy at left # Благодарность за милосердие
+            show masha happy at left
             n_narr "Маша кладёт руку мне на плечо и шепчет:"
             voice "audio/voice/masha/loud_masha_8.opus"
             masha "Спасибо"
@@ -183,7 +183,7 @@ label choice_med:
     nvl hide
     nvl clear
 
-    hide masha # Скрываем перед следующей сценой
+    hide masha 
 
     scene destroyed_house with dissolve
     n_narr "Пока отряд отдыхает, я замечаю полуразрушенный дом с выгоревшим фасадом. А за ним здание с обугленной дверью где вырезана шестиконечная звезда, вырезанная топором."
@@ -193,8 +193,8 @@ label choice_med:
     nvl clear
 
     scene ghetto with dissolve
-    play music warum loop
-    show masha scared at left # Шокирована увиденным
+    play music warum volume 0.5 loop
+    show masha scared at left
     with easeinleft
     with hpunch
 
@@ -202,7 +202,7 @@ label choice_med:
     masha "{bt=1}Здесь был концентрационный {sc=3}{color=#E10600}лагерь… концлагерь{/color}{/sc}. Тут держали евреев.{/bt}"
     
     voice "audio/voice/masha/loud_masha_10.opus"
-    show masha scared at left # Переход к травме/страху
+    show masha scared at left
     masha "{bt=1}Осенью сорок первого… их всех согнали сюда. А потом… потом большую часть{para}повели в сарай на окраине деревни.{/bt}"
     
     voice "audio/voice/masha/loud_masha_11.opus"
@@ -221,7 +221,7 @@ label choice_med:
     nvl hide
     nvl clear
 
-    hide masha # Скрываем перед переходом
+    hide masha
 
     scene city_square_evening with fade
     stop music fadeout 2.0

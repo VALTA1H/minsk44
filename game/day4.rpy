@@ -68,14 +68,14 @@ label coma:
     nvl hide
     nvl clear
 
-    show masha alarm at left: # Тревога/Облегчение
+    show masha alarm at left:
         ease 0.25 zoom 1.5 yoffset 512
     with easeinleft
     voice "audio/voice/masha/loud_masha_24.opus"
     masha "Наконец-то очнулся. Мы уже думали, что тебя не спасти."
 
     n_narr "Я перевожу свой взгляд на дрожащего Колю."
-    show masha neutral at right: # Нейтральный, наблюдательный вид
+    show masha neutral at right:
         ease 0.25 zoom 1.0 yoffset 0
     with easeinright
 
@@ -89,7 +89,7 @@ label coma:
 
     narr "Я понимаю. Самое главное, что мы остались в живых."
 
-    show masha angry at left # Гнев, выговор Коле
+    show masha angry at left
     with easeinleft
     voice "audio/voice/masha/loud_masha_25.opus"
     masha "А ты, Коля, не стой как баран. Тебе повезло, что тебя спасли в этот раз!"
@@ -144,7 +144,7 @@ label bridge_victory:
         scene forest_camp_night
         voice "audio/voice/kolya/kolya_011.opus"
         kolya "Слушай, извини за сегодняшнее."
-        show masha happy at right: # Утешение и доброта
+        show masha happy at right:
             linear 2.0 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
         with easeinright
         voice "audio/voice/masha/loud_masha_26.opus"

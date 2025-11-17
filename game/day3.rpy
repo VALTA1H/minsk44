@@ -13,7 +13,7 @@ label day3_start:
     play sound crickets_sound
     voice "audio/voice/ivan/ivan-09.opus"
     ivan "След свежий. Колёса, гусеницы… и кровь."
-    show masha tension 2 at right # Сфокусированная, профессиональная
+    show masha tension 2 at right
     with easeinright
 
     voice "audio/voice/masha/loud_masha_14.opus"
@@ -29,7 +29,7 @@ label day3_start:
     voice "audio/voice/ivan/ivan-10.opus"
     ivan "А если засада — потеряешь отряд."
 
-    hide masha # Скрываем Машу для выбора
+    hide masha
 
     menu:
         "Что сделаем?"
@@ -56,7 +56,7 @@ label trail_pursuit:
     nvl hide
     nvl clear
 
-    show masha alarm at left # Найденные пленные - эмоциональный удар
+    show masha alarm at left
     with easeinleft
     voice "audio/voice/masha/loud_masha_15.opus"
     masha "Под палаткой — ящик."
@@ -77,7 +77,7 @@ label trail_pursuit:
         nvl clear
 
     stop sound
-    hide masha # Скрываем Машу перед jump
+    hide masha
     jump night_camp
 
 label road_march:
@@ -106,14 +106,14 @@ label night_camp:
     nvl clear
 
     if masha_rep >= 1:
-        show masha neutral at right: # Начинаем спокойно
+        show masha neutral at right:
             linear 0.5 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
         with easeinright
         voice "audio/voice/masha/loud_masha_16.opus"
         masha "Ты помнишь, что мы — люди. Даже здесь."
         
         voice "audio/voice/masha/loud_masha_17.opus"
-        show masha scared at right: # Переход к травме
+        show masha scared at right:
             linear 0.5 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
         masha "Я из Борок… Там, где сожгли деревню."
         
@@ -132,7 +132,7 @@ label night_camp:
         masha "Слышала, как кричали дети…"
 
     else:
-        show masha angry at right: # Упрек и гнев
+        show masha angry at right:
             linear 2.0 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
         with easeinright
         voice "audio/voice/masha/loud_masha_22.opus"
@@ -145,6 +145,6 @@ label night_camp:
 
     nvl hide
     nvl clear
-    hide masha # Скрываем Машу перед jump
+    hide masha
     stop music fadeout 2.0
     jump day4_start

@@ -182,6 +182,7 @@ label kolya_meet:
     stop music
 
     scene forest_ambush with dissolve
+    play music theme_tense fadein 2.0
     n_narr "Проходя мимо леса, мы услышали шум."
     n_narr "Не ожидая ничего хорошего, мы направили оружие в сторону источника шума"
 
@@ -199,7 +200,7 @@ label kolya_meet:
     masha_not_known "Это свои! Не стреляйте!"
 
     n_narr "Из леса выходит молодая партизанка."
-    show masha neutral 2 at center # Первое появление, настороженность
+    show masha neutral 2 at center
     with dissolve
     n_narr "На вид, ей было лет 20-25."
 
@@ -212,7 +213,7 @@ label kolya_meet:
     narr "И зачем ты пришла, Маша?"
 
     voice "audio/voice/masha/loud_masha_3.opus"
-    show masha tension 2 at center # Сфокусированная, передает важную информацию
+    show masha tension 2 at center
     masha "Там застрял немецкий обоз. Два грузовика под охраной тыловиков. Есть шанс пополнить припасы."
 
     voice "audio/voice/masha/loud_masha_4.opus"
@@ -222,7 +223,7 @@ label kolya_meet:
     ivan "Это ловушка, Маша? Или…?"
 
     voice "audio/voice/masha/loud_masha_5.opus"
-    show masha neutral at center # Спокойное заверение, не ловушка
+    show masha neutral at center
     masha "Нет. Они застряли в грязи после дождя. У них нет времени ждать подмогу. К ним врядли придут на помощь."
 
     n_narr "Старшина смотрит на меня. Припасы нужны, но риск велик. Особенно после переправы."
@@ -230,7 +231,7 @@ label kolya_meet:
     nvl hide
     nvl clear
 
-    hide masha # Скрываем Машу для выбора
+    hide masha
 
     menu choice_convoy:
         "Атаковать немедленно":
@@ -267,7 +268,7 @@ label convoy_report:
 
     label end_of_day1:
     scene forest_camp with fade
-    stop music
+    stop music fadeout 2.0
     play music theme_calm fadein 2.0
     play sound crickets_sound fadein 2.0 loop
 
