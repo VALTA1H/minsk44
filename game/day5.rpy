@@ -78,7 +78,7 @@ label pows_camp_ruins:
     nvl hide
     nvl clear
 
-    voice "audio/voice/kolya/kolya_013.opus"
+    voice "audio/voice/kolya/kolya_13.opus"
     kolya "Зачем они это делали? Зачем так много зла?"
     voice "audio/voice/ivan/ivan-15.opus"
     ivan "Чтобы мы помнили. Чтобы никогда не допустили этого снова."
@@ -130,7 +130,7 @@ label freedom_square_approach:
     nvl hide
     nvl clear
 
-    voice "audio/voice/kolya/kolya_014.opus"
+    voice "audio/voice/kolya/kolya_14.opus"
     kolya "СТАРШИНА!!!"
 
     n_narr "Иван лежит у подножия лестницы. Кровь на гимнастёрке. Но он смотрит на меня — и кивает в сторону окна."
@@ -178,7 +178,7 @@ label minsk_liberated:
         nvl hide
         nvl clear
 
-        voice "audio/voice/kolya/kolya_015.opus"
+        voice "audio/voice/kolya/kolya_15.opus"
         kolya "Он заслужил похоронить его не на чужбине… а здесь. В освобождённом городе."
 
     elif chose_comrades:
@@ -188,7 +188,7 @@ label minsk_liberated:
         nvl hide
         nvl clear
 
-        voice "audio/voice/kolya/kolya_016.opus"
+        voice "audio/voice/kolya/kolya_16.opus"
         kolya "Ты спас его честь. И свою. Мы похоронили его на площади — как героя."
 
     voice "audio/voice/politruk/politruk_14.opus"
@@ -243,7 +243,7 @@ label epilogue_a:
     show masha neutral at center
     with easeoutleft
 
-    voice "audio/voice/kolya/kolya_017.opus"
+    voice "audio/voice/kolya/kolya_17.opus"
     kolya "Он заслужил покой в освобождённом городе."
     voice "audio/voice/masha/loud_masha_28.opus"
     masha "Мы будем помнить. Все."
@@ -309,7 +309,7 @@ label epilogue_b:
     play sound birds_morning
 
     grandson "Ты когда-нибудь его видел?"
-    voice "audio/voice/kolya/kolya_018.opus"
+    voice "audio/voice/kolya/kolya_18.opus"
     kolya "Каждый день: в своих снах, в зеркале, в лицах молодых солдат!"
 
     d_text "Внук стоит у Мемориала «Минск — Город-герой». На чёрном граните — тысячи имён."

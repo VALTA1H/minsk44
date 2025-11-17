@@ -142,7 +142,7 @@ label bridge_victory:
 
     if kolya_saved:
         scene forest_camp_night
-        voice "audio/voice/kolya/kolya_011.opus"
+        voice "audio/voice/kolya/kolya_11.opus"
         kolya "Слушай, извини за сегодняшнее."
         show masha happy at right:
             linear 2.0 matrixcolor BrightnessMatrix(-0.3) * TintMatrix("#e2582236")
