@@ -36,7 +36,7 @@ screen support(bg = "black"):
             vbox:
                 spacing 40 align(0.5, 0.5)
                 text _("Художник:") size 40 bold True
-                text "Footer Heart"
+                text "Snuff"
             vbox:
                 spacing 40 align(0.5, 0.5)
                 text _("Дизайнер:") size 40 bold True
